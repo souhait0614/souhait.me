@@ -6,8 +6,9 @@ import Loading from "./Loading"
 import Image from "next/image"
 import { useCallback, useState } from "react"
 import { useKonami } from "react-konami-code"
+import { souhait, souhaitOld1, souhaitOld2, souhaitOld3 } from "@/images"
 
-const souhaitImages = ["souhait.png", "souhait_old1.png", "souhait_old2.png", "souhait_old3.png"]
+const souhaitImages = [souhait, souhaitOld1, souhaitOld2, souhaitOld3]
 
 export const SouhaitProfileImage = () => {
   const [index, setIndex] = useState(0)
@@ -22,7 +23,7 @@ export const SouhaitProfileImage = () => {
   return (
     <div className={styles.container}>
       <Image
-        src={`https://img.souhait.me/${souhaitImages[index]}`}
+        src={souhaitImages[index]}
         height={512}
         width={512}
         alt="すえちゃん"

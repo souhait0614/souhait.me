@@ -12,6 +12,7 @@ import clsx from "clsx"
 import { Copyright } from "tabler-icons-react"
 
 import type { Metadata } from "next"
+import { icon } from "@/images"
 
 const plex = IBM_Plex_Sans_JP({ subsets: ["latin", "latin-ext"], weight: "400" })
 
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     absolute: "souhait.me",
   },
   description: "すえとすえちゃんのサイト",
-  icons: "https://img.souhait.me/icon.png",
+  icons: icon,
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (

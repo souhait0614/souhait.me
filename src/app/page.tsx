@@ -8,12 +8,13 @@ import BasicPage from "@/app/_components/BasicPage"
 import Image from "next/image"
 import { Cake, Code, DeviceGamepad2 } from "tabler-icons-react"
 import Link from "next/link"
+import { avatar, banner } from "@/images"
 
 const Profile = () => (
   <Card>
     <div className={styles.profileBannerContainer}>
       <Image
-        src="https://img.souhait.me/banner.png"
+        src={banner}
         fill
         alt="banner"
         className={styles.profileBanner}
@@ -23,7 +24,7 @@ const Profile = () => (
     <div className={styles.profileContent}>
       <div className={styles.profileAvatarContainer}>
         <Image
-          src="https://img.souhait.me/avatar.png"
+          src={avatar}
           width={120}
           height={120}
           alt="avatar"
