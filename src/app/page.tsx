@@ -4,32 +4,20 @@ import { NewTabLink } from "./_components/NewTabLink"
 import { getDaysLater } from "./_util"
 
 import BasicPage from "@/app/_components/BasicPage"
+import { avatar, banner } from "@/images"
 
 import Image from "next/image"
 import { Cake, Code, DeviceGamepad2 } from "tabler-icons-react"
 import Link from "next/link"
-import { avatar, banner } from "@/images"
 
 const Profile = () => (
   <Card>
     <div className={styles.profileBannerContainer}>
-      <Image
-        src={banner}
-        fill
-        alt="banner"
-        className={styles.profileBanner}
-        priority
-      />
+      <Image src={banner} fill alt="banner" className={styles.profileBanner} priority />
     </div>
     <div className={styles.profileContent}>
       <div className={styles.profileAvatarContainer}>
-        <Image
-          src={avatar}
-          width={120}
-          height={120}
-          alt="avatar"
-          priority
-        />
+        <Image src={avatar} width={120} height={120} alt="avatar" priority />
       </div>
       <div className={styles.profileTextContainer}>
         <h1 className={styles.profileName}>すえ</h1>

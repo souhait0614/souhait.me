@@ -3,10 +3,11 @@
 import * as styles from "./SouhaitProfileImage.css"
 import Loading from "./Loading"
 
+import { souhait, souhaitOld1, souhaitOld2, souhaitOld3 } from "@/images"
+
 import Image from "next/image"
 import { useCallback, useState } from "react"
 import { useKonami } from "react-konami-code"
-import { souhait, souhaitOld1, souhaitOld2, souhaitOld3 } from "@/images"
 
 const souhaitImages = [souhait, souhaitOld1, souhaitOld2, souhaitOld3]
 

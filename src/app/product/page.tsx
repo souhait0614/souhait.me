@@ -36,8 +36,16 @@ const Product = () => (
       description={
         <>
           <p>このサイトです</p>
-          <p>Next.jsとApp Routerが気になったの<s>と暇だったの</s>でApp RouterなNext.jsで作りました</p>
-          <p>特に意味もなく<NewTabLink href="https://github.com/souhait0614/souhait.me">オープンソースとして公開</NewTabLink>しています</p>
+          <p>
+            Next.jsとApp Routerが気になったの<s>と暇だったの</s>でApp RouterなNext.jsで作りました
+          </p>
+          <p>
+            特に意味もなく
+            <NewTabLink href="https://github.com/souhait0614/souhait.me">
+              オープンソースとして公開
+            </NewTabLink>
+            しています
+          </p>
         </>
       }
     />

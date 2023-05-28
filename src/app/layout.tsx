@@ -5,6 +5,7 @@ import { lightTheme } from "./theme.css"
 import Analytics from "./_components/Analytics"
 
 import Header from "@/app/_components/Header"
+import { icon } from "@/images"
 
 import { IBM_Plex_Sans_JP } from "next/font/google"
 import { Suspense } from "react"
@@ -12,7 +13,6 @@ import clsx from "clsx"
 import { Copyright } from "tabler-icons-react"
 
 import type { Metadata } from "next"
-import { icon } from "@/images"
 
 const plex = IBM_Plex_Sans_JP({ subsets: ["latin", "latin-ext"], weight: "400" })
 
