@@ -31,6 +31,17 @@ const Product = () => (
   <BasicPage>
     <p>並び順は適当です。</p>
     <ProductCard
+      name="souhait.me"
+      href="https://souhait.me"
+      description={
+        <>
+          <p>このサイトです</p>
+          <p>Next.jsとApp Routerが気になったの<s>と暇だったの</s>でApp RouterなNext.jsで作りました</p>
+          <p>特に意味もなく<NewTabLink href="https://github.com/souhait0614/souhait.me">オープンソースとして公開</NewTabLink>しています</p>
+        </>
+      }
+    />
+    <ProductCard
       name="Submarin Converter (Web)"
       href="https://submarin-converter.vercel.app"
       description={
