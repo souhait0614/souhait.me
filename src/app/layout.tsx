@@ -23,6 +23,17 @@ export const metadata: Metadata = {
   },
   description: "すえとすえちゃんのサイト",
   icons: icon,
+  metadataBase: new URL("https://souhait.me"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "souhait.me",
+    description: "すえとすえちゃんのサイト",
+    url: "/",
+    siteName: "souhait.me",
+    type: "website",
+  },
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
