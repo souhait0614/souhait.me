@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader } from "./_components/Card"
 import * as styles from "./page.css"
 import { NewTabLink } from "./_components/NewTabLink"
-import { getDaysLater } from "./_util"
+import DaysLater from "./_components/DaysLater"
 
 import BasicPage from "@/app/_components/BasicPage"
 import { avatar, banner } from "@/images"
@@ -38,7 +38,9 @@ const Profile = () => (
         <dd>
           <div>
             <Cake strokeWidth={1.5} />
-            <span>5/8 ({getDaysLater(5, 8)}日後)</span>
+            <span>
+              5/8 (<DaysLater month={5} day={8} />)
+            </span>
           </div>
         </dd>
         <dt>主な開発</dt>

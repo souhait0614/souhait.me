@@ -2,9 +2,9 @@ import * as styles from "./page.css"
 
 import BasicPage from "../_components/BasicPage"
 import { Card, CardContent, CardHeader } from "../_components/Card"
-import { getDaysLater } from "../_util"
 import { NewTabLink } from "../_components/NewTabLink"
 import { SouhaitProfileImage } from "../_components/SouhaitProfileImage"
+import DaysLater from "../_components/DaysLater"
 
 import type { Metadata } from "next"
 
@@ -22,7 +22,9 @@ const Product = () => (
             <CardHeader>すえちゃん</CardHeader>
             <dl>
               <dt>誕生日</dt>
-              <dd>6/14 ({getDaysLater(6, 14)}日後)</dd>
+              <dd>
+                6/14 (<DaysLater month={6} day={14} />)
+              </dd>
               <dt>年齢</dt>
               <dd>14~16くらい</dd>
               <dt>性別</dt>
