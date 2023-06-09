@@ -50,6 +50,23 @@ const Product = () => (
       }
     />
     <ProductCard
+      name="api.souhait.me"
+      href="https://api.souhait.me"
+      description={
+        <>
+          <p>自分が使うために作ったWebAPI鯖プログラム(多分SubmarinConverterWebにしか使わない)</p>
+          <p>無駄にHono製 無駄にSSR</p>
+          <p>
+            これも特に意味もなく
+            <NewTabLink href="https://github.com/souhait0614/api.souhait.me">
+              オープンソースとして公開
+            </NewTabLink>
+            しています
+          </p>
+        </>
+      }
+    />
+    <ProductCard
       name="Submarin Converter (Web)"
       href="https://submarin-converter.vercel.app"
       description={
