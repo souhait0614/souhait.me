@@ -13,7 +13,7 @@ globalStyle("a", {
   textDecoration: "none",
 })
 
-globalStyle(`a:hover`, {
+globalStyle("a:hover", {
   textDecoration: "underline",
 })
 
