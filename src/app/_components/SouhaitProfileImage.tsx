@@ -24,7 +24,7 @@ export const SouhaitProfileImage = () => {
   return (
     <div className={styles.container}>
       <Image
-        src={souhaitImages[index]}
+        src={souhaitImages[index] ?? ""}
         height={512}
         width={512}
         alt="すえちゃん"
