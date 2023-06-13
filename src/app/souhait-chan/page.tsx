@@ -1,9 +1,9 @@
 import * as styles from "./page.css"
+import { SouhaitProfileImage } from "./_components/SouhaitProfileImage"
 
 import BasicPage from "../_components/BasicPage"
 import { Card, CardContent, CardHeader } from "../_components/Card"
 import { NewTabLink } from "../_components/NewTabLink"
-import { SouhaitProfileImage } from "../_components/SouhaitProfileImage"
 import DaysLater from "../_components/DaysLater"
 
 import type { Metadata } from "next"

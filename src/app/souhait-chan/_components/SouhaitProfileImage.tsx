@@ -1,7 +1,8 @@
 "use client"
 
 import * as styles from "./SouhaitProfileImage.css"
-import Loading from "./Loading"
+
+import Loading from "../../_components/Loading"
 
 import { souhait, souhaitOld1, souhaitOld2, souhaitOld3 } from "@/images"
 
