@@ -1,4 +1,4 @@
-import { vars } from "../theme.css"
+import { vars } from "@/app/theme.css"
 
 import { style, styleVariants } from "@vanilla-extract/css"
 
