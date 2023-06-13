@@ -21,4 +21,15 @@ export const main = style({
   animationDuration: vars.transition.duration,
   animationTimingFunction: "ease-in-out",
   animationFillMode: "both",
+  position: "relative",
+})
+
+export const h1 = style({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  pointerEvents: "none",
+  opacity: 0,
 })

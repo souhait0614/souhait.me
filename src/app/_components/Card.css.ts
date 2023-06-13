@@ -20,9 +20,10 @@ export const header = style({
   borderBottom: "1px solid",
   borderBottomColor: vars.color.border,
   fontWeight: "bold",
+  fontSize: "initial",
 })
 
-globalStyle(`${content} h3`, {
+globalStyle(`:where(${content} :is(h1, h2, h3, h4, h5))`, {
   marginTop: "1rem",
   fontSize: "1.5rem",
   fontWeight: "bold",

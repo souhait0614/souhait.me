@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 }
 
 const Product = () => (
-  <BasicPage>
+  <BasicPage h1="作ったもの">
     <p>並び順は適当です。</p>
     <ProductCard
       name="souhait.me"
