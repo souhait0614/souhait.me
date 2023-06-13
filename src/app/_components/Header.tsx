@@ -41,6 +41,7 @@ export const pageList: Page[] = [
 
 const Header = () => {
   const pathname = usePathname()
+  const [category = ""] = pathname.split("/").filter((val) => val)
   const hidePage = pageList.filter(({ hide }) => hide).find(({ path }) => pathname === path)
   return (
     <header>
@@ -51,7 +52,7 @@ const Header = () => {
             .map(({ path, label, icon: Icon }) => (
               <li key={path}>
                 <Link href={path}>
-                  <div className={styles.pageLink[pathname === path ? "selected" : "normal"]}>
+                  <div className={styles.pageLink[`/${category}` === path ? "selected" : "normal"]}>
                     <Icon size={16} className={styles.pageLinkIcon} />
                     <div>{label}</div>
                   </div>
