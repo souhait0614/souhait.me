@@ -14,12 +14,12 @@ interface ProductCardProps {
 }
 const ProductCard = ({ name, href, description }: ProductCardProps) => (
   <Card>
-    <section className={styles.productCardContent}>
+    <article className={styles.productCardContent}>
       <h2 className={styles.productName}>
         <NewTabLink href={href}>{name}</NewTabLink>
       </h2>
       {description}
-    </section>
+    </article>
   </Card>
 )
 
