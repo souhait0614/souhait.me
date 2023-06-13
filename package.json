@@ -10,6 +10,7 @@
     "format": "next lint --fix && prettier --write src/"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "@vanilla-extract/css": "^1.11.0",
     "@vanilla-extract/dynamic": "^2.0.3",
     "clsx": "^1.2.1",
