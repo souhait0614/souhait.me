@@ -2,8 +2,8 @@ export const presetEmojiMap = new Map([
   [
     "submarin.online",
     [
-      [":sou:", ":kamo:", ":hai:"],
-      [":hai:", ":aru:", ":nai:", ":iie:", ":sou:"],
+      [":sou:", ":kamo:", ":hai:", ":mate:", ":sue:", ":tako:"],
+      [":hai:", ":aru:", ":nai:", ":iie:", ":sou:", ":mate:", ":dame:"],
       [
         ":a_hiragana:",
         ":ba_hiragana:",
@@ -84,8 +84,8 @@ export const presetEmojiMap = new Map([
   [
     "misskey.io",
     [
-      [":youkoso_sou:", ":kamo:", ":hai:"],
-      [":hai:", ":aru:", ":nai:", ":iie:", ":youkoso_sou:"],
+      [":youkoso_sou:", ":kamo:", ":hai:", ":gaba:", ":nemu:", ":otsu:", ":tako:"],
+      [":hai:", ":aru:", ":nai:", ":iie:", ":youkoso_sou:", ":dame:"],
       [
         ":basilisk_a:",
         ":basilisk_e:",
