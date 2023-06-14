@@ -196,7 +196,6 @@ export const presetEmojiMap = new Map([
         ":_u:",
         ":_vu:",
         ":_wa:",
-        ":_wave:",
         ":_we:",
         ":_we2:",
         ":_wi:",
@@ -217,7 +216,7 @@ export const presetEmojiMap = new Map([
   [
     "mk.shrimpia.network",
     [
-      [":sou:", ":kamo:", ":aho:", ":emo:", ":hai:"],
+      [":sou:", ":kamo:", ":aho:", ":emo:", ":hai:", ":yamo:"],
       [":hai:", ":aru:", ":nai:", ":iie:", ":aho:", ":sou:"],
       [":to:", ":a:", ":eti_e:", ":oltu:", ":eti_a2:", ":eti_n:", ":eti_n2:", ":eti_o:", ":yon:"],
     ],
