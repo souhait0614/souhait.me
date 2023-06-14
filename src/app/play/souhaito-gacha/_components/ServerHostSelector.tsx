@@ -4,20 +4,14 @@ import { presetEmojiMapIds } from "../_presetEmojiMap"
 
 import { souhaitoGachaSelectedServerHostAtom } from "@/app/_atom"
 
-import { memo, useState } from "react"
+import { memo } from "react"
 import { useAtom } from "jotai"
-import { useMount } from "react-use"
 
 import type { ComponentProps } from "react"
 
 const ServerHostSelector = (props: ComponentProps<"select">) => {
   const [selectedServerHost, setSelectedServerHost] = useAtom(souhaitoGachaSelectedServerHostAtom)
   const hosts = [...presetEmojiMapIds]
-  const [showEmptyOption, setShowEmptyOption] = useState(true)
-
-  useMount(() => {
-    setShowEmptyOption(false)
-  })
 
   return (
     <select
@@ -27,7 +21,7 @@ const ServerHostSelector = (props: ComponentProps<"select">) => {
         setSelectedServerHost(value as (typeof presetEmojiMapIds)[number])
       }}
     >
-      {showEmptyOption && <option value=""></option>}
+      {!selectedServerHost && <option value="">未選択</option>}
       {hosts.map((host) => (
         <option key={host} value={host}>
           {host}
