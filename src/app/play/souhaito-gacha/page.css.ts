@@ -77,4 +77,10 @@ export const shareContainer = style({
   justifyContent: "center",
   alignItems: "center",
   gap: "0.5rem",
+  "@media": {
+    "screen and (max-width: 450px)": {
+      borderRadius: "1rem",
+      flexDirection: "column-reverse",
+    },
+  },
 })
