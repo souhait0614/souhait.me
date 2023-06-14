@@ -2,7 +2,7 @@
 
 import * as styles from "./Header.css"
 
-import { Home, Packages, Snowflake, Star } from "tabler-icons-react"
+import { Home, Packages, PlayCard, Snowflake, Star } from "tabler-icons-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -25,6 +25,11 @@ export const pageList: Page[] = [
     label: "すえちゃん",
     path: "/souhait-chan",
     icon: Star,
+  },
+  {
+    label: "お遊び",
+    path: "/play",
+    icon: PlayCard,
   },
   {
     label: "作ったもの",

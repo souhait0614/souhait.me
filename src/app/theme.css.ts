@@ -12,6 +12,7 @@ export const [lightTheme, vars] = createTheme({
     container: rgb(254, 252, 254),
     accent: rgb(0, 126, 102),
     border: rgba(66, 66, 66, 0.2),
+    disabled: rgb(128, 128, 128),
   },
   shape: {
     radius: "0.5rem",
