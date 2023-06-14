@@ -23,7 +23,7 @@ const PostButton = ({ className, ...props }: ComponentPropsWithRef<"button">) =>
   return !selectedServerHost ? (
     <Button disabled className={clsx(styles.button, className)} {...props}>
       <Send className={styles.icon} />
-      <span>絵文字読み込み中</span>
+      <span>サーバー読み込み中</span>
     </Button>
   ) : (
     <Button asChild className={clsx(styles.button, className)} {...props}>
