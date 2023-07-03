@@ -33,6 +33,7 @@ interface Link {
 const gyaguLinkList: Link[] = [
   { href: "https://midra.me" },
   { href: "https://lunachi.me/gyagu/" },
+  { href: "https://l1n4r1.art/gyagu/" },
   { href: "https://sunset0916.net/gyagu/" },
   { href: "https://hayao0819.com/#Gyagu" },
   { href: "https://lutica.net/gyagu/" },
