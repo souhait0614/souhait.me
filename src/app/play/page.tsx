@@ -3,8 +3,10 @@ import * as styles from "./page.css"
 import BasicPage from "../_components/BasicPage"
 import { Card } from "../_components/Card"
 import { NewTabLink } from "../_components/NewTabLink"
+import { baseMetadata } from "../_baseMetadata"
 
 import Link from "next/link"
+import merge from "ts-deepmerge"
 
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
@@ -25,9 +27,18 @@ const AppCard = ({ name, href, description }: AppCardProps) => (
   </Card>
 )
 
-export const metadata: Metadata = {
+export const metadata: Metadata = merge(baseMetadata, {
   title: "お遊び",
-}
+  description: "個別で置くほどじゃないものを置いてます",
+  openGraph: {
+    title: "お遊び",
+    description: "個別で置くほどじゃないものを置いてます",
+  },
+  twitter: {
+    title: "お遊び",
+    description: "個別で置くほどじゃないものを置いてます",
+  },
+})
 
 const Play = () => (
   <BasicPage h1="お遊び">

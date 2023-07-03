@@ -3,6 +3,9 @@ import * as styles from "./page.css"
 import BasicPage from "../_components/BasicPage"
 import { Card } from "../_components/Card"
 import { NewTabLink } from "../_components/NewTabLink"
+import { baseMetadata } from "../_baseMetadata"
+
+import merge from "ts-deepmerge"
 
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
@@ -23,9 +26,18 @@ const ProductCard = ({ name, href, description }: ProductCardProps) => (
   </Card>
 )
 
-export const metadata: Metadata = {
+export const metadata: Metadata = merge(baseMetadata, {
   title: "作ったもの",
-}
+  description: "ポートフォリオっぽい何か",
+  openGraph: {
+    title: "作ったもの",
+    description: "ポートフォリオっぽい何か",
+  },
+  twitter: {
+    title: "作ったもの",
+    description: "ポートフォリオっぽい何か",
+  },
+})
 
 const Product = () => (
   <BasicPage h1="作ったもの">

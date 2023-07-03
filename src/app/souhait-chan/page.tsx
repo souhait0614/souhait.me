@@ -5,12 +5,24 @@ import BasicPage from "../_components/BasicPage"
 import { Card, CardContent, CardHeader } from "../_components/Card"
 import { NewTabLink } from "../_components/NewTabLink"
 import DaysLater from "../_components/DaysLater"
+import { baseMetadata } from "../_baseMetadata"
+
+import merge from "ts-deepmerge"
 
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = merge(baseMetadata, {
   title: "すえちゃんについて",
-}
+  description: "いわゆるうちの子です",
+  openGraph: {
+    title: "すえちゃんについて",
+    description: "いわゆるうちの子です",
+  },
+  twitter: {
+    title: "すえちゃんについて",
+    description: "いわゆるうちの子です",
+  },
+})
 
 const Product = () => (
   <BasicPage>

@@ -3,9 +3,11 @@ import * as styles from "./page.css"
 import BasicPage from "../_components/BasicPage"
 import { NewTabLink } from "../_components/NewTabLink"
 import { Card, CardContent, CardHeader } from "../_components/Card"
+import { baseMetadata } from "../_baseMetadata"
 
 import { M_PLUS_Rounded_1c, IBM_Plex_Sans_JP } from "next/font/google"
 import { assignInlineVars } from "@vanilla-extract/dynamic"
+import merge from "ts-deepmerge"
 
 import type { Metadata } from "next"
 
@@ -16,14 +18,23 @@ const font = M_PLUS_Rounded_1c({
 
 const plex = IBM_Plex_Sans_JP({ subsets: ["latin", "latin-ext"], weight: "400" })
 
-export const metadata: Metadata = {
+export const metadata: Metadata = merge(baseMetadata, {
   title: "お探しのページは存在しません",
+  description: "お探しのページは存在しません",
+  openGraph: {
+    title: "お探しのページは存在しません",
+    description: "お探しのページは存在しません",
+  },
+  twitter: {
+    title: "お探しのページは存在しません",
+    description: "お探しのページは存在しません",
+  },
   robots: {
     index: false,
     follow: false,
     nocache: true,
   },
-}
+})
 
 interface Link {
   href: string

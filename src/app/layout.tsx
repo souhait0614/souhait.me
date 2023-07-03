@@ -3,38 +3,41 @@ import ComponentLoading from "./loading"
 import * as styles from "./layout.css"
 import { lightTheme } from "./theme.css"
 import Analytics from "./_components/Analytics"
+import { baseMetadata } from "./_baseMetadata"
 
 import Header from "@/app/_components/Header"
-import { icon } from "@/images"
 
 import { IBM_Plex_Sans_JP } from "next/font/google"
 import { Suspense } from "react"
 import clsx from "clsx"
 import { Copyright } from "tabler-icons-react"
+import merge from "ts-deepmerge"
 
 import type { Metadata } from "next"
 
 const plex = IBM_Plex_Sans_JP({ subsets: ["latin", "latin-ext"], weight: "400" })
 
-export const metadata: Metadata = {
+export const metadata: Metadata = merge(baseMetadata, {
   title: {
     template: "%s | souhait.me",
     absolute: "souhait.me",
   },
   description: "すえとすえちゃんのサイト",
-  icons: icon,
-  metadataBase: new URL("https://souhait.me"),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
-    title: "souhait.me",
+    title: {
+      template: "%s | souhait.me",
+      absolute: "souhait.me",
+    },
     description: "すえとすえちゃんのサイト",
-    url: "/",
-    siteName: "souhait.me",
-    type: "website",
   },
-}
+  twitter: {
+    title: {
+      template: "%s | souhait.me",
+      absolute: "souhait.me",
+    },
+    description: "すえとすえちゃんのサイト",
+  },
+})
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="ja" className={clsx(plex.className, lightTheme)}>
