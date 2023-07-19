@@ -21,6 +21,10 @@ globalStyle("s", {
   textDecoration: "line-through",
 })
 
+globalStyle("u", {
+  textDecoration: "underline",
+})
+
 globalStyle("rt", {
   fontSize: "50%",
   textAlign: "start",

@@ -7,7 +7,10 @@ import { NewTabLink } from "../_components/NewTabLink"
 import DaysLater from "../_components/DaysLater"
 import { baseMetadata } from "../_baseMetadata"
 
+import { art } from "@/images"
+
 import merge from "ts-deepmerge"
+import Image from "next/image"
 
 import type { Metadata } from "next"
 
@@ -23,6 +26,23 @@ export const metadata: Metadata = merge(baseMetadata, {
     description: "いわゆるうちの子です",
   },
 })
+
+interface Art {
+  src: string
+  href: string
+  alt: string
+  width: number
+  height: number
+}
+const arts = [
+  {
+    src: art.sakananoonigiri1,
+    href: "https://submarin.online/notes/9hd9mu9vdw",
+    alt: "全体図",
+    width: 256 + 128,
+    height: 256 + 128,
+  },
+] as const satisfies ReadonlyArray<Art>
 
 const Product = () => (
   <BasicPage>
@@ -60,7 +80,22 @@ const Product = () => (
     <Card>
       <CardContent>
         <CardHeader>ギャラリー</CardHeader>
-        <p>ファンアート置き場予定地</p>
+        <div className={styles.galleryImagesContainer}>
+          {arts.map(({ src, href, alt, width, height }, i) => (
+            <a key={i} href={href} target="blank">
+              <Image
+                width={width}
+                height={height}
+                src={src}
+                alt={alt}
+                className={styles.galleryImage}
+              />
+            </a>
+          ))}
+        </div>
+        <p style={{ textAlign: "center" }}>
+          <u style={{ userSelect: "all" }}>#す絵</u> で絶賛募集中かも
+        </p>
       </CardContent>
     </Card>
     <Card>
