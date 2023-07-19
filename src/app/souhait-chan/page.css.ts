@@ -19,6 +19,7 @@ export const galleryImagesContainer = style({
   display: "grid",
   gridTemplateColumns: "1fr 1fr",
   justifyItems: "center",
+  alignItems: "center",
   selectors: {
     "&:has(> *:only-of-type)": {
       gridTemplateColumns: "1fr",
