@@ -79,6 +79,19 @@ const Product = () => (
       }
     />
     <ProductCard
+      name="Monesting"
+      href="https://github.com/souhait0614/monesting"
+      description={
+        <>
+          <p>完全自分用サブスクリプション管理Webアプリ</p>
+          <p>
+            SvelteKitがいい感じだったのでSMUIと組み合わせて作りました <s>でもSMUIやめたい</s>
+          </p>
+          <p>誰でも使える形での一般公開はしてないです</p>
+        </>
+      }
+    />
+    <ProductCard
       name="Submarin Converter (Web)"
       href="https://submarin-converter.vercel.app"
       description={
