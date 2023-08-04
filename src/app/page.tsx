@@ -89,7 +89,7 @@ const Home = () => (
               <NewTabLink href="https://github.com/souhait0614">GitHub</NewTabLink>
             </li>
             <li>
-              <NewTabLink href="https://twitter.com/ElectronicsBot">Twitter</NewTabLink>
+              <NewTabLink href="https://x.com/ElectronicsBot">𝕏</NewTabLink>
             </li>
           </ul>
         </section>
