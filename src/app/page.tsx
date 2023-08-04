@@ -47,7 +47,7 @@ const Profile = () => (
         <dd>
           <div>
             <Code strokeWidth={1.5} />
-            <span>TypeScript / React / SolidJS</span>
+            <span>TypeScript / React / SolidJS / Svelte</span>
           </div>
         </dd>
         <dt>好みのゲームジャンル</dt>
