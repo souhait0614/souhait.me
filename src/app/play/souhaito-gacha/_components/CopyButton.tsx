@@ -1,34 +1,16 @@
 "use client"
 
-import * as styles from "./PostButton.css"
-
 import { makeNoteContent } from "../_makeNoteContent"
+import ComponentCopyButton from "../../_components/CopyButton"
 
-import { Button } from "@/app/_components/Button"
 import { souhaitoGachaResultAtom } from "@/app/_atom"
 
-import { Copy } from "tabler-icons-react"
-import { memo, type ComponentPropsWithRef } from "react"
+import { memo } from "react"
 import { useAtomValue } from "jotai"
-import clsx from "clsx"
-import { useCopyToClipboard } from "react-use"
 
-const CopyButton = ({ className, ...props }: ComponentPropsWithRef<"button">) => {
-  const [, copy] = useCopyToClipboard()
+const CopyButton = () => {
   const result = useAtomValue(souhaitoGachaResultAtom)
-  return (
-    <Button
-      buttonColor="transparent"
-      className={clsx(styles.button, className)}
-      onClick={() => {
-        copy(makeNoteContent(result ?? ["", "", ""]))
-      }}
-      {...props}
-    >
-      <Copy className={styles.icon} />
-      <span>コピー</span>
-    </Button>
-  )
+  return <ComponentCopyButton copyString={makeNoteContent(result ?? ["", "", ""])} />
 }
 
 export default memo(CopyButton)

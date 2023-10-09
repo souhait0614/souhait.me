@@ -1,8 +1,8 @@
-import { presetEmojiMap } from "../souhaito-gacha/_presetEmojiMap"
+import { presetEmojiMap } from "./presetEmojiMap"
 
 import { randomValue } from "@/app/_util"
 
-import type { PresetEmojiMapId } from "../souhaito-gacha/_presetEmojiMap"
+import type { PresetEmojiMapId } from "./presetEmojiMap"
 
 export const raffle = (arr: readonly string[]) => arr[randomValue(0, arr.length - 1)] ?? ""
 

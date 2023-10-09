@@ -1,6 +1,6 @@
 "use client"
 
-import { gacha } from "../../_util/souhaito-gacha"
+import { gacha } from "../../_util/souhait-gacha/gacha"
 
 import { souhaitoGachaResultAtom, souhaitoGachaSelectedServerHostAtom } from "@/app/_atom"
 import { Button } from "@/app/_components/Button"

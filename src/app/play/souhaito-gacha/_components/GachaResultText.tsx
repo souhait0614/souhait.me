@@ -1,7 +1,7 @@
 "use client"
 import * as styles from "./GachaResultText.css"
 
-import { presetEmojiMap } from "../_presetEmojiMap"
+import { presetEmojiMap } from "../../_util/souhait-gacha/presetEmojiMap"
 
 import { souhaitoGachaResultAtom, souhaitoGachaSelectedServerHostAtom } from "@/app/_atom"
 

@@ -1,7 +1,7 @@
 import { atom } from "jotai"
 import { atomWithStorage } from "jotai/utils"
 
-import type { PresetEmojiMapId } from "./play/souhaito-gacha/_presetEmojiMap"
+import type { PresetEmojiMapId } from "./play/_util/souhait-gacha/presetEmojiMap"
 
 export const souhaitoGachaSelectedServerHostAtom = atomWithStorage<PresetEmojiMapId | "">(
   "souhaito-gacha_selected-server-host",

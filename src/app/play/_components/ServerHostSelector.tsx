@@ -1,6 +1,6 @@
 "use client"
 
-import { presetEmojiMapIds } from "../_presetEmojiMap"
+import { presetEmojiMapIds } from "../_util/souhait-gacha/presetEmojiMap"
 
 import { souhaitoGachaSelectedServerHostAtom } from "@/app/_atom"
 

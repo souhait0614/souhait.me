@@ -1,9 +1,10 @@
 import * as styles from "./page.css"
 import GachaResult from "./_components/GachaResultText"
-import ServerHostSelector from "./_components/ServerHostSelector"
 import RunGachaButton from "./_components/RunGachaButton"
-import PostButton from "./_components/PostButton"
+import ComponentPostButton from "./_components/PostButton"
 import CopyButton from "./_components/CopyButton"
+
+import ServerHostSelector from "../_components/ServerHostSelector"
 
 import BasicPage from "@/app/_components/BasicPage"
 import { Card } from "@/app/_components/Card"
@@ -42,7 +43,7 @@ const SouhaitoGacha = () => (
     </Card>
     <div className={styles.shareContainer}>
       <CopyButton />
-      <PostButton />
+      <ComponentPostButton />
     </div>
   </BasicPage>
 )
