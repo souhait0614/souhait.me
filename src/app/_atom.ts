@@ -9,3 +9,4 @@ export const souhaitoGachaSelectedServerHostAtom = atomWithStorage<PresetEmojiMa
 )
 
 export const souhaitoGachaResultAtom = atom<[string, string, string] | null>(null)
+export const souhaitoGachaTenResultAtom = atom<[string, string, string][] | null>(null)

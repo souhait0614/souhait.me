@@ -58,6 +58,22 @@ const Play = () => (
         </>
       }
     />
+    <AppCard
+      name="そうはいとガチャ 10連"
+      href="souhaito-gacha-ten"
+      description={
+        <>
+          <p>絵文字がランダムで三つ×10出力され、結果をMisskeyに投稿したりコピーしたりできます。</p>
+          <p>
+            <s>本当になにこれ</s>
+          </p>
+          <p>
+            <NewTabLink href="https://submarin.online/@f/pages/souhait">これ</NewTabLink>
+            を勝手に移植・改造しました
+          </p>
+        </>
+      }
+    />
   </BasicPage>
 )
 

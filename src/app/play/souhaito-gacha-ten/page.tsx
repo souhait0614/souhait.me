@@ -1,8 +1,8 @@
-import * as styles from "./page.css"
 import GachaResult from "./_components/GachaResultText"
 import RunGachaButton from "./_components/RunGachaButton"
-import PostButton from "./_components/PostButton"
+import ComponentPostButton from "./_components/PostButton"
 import CopyButton from "./_components/CopyButton"
+import * as styles from "./page.css"
 
 import ServerHostSelector from "../_components/ServerHostSelector"
 
@@ -16,38 +16,40 @@ import merge from "ts-deepmerge"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = merge(baseMetadata, {
-  title: "そうはいとガチャ",
-  description: "絵文字がランダムで三つ出力され、結果をMisskeyに投稿したりコピーしたりできます。",
+  title: "そうはいとガチャ 10連",
+  description: "絵文字がランダムで三つ×10出力され、結果をMisskeyに投稿したりコピーしたりできます。",
   openGraph: {
-    title: "そうはいとガチャ",
-    description: "絵文字がランダムで三つ出力され、結果をMisskeyに投稿したりコピーしたりできます。",
+    title: "そうはいとガチャ 10連",
+    description:
+      "絵文字がランダムで三つ×10出力され、結果をMisskeyに投稿したりコピーしたりできます。",
   },
   twitter: {
-    title: "そうはいとガチャ",
-    description: "絵文字がランダムで三つ出力され、結果をMisskeyに投稿したりコピーしたりできます。",
+    title: "そうはいとガチャ 10連",
+    description:
+      "絵文字がランダムで三つ×10出力され、結果をMisskeyに投稿したりコピーしたりできます。",
   },
 })
 
 const SouhaitoGacha = () => (
   <BasicPage>
     <Card className={styles.resultCard}>
-      <h1 className={styles.title}>そうはいとガチャ</h1>
-      <p className={styles.resultText}>
+      <h1 className={styles.title}>そうはいとガチャ 10連</h1>
+      <div className={styles.resultText}>
         <GachaResult />
-      </p>
+      </div>
       <div className={styles.actionSelectContainer}>
         <ServerHostSelector className={styles.actionSelect} />
       </div>
       <div className={styles.actionGachaGrope}>
-        <RunGachaButton className={styles.actionGacha}>ガチャを回す</RunGachaButton>
         <Button className={styles.actionGacha} asChild>
-          <a href="./souhaito-gacha-ten">10連ガチャを回す</a>
+          <a href="./souhaito-gacha">ガチャを回す</a>
         </Button>
+        <RunGachaButton className={styles.actionGacha}>10連ガチャを回す</RunGachaButton>
       </div>
     </Card>
     <div className={styles.shareContainer}>
       <CopyButton />
-      <PostButton />
+      <ComponentPostButton />
     </div>
   </BasicPage>
 )

@@ -16,9 +16,7 @@ export const title = style({
 })
 
 export const resultText = style({
-  height: "2em",
-  display: "flex",
-  alignItems: "center",
+  height: "20em",
 })
 
 export const actionSelectContainer = style({

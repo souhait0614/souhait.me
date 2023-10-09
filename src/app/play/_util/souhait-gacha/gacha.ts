@@ -10,7 +10,7 @@ export type ResultEmojis = [string, string, string]
 
 export const gacha = (serverHost: PresetEmojiMapId) => {
   const candidateEmojisList = presetEmojiMap.get(serverHost)
-  if (!candidateEmojisList) return null
+  if (!candidateEmojisList) return ["", "", ""] as ResultEmojis
   const resultEmojis = candidateEmojisList.map((candidateEmojis) => raffle(candidateEmojis))
   return resultEmojis as ResultEmojis
 }
