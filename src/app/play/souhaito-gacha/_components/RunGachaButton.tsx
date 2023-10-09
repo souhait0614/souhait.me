@@ -1,3 +1,4 @@
+/* eslint-disable unused-imports/no-unused-vars */
 "use client"
 
 import { presetEmojiMap } from "../_presetEmojiMap"
@@ -10,7 +11,12 @@ import { useAtomValue, useSetAtom } from "jotai"
 
 import type { ComponentPropsWithRef } from "react"
 
-const raffle = (arr: readonly string[]) => arr[Math.floor(Math.random() * arr.length)] ?? ""
+const raffle = (arr: readonly string[]) => {
+  const randomBuffer = crypto.getRandomValues(new Uint32Array(1))
+  const randomNumber = randomBuffer[0]! / (0xffffffff + 1)
+  const index = Math.floor(randomNumber * arr.length)
+  return arr[index] ?? ""
+}
 
 const RunGachaButton = (props: ComponentPropsWithRef<"button">) => {
   const selectedServerHost = useAtomValue(souhaitoGachaSelectedServerHostAtom)
