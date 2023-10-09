@@ -328,3 +328,4 @@ export const presetEmojiMap = new Map([
 >)
 
 export const presetEmojiMapIds = [...presetEmojiMap.keys()]
+export type PresetEmojiMapId = (typeof presetEmojiMapIds)[number]
