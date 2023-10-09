@@ -323,6 +323,8 @@ export const presetEmojiMap = new Map([
       ],
     ],
   ],
-] as const satisfies ReadonlyArray<readonly [string, readonly [readonly string[], readonly string[], readonly string[]]]>)
+] as const satisfies ReadonlyArray<
+  readonly [string, readonly [readonly string[], readonly string[], readonly string[]]]
+>)
 
 export const presetEmojiMapIds = [...presetEmojiMap.keys()]

@@ -6,7 +6,7 @@ import BasicPage from "@/app/_components/BasicPage"
 const Loading = () => {
   return (
     <BasicPage>
-      <ComponentLoading className={styles.loading}/>
+      <ComponentLoading className={styles.loading} />
     </BasicPage>
   )
 }
