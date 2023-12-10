@@ -110,9 +110,16 @@ const Home = () => (
           リズムゲームばっかりやってます。たまにMinecraftやらTerrariaやらのサンドボックスをやったり
         </p>
         <p>
-          2023年現在はProject DIVA MEGA39&#39;s+をひたすらやっています。
+          2023年12月現在は
+          <NewTabLink href="https://world-dai-star.com/game">
+            ワールドダイスター 夢のステラリウム
+          </NewTabLink>
+          に浸かっています
+        </p>
+        <p>
+          ユメステリリース前はProject DIVA MEGA39&#39;s+をひたすらやっていました。
           <NewTabLink href="https://submarin.online/notes/9cvsn71ik9">
-            専用アケコンも買ってしまいました
+            専用アケコンもあります
           </NewTabLink>
         </p>
       </CardContent>
