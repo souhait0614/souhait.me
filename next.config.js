@@ -8,8 +8,8 @@ const nextConfig = {
   //   appDir: true,
   // },
   images: {
-    domains: ["img.souhait.me"]
-  }
+    domains: ["img.souhait.me"],
+  },
 }
 
 module.exports = withVanillaExtract(nextConfig)
