@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "next lint --fix && prettier --write src/"
+    "format": "next lint --fix && prettier --write ./"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
