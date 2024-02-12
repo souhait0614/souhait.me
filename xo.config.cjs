@@ -11,7 +11,14 @@ module.exports = {
 				parser: '@typescript-eslint/parser',
 				extraFileExtensions: ['.astro'],
 			},
-			rules: {},
 		},
 	],
+	rules: {
+		'unicorn/prevent-abbreviations': [
+			'error',
+			{
+				ignore: ['Props'],
+			},
+		],
+	},
 };
