@@ -14,6 +14,7 @@ module.exports = {
 		},
 	],
 	rules: {
+		'import/extensions': ['error', 'never'],
 		'unicorn/prevent-abbreviations': [
 			'error',
 			{
