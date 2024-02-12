@@ -1,5 +1,28 @@
 {
-  "cSpell.words": [
-    "souhait"
-  ]
+  "cSpell.words": ["souhait"],
+	"editor.formatOnSave": true,
+	"xo.enable": true,
+	"xo.format.enable": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "samverschueren.linter-xo"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "samverschueren.linter-xo"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "samverschueren.linter-xo"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "samverschueren.linter-xo"
+	},
+  "[astro]": {
+		"editor.defaultFormatter": "samverschueren.linter-xo"
+  },
+  "xo.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "astro"
+  ],
 }
