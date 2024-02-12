@@ -21,6 +21,12 @@ module.exports = {
 				astro: 'always',
 			},
 		],
+		'import/no-unassigned-import': [
+			'error',
+			{
+				allow: ['modern-normalize'],
+			},
+		],
 		'unicorn/prevent-abbreviations': [
 			'error',
 			{

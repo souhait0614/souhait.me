@@ -11,6 +11,12 @@ dependencies:
   astro:
     specifier: ^4.3.5
     version: 4.3.5(typescript@5.3.3)
+  astro-seo:
+    specifier: ^0.8.0
+    version: 0.8.0
+  modern-normalize:
+    specifier: ^2.0.0
+    version: 2.0.0
 
 devDependencies:
   eslint-plugin-astro:
@@ -1515,6 +1521,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /astro-seo@0.8.0:
+    resolution: {integrity: sha512-7gq6lhibCM8FuzZIJlbLLWP5EJ9KL2/4XqeFrAg9O6ZK2xMFxJ5ubKf+a0VJwwTu8W8Xr421CmpiXu6Hq7n/7Q==}
+    dev: false
 
   /astro@4.3.5(typescript@5.3.3):
     resolution: {integrity: sha512-7jPffNlcmDO94NlkWe/hUWta/pIjlx1LVD/DZb/fyjT1Jv+7mGhKZBIjkDfeVpequW70mep8cAS5RM7Pxa0Gdg==}
@@ -4540,6 +4550,11 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /modern-normalize@2.0.0:
+    resolution: {integrity: sha512-CxBoEVKh5U4DH3XuNbc5ONLF6dQBc8dSc7pdZ1957FGbIO5JBqGqqchhET9dTexri8/pk9xBL6+5ceOtCIp1QA==}
+    engines: {node: '>=6'}
+    dev: false
 
   /ms@2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}

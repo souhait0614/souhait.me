@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.2",
-    "astro": "^4.3.5"
+    "astro": "^4.3.5",
+    "astro-seo": "^0.8.0",
+    "modern-normalize": "^2.0.0"
   },
   "devDependencies": {
     "eslint-plugin-astro": "^0.31.4",
