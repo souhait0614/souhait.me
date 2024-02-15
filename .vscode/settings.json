@@ -16,7 +16,10 @@
 		"editor.defaultFormatter": "samverschueren.linter-xo"
 	},
   "[astro]": {
-		"editor.defaultFormatter": "samverschueren.linter-xo"
+		"editor.defaultFormatter": "samverschueren.linter-xo",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.stylelint": "explicit"
+		}
   },
   "xo.validate": [
     "javascript",
@@ -25,4 +28,10 @@
     "typescriptreact",
     "astro"
   ],
+	"stylelint.validate": [
+		"css",
+		"scss",
+		"postcss",
+		"astro"
+	]
 }
