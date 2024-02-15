@@ -33,5 +33,6 @@
 		"scss",
 		"postcss",
 		"astro"
-	]
+	],
+	"prettier.configPath": "prettier.config.cjs"
 }
