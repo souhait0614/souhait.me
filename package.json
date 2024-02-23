@@ -1,33 +1,33 @@
 {
-  "name": "souhait.me",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "lint": "xo && stylelint",
-    "fix": "prettier --write . && xo --fix && stylelint --fix"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.5.2",
-    "astro": "^4.3.5",
-    "astro-seo": "^0.8.0",
-    "modern-normalize": "^2.0.0"
-  },
-  "devDependencies": {
-    "eslint-plugin-astro": "^0.31.4",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "postcss-html": "^1.6.0",
-    "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.13.0",
-    "sass": "^1.70.0",
-    "stylelint": "^16.2.1",
-    "stylelint-config-recess-order": "^4.6.0",
-    "stylelint-config-recommended-scss": "^14.0.0",
-    "typescript": "^5.3.3",
-    "xo": "^0.57.0"
-  }
+	"name": "souhait.me",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "xo && stylelint",
+		"fix": "prettier --write . && xo --fix && stylelint --fix"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.5.2",
+		"astro": "^4.3.5",
+		"astro-seo": "^0.8.0",
+		"modern-normalize": "^2.0.0"
+	},
+	"devDependencies": {
+		"eslint-plugin-astro": "^0.31.4",
+		"eslint-plugin-jsx-a11y": "^6.8.0",
+		"postcss-html": "^1.6.0",
+		"prettier": "^3.2.5",
+		"prettier-plugin-astro": "^0.13.0",
+		"sass": "^1.70.0",
+		"stylelint": "^16.2.1",
+		"stylelint-config-recess-order": "^4.6.0",
+		"stylelint-config-recommended-scss": "^14.0.0",
+		"typescript": "^5.3.3",
+		"xo": "^0.57.0"
+	}
 }
