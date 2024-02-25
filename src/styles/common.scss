@@ -1,0 +1,14 @@
+@use './colors.scss' as c;
+
+* {
+	accent-color: c.$accent;
+}
+
+a {
+	color: c.$accent;
+	text-decoration: none;
+
+	&:is(:hover, :focus, :active) {
+		text-decoration: underline;
+	}
+}

@@ -1,7 +1,7 @@
 export const origin = 'https://img.souhait.me';
 
 export const icon = `${origin}/icon.png`;
-export const banner = `${origin}/banner.png`;
+export const banner = `${origin}/banner2.png`;
 export const avatar = `${origin}/avatar.png`;
 export const souhait = `${origin}/souhait.png`;
 export const souhaitOld = [

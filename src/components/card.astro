@@ -1,0 +1,21 @@
+---
+import type {HTMLAttributes} from 'astro/types';
+
+export type Props = HTMLAttributes<'div'>;
+---
+
+<div {...Astro.props}>
+	<slot />
+</div>
+
+<style lang='scss'>
+	@use '@/styles/colors' as c;
+	@use '@/styles/shapes' as s;
+
+	div {
+		overflow: hidden;
+		background-color: c.$container;
+		border-radius: s.$radius;
+		box-shadow: 0 0 3rem rgba(c.$border, 0.05);
+	}
+</style>
