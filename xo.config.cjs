@@ -2,6 +2,7 @@
 module.exports = {
 	extensions: ['astro'],
 	extends: ['plugin:astro/recommended', 'plugin:astro/jsx-a11y-recommended'],
+	plugins: ['unused-imports'],
 	prettier: true,
 	overrides: [
 		{
@@ -14,6 +15,17 @@ module.exports = {
 		},
 	],
 	rules: {
+		'@typescript-eslint/no-unused-vars': 'off',
+		'unused-imports/no-unused-imports': 'warn',
+		'unused-imports/no-unused-vars': [
+			'warn',
+			{
+				vars: 'all',
+				varsIgnorePattern: '^_',
+				args: 'after-used',
+				argsIgnorePattern: '^_',
+			},
+		],
 		'import/extensions': [
 			'error',
 			'never',
