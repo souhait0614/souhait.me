@@ -8,7 +8,7 @@ import {transitionNames} from '@/constants/transition';
 import ExternalLink from '@/components/external-link.astro';
 ---
 
-<BaseLayout title='' description='すえのサイト'>
+<BaseLayout title='すえについて' description='あばうとみー'>
 	<div class='stack'>
 		<Card transition:name={transitionNames.profileCard}>
 			<ProfileContent />
@@ -35,6 +35,7 @@ import ExternalLink from '@/components/external-link.astro';
 					>が書けます。
 				</p>
 				<p>バックエンドもちょっとできます。</p>
+				<p>公開済みの制作物は<a href='/product'>ここ</a>に載せてあります</p>
 			</CardBody>
 		</Card>
 		<Card>
