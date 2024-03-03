@@ -36,7 +36,7 @@ const showHeader = Astro.url.pathname !== '/';
 		<main transition:animate={transitionAnimate}>
 			<slot />
 		</main>
-		<footer>©2024 すえ</footer>
+		<footer><small class='copyright'>©2024 すえ</small></footer>
 
 		<style lang='scss'>
 			@use '@/styles/breakpoints' as bp;
@@ -68,7 +68,10 @@ const showHeader = Astro.url.pathname !== '/';
 				background-color: c.$bg;
 
 				> header {
+					display: flex;
 					grid-area: header;
+					align-items: center;
+					justify-content: space-between;
 				}
 
 				> main {
@@ -84,6 +87,16 @@ const showHeader = Astro.url.pathname !== '/';
 			.back {
 				display: flex;
 				align-items: center;
+				padding-right: 0.5rem;
+				background-color: c.$bg;
+				border-radius: s.$radius;
+			}
+
+			.copyright {
+				padding: 0 0.5rem;
+				font-size: 1rem;
+				background-color: c.$bg;
+				border-radius: s.$radius;
 			}
 		</style>
 	</body>
