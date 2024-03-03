@@ -14,6 +14,9 @@ dependencies:
   '@fontsource/ibm-plex-sans-jp':
     specifier: ^5.0.11
     version: 5.0.11
+  '@fontsource/m-plus-rounded-1c':
+    specifier: ^5.0.11
+    version: 5.0.11
   '@iconify-json/arcticons':
     specifier: ^1.1.95
     version: 1.1.95
@@ -784,6 +787,10 @@ packages:
 
   /@fontsource/ibm-plex-sans-jp@5.0.11:
     resolution: {integrity: sha512-29esZO2S1zERX2uSpfxfeh9TqDqcCZOQ0nLxyK6oC+lnJ5vZG1uDYKK/SBrvaZq9vC9e7iSi9KPWPKSf3tbH6g==}
+    dev: false
+
+  /@fontsource/m-plus-rounded-1c@5.0.11:
+    resolution: {integrity: sha512-YmGf0fCJ+7ZBQfyVwHY0n0/vC+eGBaxbBgHwTJDDw+mxo3KjCZkTu4Dq9p7omwKRqyyesk7hhtW0S/Gq/nXB8A==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.14:
