@@ -1,0 +1,61 @@
+---
+import type {HTMLAttributes} from 'astro/types';
+
+interface Link {
+	href: string;
+	label: string;
+}
+
+const links: Link[] = [
+	{
+		href: '/about-me',
+		label: 'すえ',
+	},
+	{
+		href: '/souhait-chan',
+		label: 'すえちゃん',
+	},
+	{
+		href: '/product',
+		label: '作ったもの',
+	},
+];
+
+type Props = HTMLAttributes<'nav'>;
+---
+
+<nav {...Astro.props}>
+	<ul>
+		{
+			links.map(({href, label}) => (
+				<li transition:name={`nav-link-${href}`}>
+					{href === Astro.url.pathname ? (
+						<span>{label}</span>
+					) : (
+						<a {href}>{label}</a>
+					)}
+				</li>
+			))
+		}
+	</ul>
+</nav>
+
+<style lang='scss'>
+	@use '@/styles/colors' as c;
+	@use '@/styles/shapes' as s;
+
+	nav {
+		padding: 0.25rem 0.5rem;
+		background-color: c.$bg;
+		border-radius: s.$radius;
+	}
+	ul {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		justify-content: space-around;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+</style>

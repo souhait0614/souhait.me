@@ -4,6 +4,7 @@ import 'modern-normalize';
 import '@fontsource/ibm-plex-sans-jp/400.css';
 import '@fontsource/ibm-plex-sans-jp/700.css';
 import {Icon} from 'astro-icon/components';
+import Navigation from './navigation.astro';
 import '@/styles/common.scss';
 import BaseHead from '@/components/base-head.astro';
 import {transitionAnimate} from '@/constants/transition';
@@ -15,7 +16,7 @@ interface Props {
 }
 const {title, description} = Astro.props;
 
-const showHeader = Astro.url.pathname !== '/';
+const showBack = Astro.url.pathname !== '/';
 ---
 
 <html lang='ja'>
@@ -23,16 +24,21 @@ const showHeader = Astro.url.pathname !== '/';
 		<BaseHead {title} {description} />
 	</head>
 	<body>
-		{
-			showHeader && (
-				<header>
+		<header>
+			{
+				showBack && (
 					<a class='back' href='/'>
 						<Icon name='tabler:chevron-left' size={24} />
 						<span>トップに戻る</span>
 					</a>
-				</header>
-			)
-		}
+				)
+			}
+			<Navigation
+				class:list={{
+					'full-width': !showBack,
+				}}
+			/>
+		</header>
 		<main transition:animate={transitionAnimate}>
 			<slot />
 		</main>
@@ -90,6 +96,10 @@ const showHeader = Astro.url.pathname !== '/';
 				padding-right: 0.5rem;
 				background-color: c.$bg;
 				border-radius: s.$radius;
+			}
+
+			.full-width {
+				width: 100%;
 			}
 
 			.copyright {
