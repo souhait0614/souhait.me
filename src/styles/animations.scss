@@ -1,4 +1,4 @@
-@keyframes pageForwardsOld {
+@keyframes page-forwards-old {
 	from {
 		top: 0;
 		opacity: 1;
@@ -10,7 +10,7 @@
 	}
 }
 
-@keyframes pageForwardsNew {
+@keyframes page-forwards-new {
 	from {
 		top: 1rem;
 		opacity: 0;
@@ -22,7 +22,7 @@
 	}
 }
 
-@keyframes pageBackwardsOld {
+@keyframes page-backwards-old {
 	from {
 		top: 0;
 		opacity: 1;
@@ -34,7 +34,7 @@
 	}
 }
 
-@keyframes pageBackwardsNew {
+@keyframes page-backwards-new {
 	from {
 		top: -1rem;
 		opacity: 0;

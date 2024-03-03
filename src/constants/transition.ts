@@ -9,13 +9,13 @@ export const delay = '0.2s';
 export const transitionAnimate = {
 	forwards: {
 		old: {
-			name: 'pageForwardsOld',
+			name: 'page-forwards-old',
 			easing: easingOld,
 			duration,
 			fillMode: 'both',
 		},
 		new: {
-			name: 'pageForwardsNew',
+			name: 'page-forwards-new',
 			easing: easingNew,
 			delay,
 			duration,
@@ -24,13 +24,13 @@ export const transitionAnimate = {
 	},
 	backwards: {
 		old: {
-			name: 'pageBackwardsOld',
+			name: 'page-backwards-old',
 			easing: easingOld,
 			duration,
 			fillMode: 'both',
 		},
 		new: {
-			name: 'pageBackwardsNew',
+			name: 'page-backwards-new',
 			easing: easingNew,
 			delay,
 			duration,
