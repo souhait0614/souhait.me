@@ -9,5 +9,6 @@ export default defineConfig({
 	image: {
 		domains: ['img.souhait.me'],
 	},
+	trailingSlash: 'always',
 	integrations: [icon()],
 });
