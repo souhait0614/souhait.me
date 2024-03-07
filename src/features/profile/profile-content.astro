@@ -1,6 +1,7 @@
 ---
 import {Image} from 'astro:assets';
 import {banner, avatar} from '@/constants/image';
+import {transitionNames} from '@/constants/transition';
 ---
 
 <Image
@@ -19,6 +20,7 @@ import {banner, avatar} from '@/constants/image';
 		height={256}
 		class='avatar'
 		loading='eager'
+		transition:name={transitionNames.souhaitChan}
 	/>
 	<h1>すえ</h1>
 	<p>なんかいろいろやってる人</p>
