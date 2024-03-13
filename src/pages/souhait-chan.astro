@@ -59,7 +59,7 @@ const arts = [
 					{
 						arts.map(({src, alt, href}) => (
 							<a {href} target='_blank' class='art-wrapper'>
-								<Image {src} inferSize {alt} class='art' />
+								<Image {src} inferSize {alt} class='art' loading='eager' />
 							</a>
 						))
 					}
