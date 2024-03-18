@@ -1,0 +1,88 @@
+---
+import BaseLayout from '@/layouts/base-layout.astro';
+import Card from '@/components/card.astro';
+import ProfileContent from '@/features/profile/profile-content.astro';
+import {transitionNames} from '@/constants/transition';
+import IconLink from '@/components/icon-link.astro';
+---
+
+<BaseLayout title='' description='すえのサイト'>
+	<div class='card-container'>
+		<Card class='card' transition:name={transitionNames.profileCard}>
+			<ProfileContent />
+			<div class='more-link-container'>
+				<a href='/about-me/'>もっと見る</a>
+			</div>
+		</Card>
+		<ul class='account-links' transition:animate='fade'>
+			<li>
+				<IconLink
+					iconName='arcticons:misskey'
+					href='https://submarin.online/@souhait'
+					target='_blank'
+					title='Misskey (submarin.online)'
+					aria-label='Misskey (submarin.online)'
+				/>
+			</li>
+			<li>
+				<IconLink
+					iconName='arcticons:x-twitter'
+					href='https://twitter.com/ElectronicsBot'
+					target='_blank'
+					title='X (Twitter)'
+					aria-label='X (Twitter)'
+				/>
+			</li>
+			<li>
+				<IconLink
+					iconName='arcticons:github'
+					href='https://github.com/souhait0614'
+					target='_blank'
+					title='GitHub'
+					aria-label='GitHub'
+				/>
+			</li>
+		</ul>
+	</div>
+</BaseLayout>
+
+<style lang='scss'>
+	@use '@/styles/shapes' as s;
+	.card-container {
+		display: flex;
+		flex-direction: column;
+		gap: s.$space;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+	.card {
+		width: 100%;
+	}
+	.more-link-container {
+		display: flex;
+		justify-content: center;
+		margin-bottom: calc(s.$space / 2);
+	}
+	.account-links {
+		display: flex;
+		gap: s.$space;
+		justify-content: center;
+		padding: 0;
+		margin: 0;
+		margin-top: s.$space;
+		list-style: none;
+
+		> li:nth-of-type(1) {
+			order: 2;
+		}
+
+		> li:nth-of-type(2) {
+			order: 1;
+		}
+
+		> li:nth-of-type(3) {
+			order: 3;
+		}
+	}
+</style>

@@ -1,0 +1,32 @@
+---
+import type {HTMLAttributes} from 'astro/types';
+import {Icon} from 'astro-icon/components';
+
+export type Props = HTMLAttributes<'a'> & {
+	iconName: string;
+};
+
+const {iconName, ...properties} = Astro.props;
+---
+
+<a {...properties}>
+	<Icon name={iconName} size={36} stroke-width={2} />
+	<span>{properties.title}</span>
+</a>
+
+<style lang='scss'>
+	@use '@/styles/colors' as c;
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: inherit;
+
+		&:is(:hover, :focus, :active) {
+			color: c.$accent;
+		}
+	}
+	span {
+		display: none;
+	}
+</style>

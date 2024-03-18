@@ -1,0 +1,23 @@
+---
+import Card from '@/components/card.astro';
+import CardBody from '@/components/card-body.astro';
+import ExternalLink from '@/components/external-link.astro';
+
+type Props = {
+	title: string;
+	href: string;
+};
+
+const {title, href} = Astro.props;
+---
+
+<Card>
+	<CardBody element='article'>
+		<h2>
+			<ExternalLink {href}>
+				{title}
+			</ExternalLink>
+		</h2>
+		<slot />
+	</CardBody>
+</Card>
