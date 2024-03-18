@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 
 export const baseMetadata: Metadata = {
   icons: icon,
-  metadataBase: new URL("https://souhait.me"),
+  metadataBase: new URL("https://v1.souhait.me"),
   alternates: {
     canonical: "/",
   },

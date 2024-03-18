@@ -5,6 +5,6 @@ export const makeNoteContent = (resultEmojis: [string, string, string][]) => {
     "",
     "#souhaitガチャ",
     "#souhaitガチャ10連",
-    `https://souhait.me/play/souhaito-gacha-ten`,
+    `https://v1.souhait.me/play/souhaito-gacha-ten`,
   ].join("\n")
 }

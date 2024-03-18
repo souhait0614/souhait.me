@@ -44,7 +44,7 @@ const Product = () => (
     <p>並び順は適当です。</p>
     <ProductCard
       name="souhait.me"
-      href="https://souhait.me"
+      href="https://v1.souhait.me"
       description={
         <>
           <p>このサイトです</p>
@@ -53,7 +53,7 @@ const Product = () => (
           </p>
           <p>
             特に意味もなく
-            <NewTabLink href="https://github.com/souhait0614/souhait.me">
+            <NewTabLink href="https://github.com/souhait0614/souhait.me/tree/v1">
               オープンソースとして公開
             </NewTabLink>
             しています
