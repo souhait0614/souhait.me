@@ -8,8 +8,8 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"lint": "xo && stylelint",
-		"fix": "prettier --write . && xo --fix && stylelint --fix"
+		"lint": "xo && stylelint **/*.{css,scss,astro}",
+		"fix": "prettier --write . && xo --fix && stylelint --fix **/*.{css,scss,astro}"
 	},
 	"dependencies": {
 		"@astro-community/astro-embed-youtube": "^0.5.2",
