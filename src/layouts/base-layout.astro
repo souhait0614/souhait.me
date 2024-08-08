@@ -9,8 +9,8 @@ import {transitionAnimate} from '@/constants/transition';
 /* eslint-enable */
 
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 const {title, description} = Astro.props;
 
@@ -18,96 +18,96 @@ const showBack = Astro.url.pathname !== '/';
 ---
 
 <html lang='ja'>
-	<head>
-		<BaseHead {title} {description} />
-		<slot name='head' />
-	</head>
-	<body>
-		<header>
-			{
-				showBack && (
-					<a class='back' href='/'>
-						<Icon name='tabler:chevron-left' size={24} />
-						<span>トップに戻る</span>
-					</a>
-				)
-			}
-			<Navigation
-				class:list={{
-					'full-width': !showBack,
-				}}
-			/>
-		</header>
-		<main transition:animate={transitionAnimate}>
-			<slot />
-		</main>
-		<footer><small class='copyright'>©2024 すえ</small></footer>
+  <head>
+    <BaseHead {title} {description} />
+    <slot name='head' />
+  </head>
+  <body>
+    <header>
+      {
+        showBack && (
+          <a class='back' href='/'>
+            <Icon name='tabler:chevron-left' size={24} />
+            <span>トップに戻る</span>
+          </a>
+        )
+      }
+      <Navigation
+        class:list={{
+          'full-width': !showBack,
+        }}
+      />
+    </header>
+    <main transition:animate={transitionAnimate}>
+      <slot />
+    </main>
+    <footer><small class='copyright'>©2024 すえ</small></footer>
 
-		<style lang='scss'>
-			@use '@/styles/breakpoints' as bp;
-			@use '@/styles/colors' as c;
-			@use '@/styles/shapes' as s;
+    <style lang='scss'>
+      @use '@/styles/breakpoints' as bp;
+      @use '@/styles/colors' as c;
+      @use '@/styles/shapes' as s;
 
-			html {
-				width: 100%;
-				height: 100%;
-			}
+      html {
+        width: 100%;
+        height: 100%;
+      }
 
-			body {
-				display: grid;
-				grid-template:
-					'header' auto
-					'main' 1fr
-					'footer' auto / 1fr;
-				gap: s.$space;
-				justify-content: center;
-				width: 100%;
-				max-width: 600px;
-				min-height: 100%;
-				padding: s.$space;
-				margin: 0 auto;
+      body {
+        display: grid;
+        grid-template:
+          'header' auto
+          'main' 1fr
+          'footer' auto / 1fr;
+        gap: s.$space;
+        justify-content: center;
+        width: 100%;
+        max-width: 600px;
+        min-height: 100%;
+        padding: s.$space;
+        margin: 0 auto;
 
-				font-family: 'IBM Plex Sans JP', 'BIZ UDPGothic', 'Helvetica Neue',
-					Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
-					sans-serif;
-				color: c.$fg;
-				background-color: c.$bg;
+        font-family: 'IBM Plex Sans JP', 'BIZ UDPGothic', 'Helvetica Neue',
+          Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
+          sans-serif;
+        color: c.$fg;
+        background-color: c.$bg;
 
-				> header {
-					display: flex;
-					grid-area: header;
-					align-items: center;
-					justify-content: space-between;
-				}
+        > header {
+          display: flex;
+          grid-area: header;
+          align-items: center;
+          justify-content: space-between;
+        }
 
-				> main {
-					grid-area: main;
-				}
+        > main {
+          grid-area: main;
+        }
 
-				> footer {
-					grid-area: footer;
-					text-align: center;
-				}
-			}
+        > footer {
+          grid-area: footer;
+          text-align: center;
+        }
+      }
 
-			.back {
-				display: flex;
-				align-items: center;
-				padding-right: 0.5rem;
-				background-color: c.$bg;
-				border-radius: s.$radius;
-			}
+      .back {
+        display: flex;
+        align-items: center;
+        padding-right: 0.5rem;
+        background-color: c.$bg;
+        border-radius: s.$radius;
+      }
 
-			.full-width {
-				width: 100%;
-			}
+      .full-width {
+        width: 100%;
+      }
 
-			.copyright {
-				padding: 0 0.5rem;
-				font-size: 1rem;
-				background-color: c.$bg;
-				border-radius: s.$radius;
-			}
-		</style>
-	</body>
+      .copyright {
+        padding: 0 0.5rem;
+        font-size: 1rem;
+        background-color: c.$bg;
+        border-radius: s.$radius;
+      }
+    </style>
+  </body>
 </html>

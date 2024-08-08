@@ -1,18 +1,18 @@
 @use './colors.scss' as c;
 
 * {
-	accent-color: c.$accent;
+  accent-color: c.$accent;
 }
 
 a {
-	color: c.$accent;
-	text-decoration: none;
+  color: c.$accent;
+  text-decoration: none;
 
-	&:is(:hover, :focus, :active) {
-		text-decoration: underline;
-	}
+  &:is(:hover, :focus, :active) {
+    text-decoration: underline;
+  }
 }
 
 p {
-	margin: 0.7rem auto;
+  margin: 0.7rem auto;
 }

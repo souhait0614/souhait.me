@@ -2,18 +2,18 @@
 import type {JSX} from 'astro/jsx-runtime';
 
 type Props = {
-	element?: keyof JSX.DefinedIntrinsicElements;
+  element?: keyof JSX.DefinedIntrinsicElements;
 };
 const {element: Element = 'section'} = Astro.props;
 ---
 
 <Element class='card-body'>
-	<slot />
+  <slot />
 </Element>
 
 <style lang='scss'>
-	@use '@/styles/shapes' as s;
-	.card-body {
-		margin: s.$space;
-	}
+  @use '@/styles/shapes' as s;
+  .card-body {
+    margin: s.$space;
+  }
 </style>

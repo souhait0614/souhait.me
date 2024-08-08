@@ -2,77 +2,77 @@
 import type {HTMLAttributes} from 'astro/types';
 
 interface Link {
-	href: string;
-	label: string;
-	hide?: boolean;
+  href: string;
+  label: string;
+  hide?: boolean;
 }
 
 const links: Link[] = [
-	{
-		href: '/about-me/',
-		label: 'すえ',
-	},
-	{
-		href: '/souhait-chan/',
-		label: 'すえちゃん',
-	},
-	{
-		href: '/play/',
-		label: 'お遊び',
-	},
-	{
-		href: '/product/',
-		label: '作ったもの',
-	},
-	{
-		href: '/gyagu/',
-		label: 'ギャグ',
-		hide: true,
-	},
+  {
+    href: '/about-me/',
+    label: 'すえ',
+  },
+  {
+    href: '/souhait-chan/',
+    label: 'すえちゃん',
+  },
+  {
+    href: '/play/',
+    label: 'お遊び',
+  },
+  {
+    href: '/product/',
+    label: '作ったもの',
+  },
+  {
+    href: '/gyagu/',
+    label: 'ギャグ',
+    hide: true,
+  },
 ];
 
 type Props = HTMLAttributes<'nav'>;
 ---
 
 <nav {...Astro.props}>
-	<h2>サイトナビゲーション</h2>
-	<ul>
-		{
-			links
-				.filter(({href, hide}) => !hide || href === Astro.url.pathname)
-				.map(({href, label}) => (
-					<li transition:name={`nav-link-${href}`}>
-						{href === Astro.url.pathname ? (
-							<span>{label}</span>
-						) : (
-							<a {href}>{label}</a>
-						)}
-					</li>
-				))
-		}
-	</ul>
+  <h2>サイトナビゲーション</h2>
+  <ul>
+    {
+      links
+        .filter(({href, hide}) => !hide || href === Astro.url.pathname)
+        .map(({href, label}) => (
+          <li transition:name={`nav-link-${href}`}>
+            {href === Astro.url.pathname ? (
+              <span>{label}</span>
+            ) : (
+              <a {href}>{label}</a>
+            )}
+          </li>
+        ))
+    }
+  </ul>
 </nav>
 
 <style lang='scss'>
-	@use '@/styles/colors' as c;
-	@use '@/styles/shapes' as s;
+  @use '@/styles/colors' as c;
+  @use '@/styles/shapes' as s;
 
-	nav {
-		padding: 0.25rem 0.5rem;
-		background-color: c.$bg;
-		border-radius: s.$radius;
+  nav {
+    padding: 0.25rem 0.5rem;
+    background-color: c.$bg;
+    border-radius: s.$radius;
 
-		> h2 {
-			display: none;
-		}
-	}
-	ul {
-		display: flex;
-		gap: 0.5rem;
-		align-items: center;
-		justify-content: space-around;
-		padding: 0;
-		margin: 0;
-		list-style: none;
-	}
+    > h2 {
+      display: none;
+    }
+  }
+  ul {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
 </style>

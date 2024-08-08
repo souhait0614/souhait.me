@@ -6,14 +6,14 @@ type Props = HTMLAttributes<'a'>;
 ---
 
 <a {...Astro.props} target='_blank'>
-	<span>
-		<slot />
-	</span>
-	<Icon class='icon' name='tabler:external-link' size={16} />
+  <span>
+    <slot />
+  </span>
+  <Icon class='icon' name='tabler:external-link' size={16} />
 </a>
 
 <style lang='scss'>
-	.icon {
-		vertical-align: middle;
-	}
+  .icon {
+    vertical-align: middle;
+  }
 </style>

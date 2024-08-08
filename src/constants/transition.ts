@@ -7,39 +7,39 @@ export const duration = '0.15s';
 export const delay = '0.2s';
 
 export const transitionAnimate = {
-	forwards: {
-		old: {
-			name: 'page-forwards-old',
-			easing: easingOld,
-			duration,
-			fillMode: 'both',
-		},
-		new: {
-			name: 'page-forwards-new',
-			easing: easingNew,
-			delay,
-			duration,
-			fillMode: 'both',
-		},
-	},
-	backwards: {
-		old: {
-			name: 'page-backwards-old',
-			easing: easingOld,
-			duration,
-			fillMode: 'both',
-		},
-		new: {
-			name: 'page-backwards-new',
-			easing: easingNew,
-			delay,
-			duration,
-			fillMode: 'both',
-		},
-	},
+  forwards: {
+    old: {
+      name: 'page-forwards-old',
+      easing: easingOld,
+      duration,
+      fillMode: 'both',
+    },
+    new: {
+      name: 'page-forwards-new',
+      easing: easingNew,
+      delay,
+      duration,
+      fillMode: 'both',
+    },
+  },
+  backwards: {
+    old: {
+      name: 'page-backwards-old',
+      easing: easingOld,
+      duration,
+      fillMode: 'both',
+    },
+    new: {
+      name: 'page-backwards-new',
+      easing: easingNew,
+      delay,
+      duration,
+      fillMode: 'both',
+    },
+  },
 } as const satisfies TransitionDirectionalAnimations;
 
 export const transitionNames = {
-	profileCard: 'profile-card',
-	souhaitChan: 'souhait-chan',
+  profileCard: 'profile-card',
+  souhaitChan: 'souhait-chan',
 };

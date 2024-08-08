@@ -3,21 +3,21 @@ import BaseLayout from '@/layouts/base-layout.astro';
 ---
 
 <BaseLayout title='404 Not Found' description='お探しのページは存在しません'>
-	<div class='container'>
-		<h1>404 Not Found</h1>
-		<p>お探しのページは存在しません</p>
-		<a href='/'>トップに戻る</a>
-	</div>
+  <div class='container'>
+    <h1>404 Not Found</h1>
+    <p>お探しのページは存在しません</p>
+    <a href='/'>トップに戻る</a>
+  </div>
 </BaseLayout>
 
 <style lang='scss'>
-	@use '@/styles/shapes' as s;
-	.container {
-		display: flex;
-		flex-direction: column;
-		gap: s.$space;
-		align-items: center;
-		justify-content: center;
-		height: 100%;
-	}
+  @use '@/styles/shapes' as s;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: s.$space;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
 </style>

@@ -9,72 +9,72 @@ import ExternalLink from '@/components/external-link.astro';
 ---
 
 <BaseLayout title='すえについて' description='あばうとみー'>
-	<div class='stack'>
-		<Card transition:name={transitionNames.profileCard}>
-			<ProfileContent />
-		</Card>
-		<Card>
-			<CardBody>
-				<h2>名前について</h2>
-				<p>
-					<ruby>souhait<rp>(</rp><rt>すえ</rt><rp>)</rp></ruby>です。<b
-						>決してそうはいとではありません。</b
-					>
-				</p>
-				<p>前はLG Electronics Botだったりhakunagiだったりしました。</p>
-			</CardBody>
-		</Card>
-		<Card>
-			<CardBody>
-				<h2>ぷろぐらみんぐ</h2>
-				<p>趣味その1兼お仕事です。TypeScriptなWebアプリをよく書いてます。</p>
-				<p>
-					<ExternalLink href='https://ja.react.dev'>React</ExternalLink>と
-					<ExternalLink href='https://svelte.jp'>Svelte</ExternalLink>と
-					<ExternalLink href='https://www.solidjs.com'>SolidJS</ExternalLink
-					>が書けます。
-				</p>
-				<p>バックエンドもちょっとできます。</p>
-				<p>公開済みの制作物は<a href='/product/'>ここ</a>に載せてあります</p>
-			</CardBody>
-		</Card>
-		<Card>
-			<CardBody>
-				<h2>げーむ</h2>
-				<p>
-					趣味その2です。リズムゲームばっかりやってます。たまにサンドボックスやアクションをやったり。
-				</p>
-				<p>
-					2024年2月現在は<ExternalLink href='https://world-dai-star.com/game'
-						>ワールドダイスター 夢のステラリウム</ExternalLink
-					>に浸かっています。
-				</p>
-				<p>
-					ユメステリリース前は<ExternalLink
-						href='https://miku.sega.jp/mega39splus/'
-						>初音ミク Project DIVA MEGA39’s+</ExternalLink
-					>をひたすらやっていました。<ExternalLink
-						href='https://submarin.online/notes/9cvsn71ik9'
-						>専用アケコンもあります。</ExternalLink
-					>
-				</p>
-			</CardBody>
-		</Card>
-		<section>
-			<h2>視聴覚室</h2>
-			<Card>
-				<YouTube id='Dh79Lk_wCD4' />
-			</Card>
-		</section>
-	</div>
+  <div class='stack'>
+    <Card transition:name={transitionNames.profileCard}>
+      <ProfileContent />
+    </Card>
+    <Card>
+      <CardBody>
+        <h2>名前について</h2>
+        <p>
+          <ruby>souhait<rp>(</rp><rt>すえ</rt><rp>)</rp></ruby>です。<b
+            >決してそうはいとではありません。</b
+          >
+        </p>
+        <p>前はLG Electronics Botだったりhakunagiだったりしました。</p>
+      </CardBody>
+    </Card>
+    <Card>
+      <CardBody>
+        <h2>ぷろぐらみんぐ</h2>
+        <p>趣味その1兼お仕事です。TypeScriptなWebアプリをよく書いてます。</p>
+        <p>
+          <ExternalLink href='https://ja.react.dev'>React</ExternalLink>と
+          <ExternalLink href='https://svelte.jp'>Svelte</ExternalLink>と
+          <ExternalLink href='https://www.solidjs.com'>SolidJS</ExternalLink
+          >が書けます。
+        </p>
+        <p>バックエンドもちょっとできます。</p>
+        <p>公開済みの制作物は<a href='/product/'>ここ</a>に載せてあります</p>
+      </CardBody>
+    </Card>
+    <Card>
+      <CardBody>
+        <h2>げーむ</h2>
+        <p>
+          趣味その2です。リズムゲームばっかりやってます。たまにサンドボックスやアクションをやったり。
+        </p>
+        <p>
+          2024年2月現在は<ExternalLink href='https://world-dai-star.com/game'
+            >ワールドダイスター 夢のステラリウム</ExternalLink
+          >に浸かっています。
+        </p>
+        <p>
+          ユメステリリース前は<ExternalLink
+            href='https://miku.sega.jp/mega39splus/'
+            >初音ミク Project DIVA MEGA39’s+</ExternalLink
+          >をひたすらやっていました。<ExternalLink
+            href='https://submarin.online/notes/9cvsn71ik9'
+            >専用アケコンもあります。</ExternalLink
+          >
+        </p>
+      </CardBody>
+    </Card>
+    <section>
+      <h2>視聴覚室</h2>
+      <Card>
+        <YouTube id='Dh79Lk_wCD4' />
+      </Card>
+    </section>
+  </div>
 </BaseLayout>
 
 <style lang='scss'>
-	@use '@/styles/shapes' as s;
+  @use '@/styles/shapes' as s;
 
-	.stack {
-		display: flex;
-		flex-direction: column;
-		gap: s.$space;
-	}
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: s.$space;
+  }
 </style>

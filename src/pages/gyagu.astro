@@ -6,208 +6,208 @@ import BaseLayout from '@/layouts/base-layout.astro';
 import ExternalLink from '@/components/external-link.astro';
 
 interface Link {
-	href: string;
-	label?: string;
-	extra?: string;
+  href: string;
+  label?: string;
+  extra?: string;
 }
 
 const gyaguLinkList: Link[] = [
-	{href: 'https://midra.me'},
-	{href: 'https://lunachi.me/gyagu/'},
-	{href: 'https://l1n4r1.art/gyagu/'},
-	{href: 'https://lutica.net/gyagu/'},
-	{href: 'https://site.kagamisskey.com/gyagu.html'},
-	{href: 'https://sunset0916.net/gyagu/'},
-	{href: 'https://www.hayao0819.com/gyagu/'},
-	{href: 'https://cffn.pw/r/gyagu', label: 'cffn.pw/r', extra: '←死んでます'},
+  {href: 'https://midra.me'},
+  {href: 'https://lunachi.me/gyagu/'},
+  {href: 'https://l1n4r1.art/gyagu/'},
+  {href: 'https://lutica.net/gyagu/'},
+  {href: 'https://site.kagamisskey.com/gyagu.html'},
+  {href: 'https://sunset0916.net/gyagu/'},
+  {href: 'https://www.hayao0819.com/gyagu/'},
+  {href: 'https://cffn.pw/r/gyagu', label: 'cffn.pw/r', extra: '←死んでます'},
 ];
 
 const notGyaguLinkList: Link[] = [
-	{href: 'https://hisubway.online'},
-	{href: 'https://stesan.dev'},
-	{href: 'https://matechan.com'},
-	{href: 'https://kitazawa.me'},
+  {href: 'https://hisubway.online'},
+  {href: 'https://stesan.dev'},
+  {href: 'https://matechan.com'},
+  {href: 'https://kitazawa.me'},
 ];
 
 const taiwaiLinkList: Link[] = [{href: 'https://taiy.me/gyagu'}];
 ---
 
 <BaseLayout
-	title='お探しのページは存在しません'
-	description='お探しのページは存在しません'
+  title='お探しのページは存在しません'
+  description='お探しのページは存在しません'
 >
-	<div class='stack'>
-		<Card>
-			<CardBody>
-				<h1 class='noisy'>
-					このサイトはうるさくないので、<br />お探しのページは存在しません。
-				</h1>
-			</CardBody>
-		</Card>
-		<Card>
-			<CardBody>
-				<h2 class='noisy'>もしかして: うるさいと</h2>
-				<ul>
-					{
-						gyaguLinkList.map(({href, label, extra}, index) => (
-							<li class='noisy-link' style={`--delay: ${index / -16}s`}>
-								<a {href} class='noisy' target='_blank'>
-									<span>
-										うるさいと{index + 1} ({label ?? new URL(href).hostname})
-										{extra}
-									</span>
-									<Icon class='icon' name='tabler:external-link' size={16} />
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</CardBody>
-		</Card>
-		<Card class='no-noisy'>
-			<CardBody>
-				<h2>もしかして: うるさくない</h2>
-				<ul>
-					{
-						notGyaguLinkList.map(({href, label, extra}) => (
-							<li>
-								<ExternalLink {href}>
-									{label ?? new URL(href).hostname}
-									{extra}
-								</ExternalLink>
-							</li>
-						))
-					}
-				</ul>
-			</CardBody>
-		</Card>
-		<Card class='no-noisy'>
-			<CardBody>
-				<h2>は？</h2>
-				<ul>
-					{
-						taiwaiLinkList.map(({href, label, extra}) => (
-							<li>
-								<ExternalLink {href}>
-									{label ?? new URL(href).hostname}
-									{extra}
-								</ExternalLink>
-							</li>
-						))
-					}
-				</ul>
-			</CardBody>
-		</Card>
-		<Card>
-			<CardBody element='div'>
-				<p class:list={['chance-to-be-listed', 'noisy']}>
-					連絡くれたら載せるかも
-				</p>
-			</CardBody>
-		</Card>
-	</div>
+  <div class='stack'>
+    <Card>
+      <CardBody>
+        <h1 class='noisy'>
+          このサイトはうるさくないので、<br />お探しのページは存在しません。
+        </h1>
+      </CardBody>
+    </Card>
+    <Card>
+      <CardBody>
+        <h2 class='noisy'>もしかして: うるさいと</h2>
+        <ul>
+          {
+            gyaguLinkList.map(({href, label, extra}, index) => (
+              <li class='noisy-link' style={`--delay: ${index / -16}s`}>
+                <a {href} class='noisy' target='_blank'>
+                  <span>
+                    うるさいと{index + 1} ({label ?? new URL(href).hostname})
+                    {extra}
+                  </span>
+                  <Icon class='icon' name='tabler:external-link' size={16} />
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </CardBody>
+    </Card>
+    <Card class='no-noisy'>
+      <CardBody>
+        <h2>もしかして: うるさくない</h2>
+        <ul>
+          {
+            notGyaguLinkList.map(({href, label, extra}) => (
+              <li>
+                <ExternalLink {href}>
+                  {label ?? new URL(href).hostname}
+                  {extra}
+                </ExternalLink>
+              </li>
+            ))
+          }
+        </ul>
+      </CardBody>
+    </Card>
+    <Card class='no-noisy'>
+      <CardBody>
+        <h2>は？</h2>
+        <ul>
+          {
+            taiwaiLinkList.map(({href, label, extra}) => (
+              <li>
+                <ExternalLink {href}>
+                  {label ?? new URL(href).hostname}
+                  {extra}
+                </ExternalLink>
+              </li>
+            ))
+          }
+        </ul>
+      </CardBody>
+    </Card>
+    <Card>
+      <CardBody element='div'>
+        <p class:list={['chance-to-be-listed', 'noisy']}>
+          連絡くれたら載せるかも
+        </p>
+      </CardBody>
+    </Card>
+  </div>
 </BaseLayout>
 
 <style lang='scss'>
-	@use '@/styles/shapes' as s;
-	@use '@/styles/colors' as c;
+  @use '@/styles/shapes' as s;
+  @use '@/styles/colors' as c;
 
-	$bg-size: 1000px;
+  $bg-size: 1000px;
 
-	/* m-plus-rounded-1c-latin-900-normal */
-	@font-face {
-		font-family: 'M PLUS Rounded 1c';
-		font-style: normal;
-		font-weight: 900;
-		src:
-			url(@fontsource/m-plus-rounded-1c/files/m-plus-rounded-1c-latin-900-normal.woff2)
-				format('woff2'),
-			url(@fontsource/m-plus-rounded-1c/files/m-plus-rounded-1c-latin-900-normal.woff)
-				format('woff');
-		font-display: swap;
-		unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-			U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
-			U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-	}
+  /* m-plus-rounded-1c-latin-900-normal */
+  @font-face {
+    font-family: 'M PLUS Rounded 1c';
+    font-style: normal;
+    font-weight: 900;
+    src:
+      url(@fontsource/m-plus-rounded-1c/files/m-plus-rounded-1c-latin-900-normal.woff2)
+        format('woff2'),
+      url(@fontsource/m-plus-rounded-1c/files/m-plus-rounded-1c-latin-900-normal.woff)
+        format('woff');
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
 
-	/* m-plus-rounded-1c-japanese-900-normal */
-	@font-face {
-		font-family: 'M PLUS Rounded 1c';
-		font-style: normal;
-		font-weight: 900;
-		src:
-			url(@fontsource/m-plus-rounded-1c/files/m-plus-rounded-1c-japanese-900-normal.woff2)
-				format('woff2'),
-			url(@fontsource/m-plus-rounded-1c/files/m-plus-rounded-1c-japanese-900-normal.woff)
-				format('woff');
-		font-display: swap;
-	}
+  /* m-plus-rounded-1c-japanese-900-normal */
+  @font-face {
+    font-family: 'M PLUS Rounded 1c';
+    font-style: normal;
+    font-weight: 900;
+    src:
+      url(@fontsource/m-plus-rounded-1c/files/m-plus-rounded-1c-japanese-900-normal.woff2)
+        format('woff2'),
+      url(@fontsource/m-plus-rounded-1c/files/m-plus-rounded-1c-japanese-900-normal.woff)
+        format('woff');
+    font-display: swap;
+  }
 
-	@keyframes noisy-bg-animation {
-		to {
-			background-position-y: $bg-size;
-		}
-	}
+  @keyframes noisy-bg-animation {
+    to {
+      background-position-y: $bg-size;
+    }
+  }
 
-	@keyframes noisy-list-animation {
-		to {
-			margin-left: -1rem;
-		}
-	}
+  @keyframes noisy-list-animation {
+    to {
+      margin-left: -1rem;
+    }
+  }
 
-	$noisy-bg: repeating-linear-gradient(
-			135deg,
-			hsl(0deg, 80%, 50%),
-			hsl(60deg, 80%, 50%),
-			hsl(120deg, 80%, 50%),
-			hsl(180deg, 80%, 50%),
-			hsl(240deg, 80%, 50%),
-			hsl(300deg, 80%, 50%),
-			hsl(360deg, 80%, 50%) 50%
-		)
-		center 0% / ($bg-size $bg-size);
+  $noisy-bg: repeating-linear-gradient(
+      135deg,
+      hsl(0deg, 80%, 50%),
+      hsl(60deg, 80%, 50%),
+      hsl(120deg, 80%, 50%),
+      hsl(180deg, 80%, 50%),
+      hsl(240deg, 80%, 50%),
+      hsl(300deg, 80%, 50%),
+      hsl(360deg, 80%, 50%) 50%
+    )
+    center 0% / ($bg-size $bg-size);
 
-	body {
-		font-family: 'M PLUS Rounded 1c', system-ui, 'Segoe UI', Roboto, Helvetica,
-			Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-		background: $noisy-bg;
-		animation: noisy-bg-animation 1s linear infinite;
-	}
+  body {
+    font-family: 'M PLUS Rounded 1c', system-ui, 'Segoe UI', Roboto, Helvetica,
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    background: $noisy-bg;
+    animation: noisy-bg-animation 1s linear infinite;
+  }
 
-	h1 {
-		text-align: center;
-	}
+  h1 {
+    text-align: center;
+  }
 
-	.stack {
-		display: flex;
-		flex-direction: column;
-		gap: s.$space;
-	}
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: s.$space;
+  }
 
-	.noisy {
-		color: transparent;
-		background: $noisy-bg;
-		background-clip: text;
-		animation: noisy-bg-animation 1s linear infinite;
+  .noisy {
+    color: transparent;
+    background: $noisy-bg;
+    background-clip: text;
+    animation: noisy-bg-animation 1s linear infinite;
 
-		.icon {
-			color: c.$accent;
-			vertical-align: middle;
-		}
-	}
+    .icon {
+      color: c.$accent;
+      vertical-align: middle;
+    }
+  }
 
-	.no-noisy {
-		font-family: 'IBM Plex Sans JP', system-ui, 'Segoe UI', Roboto, Helvetica,
-			Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-	}
+  .no-noisy {
+    font-family: 'IBM Plex Sans JP', system-ui, 'Segoe UI', Roboto, Helvetica,
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  }
 
-	.noisy-link {
-		animation: noisy-list-animation 0.25s ease-in-out var(--delay) infinite
-			alternate;
-	}
+  .noisy-link {
+    animation: noisy-list-animation 0.25s ease-in-out var(--delay) infinite
+      alternate;
+  }
 
-	.chance-to-be-listed {
-		font-size: 2rem;
-		text-align: center;
-	}
+  .chance-to-be-listed {
+    font-size: 2rem;
+    text-align: center;
+  }
 </style>

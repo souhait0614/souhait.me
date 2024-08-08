@@ -8,156 +8,156 @@ import Card from '@/components/card.astro';
 import ExternalLink from '@/components/external-link.astro';
 
 const arts = [
-	{
-		src: art.sakananoonigiri1,
-		href: 'https://submarin.online/notes/9hd9mu9vdw',
-		alt: '全体図',
-	},
+  {
+    src: art.sakananoonigiri1,
+    href: 'https://submarin.online/notes/9hd9mu9vdw',
+    alt: '全体図',
+  },
 ] as const satisfies Array<{
-	src: string;
-	href: string;
-	alt: string;
+  src: string;
+  href: string;
+  alt: string;
 }>;
 ---
 
 <BaseLayout title='すえちゃんについて' description='いわゆるうちの子です'>
-	<div class='stack'>
-		<Card transition:name={transitionNames.profileCard}>
-			<div class='souhait-chan-wrapper'>
-				<Image
-					src={optimizedSouhaitChan.src}
-					width={optimizedSouhaitChan.attributes.width}
-					height={optimizedSouhaitChan.attributes.height}
-					alt='すえちゃん'
-					class='souhait-chan'
-					loading='eager'
-					transition:name={transitionNames.souhaitChan}
-				/>
-			</div>
-			<div class='profile'>
-				<h1>すえちゃん</h1>
-				<dl>
-					<dt>誕生日</dt>
-					<dd>6/14</dd>
-					<dt>年齢</dt>
-					<dd>14~16くらい</dd>
-					<dt>性別</dt>
-					<dd>女性だと思う</dd>
-				</dl>
-			</div>
-		</Card>
-		<Card>
-			<CardBody>
-				<h2>設定的なやつ</h2>
-				<p>身の上話をほとんどしてくれないので謎だらけ</p>
-				<p>唯一誕生日だけはっきりとしている</p>
-			</CardBody>
-		</Card>
-		<Card>
-			<CardBody>
-				<h2>ギャラリー</h2>
-				<div class='arts'>
-					{
-						arts.map(({src, alt, href}) => (
-							<a {href} target='_blank' class='art-wrapper'>
-								<Image {src} inferSize {alt} class='art' loading='eager' />
-							</a>
-						))
-					}
-				</div>
-			</CardBody>
-		</Card>
-		<Card>
-			<CardBody>
-				<h2>FAQ</h2>
-				<section>
-					<h3>すえ(souhait)って何？</h3>
-					<p>願いとか望みとかの意味を持つフランス語の男性名詞です</p>
-					<p>
-						2021年辺りに命名したっぽいんですが、名前の由来はどこにも残ってませんでした
-					</p>
-					<p>
-						<s>そうはいととしか読めないところ以外は</s>いい名前だと思います
-					</p>
-				</section>
-				<section>
-					<h3>画像は何製？</h3>
-					<p><ExternalLink href='https://crypko.ai/'>Crypko</ExternalLink>製</p>
-					<p>
-						MidjourneyとかStable
-						Diffusionが話題になる前から存在してる誰でもいい感じの子を生み出せるAI画像生成サービスです
-					</p>
-				</section>
-				<section>
-					<h3>すえとすえちゃんの関係性は？</h3>
-					<p>わからん</p>
-					<p>少なくとも他人</p>
-				</section>
-				<section>
-					<h3>すえちゃんの名前と画像をすえが使っている理由は？</h3>
-					<p>勝手に使ってるだけ</p>
-				</section>
-			</CardBody>
-		</Card>
-	</div>
+  <div class='stack'>
+    <Card transition:name={transitionNames.profileCard}>
+      <div class='souhait-chan-wrapper'>
+        <Image
+          src={optimizedSouhaitChan.src}
+          width={optimizedSouhaitChan.attributes.width}
+          height={optimizedSouhaitChan.attributes.height}
+          alt='すえちゃん'
+          class='souhait-chan'
+          loading='eager'
+          transition:name={transitionNames.souhaitChan}
+        />
+      </div>
+      <div class='profile'>
+        <h1>すえちゃん</h1>
+        <dl>
+          <dt>誕生日</dt>
+          <dd>6/14</dd>
+          <dt>年齢</dt>
+          <dd>14~16くらい</dd>
+          <dt>性別</dt>
+          <dd>女性だと思う</dd>
+        </dl>
+      </div>
+    </Card>
+    <Card>
+      <CardBody>
+        <h2>設定的なやつ</h2>
+        <p>身の上話をほとんどしてくれないので謎だらけ</p>
+        <p>唯一誕生日だけはっきりとしている</p>
+      </CardBody>
+    </Card>
+    <Card>
+      <CardBody>
+        <h2>ギャラリー</h2>
+        <div class='arts'>
+          {
+            arts.map(({src, alt, href}) => (
+              <a {href} target='_blank' class='art-wrapper'>
+                <Image {src} inferSize {alt} class='art' loading='eager' />
+              </a>
+            ))
+          }
+        </div>
+      </CardBody>
+    </Card>
+    <Card>
+      <CardBody>
+        <h2>FAQ</h2>
+        <section>
+          <h3>すえ(souhait)って何？</h3>
+          <p>願いとか望みとかの意味を持つフランス語の男性名詞です</p>
+          <p>
+            2021年辺りに命名したっぽいんですが、名前の由来はどこにも残ってませんでした
+          </p>
+          <p>
+            <s>そうはいととしか読めないところ以外は</s>いい名前だと思います
+          </p>
+        </section>
+        <section>
+          <h3>画像は何製？</h3>
+          <p><ExternalLink href='https://crypko.ai/'>Crypko</ExternalLink>製</p>
+          <p>
+            MidjourneyとかStable
+            Diffusionが話題になる前から存在してる誰でもいい感じの子を生み出せるAI画像生成サービスです
+          </p>
+        </section>
+        <section>
+          <h3>すえとすえちゃんの関係性は？</h3>
+          <p>わからん</p>
+          <p>少なくとも他人</p>
+        </section>
+        <section>
+          <h3>すえちゃんの名前と画像をすえが使っている理由は？</h3>
+          <p>勝手に使ってるだけ</p>
+        </section>
+      </CardBody>
+    </Card>
+  </div>
 </BaseLayout>
 
 <style lang='scss'>
-	@use '@/styles/shapes' as s;
+  @use '@/styles/shapes' as s;
 
-	.profile {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-bottom: s.$space;
-		text-align: center;
-	}
-	h1 {
-		width: 100%;
-		margin: 0;
-		font-size: 1.5rem;
-		font-weight: inherit;
-	}
-	dl {
-		display: grid;
-		grid-template-columns: auto auto;
-		column-gap: s.$space;
-		margin: 0;
-		margin-top: calc(s.$space / 2);
-		text-align: left;
-	}
-	dd {
-		margin: 0;
-	}
-	.stack {
-		display: flex;
-		flex-direction: column;
-		gap: s.$space;
-	}
-	.souhait-chan-wrapper {
-		width: 100%;
-		height: auto;
-		padding: calc(s.$space * 2);
-		padding-bottom: 0;
-	}
-	.souhait-chan {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
-	.art-wrapper {
-		display: block;
-	}
-	.arts {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-	.art {
-		display: block;
-		width: 100%;
-		min-width: 5rem;
-		max-width: 15rem;
-		height: auto;
-	}
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: s.$space;
+    text-align: center;
+  }
+  h1 {
+    width: 100%;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: inherit;
+  }
+  dl {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: s.$space;
+    margin: 0;
+    margin-top: calc(s.$space / 2);
+    text-align: left;
+  }
+  dd {
+    margin: 0;
+  }
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: s.$space;
+  }
+  .souhait-chan-wrapper {
+    width: 100%;
+    height: auto;
+    padding: calc(s.$space * 2);
+    padding-bottom: 0;
+  }
+  .souhait-chan {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .art-wrapper {
+    display: block;
+  }
+  .arts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .art {
+    display: block;
+    width: 100%;
+    min-width: 5rem;
+    max-width: 15rem;
+    height: auto;
+  }
 </style>

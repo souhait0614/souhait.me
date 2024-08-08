@@ -5,55 +5,55 @@ import BaseLayout from '@/layouts/base-layout.astro';
 ---
 
 <BaseLayout title='お遊び' description='個別で置くほどじゃないものを置いてます'>
-	<h1>お遊び</h1>
-	<div class='stack'>
-		<PlayCard
-			title='そうはいとガチャ'
-			href='https://v1.souhait.me/play/souhaito-gacha'
-		>
-			<p>
-				絵文字がランダムで三つ出力され、結果をMisskeyに投稿したりコピーしたりできます。
-			</p>
-			<p>
-				<s>なにこれ</s>
-			</p>
-			<p>
-				<ExternalLink href='https://submarin.online/@f/pages/souhait'
-					>これ</ExternalLink
-				>
-				を勝手に移植・改造しました
-			</p>
-		</PlayCard>
-		<PlayCard
-			title='そうはいとガチャ 10連'
-			href='https://v1.souhait.me/play/souhaito-gacha-ten'
-		>
-			<p>
-				絵文字がランダムで三つ×10出力され、結果をMisskeyに投稿したりコピーしたりできます。
-			</p>
-			<p>
-				<s>本当になにこれ</s>
-			</p>
-			<p>
-				<ExternalLink href='https://submarin.online/@f/pages/souhait'
-					>これ</ExternalLink
-				>
-				を勝手に移植・改造しました
-			</p>
-		</PlayCard>
-	</div>
+  <h1>お遊び</h1>
+  <div class='stack'>
+    <PlayCard
+      title='そうはいとガチャ'
+      href='https://v1.souhait.me/play/souhaito-gacha'
+    >
+      <p>
+        絵文字がランダムで三つ出力され、結果をMisskeyに投稿したりコピーしたりできます。
+      </p>
+      <p>
+        <s>なにこれ</s>
+      </p>
+      <p>
+        <ExternalLink href='https://submarin.online/@f/pages/souhait'
+          >これ</ExternalLink
+        >
+        を勝手に移植・改造しました
+      </p>
+    </PlayCard>
+    <PlayCard
+      title='そうはいとガチャ 10連'
+      href='https://v1.souhait.me/play/souhaito-gacha-ten'
+    >
+      <p>
+        絵文字がランダムで三つ×10出力され、結果をMisskeyに投稿したりコピーしたりできます。
+      </p>
+      <p>
+        <s>本当になにこれ</s>
+      </p>
+      <p>
+        <ExternalLink href='https://submarin.online/@f/pages/souhait'
+          >これ</ExternalLink
+        >
+        を勝手に移植・改造しました
+      </p>
+    </PlayCard>
+  </div>
 </BaseLayout>
 
 <style lang='scss'>
-	@use '@/styles/shapes' as s;
+  @use '@/styles/shapes' as s;
 
-	h1 {
-		margin-top: 0;
-	}
+  h1 {
+    margin-top: 0;
+  }
 
-	.stack {
-		display: flex;
-		flex-direction: column;
-		gap: s.$space;
-	}
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: s.$space;
+  }
 </style>
