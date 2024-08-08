@@ -24,11 +24,12 @@ const gyaguLinkList: Link[] = [
 
 const notGyaguLinkList: Link[] = [
 	{href: 'https://hisubway.online'},
-	{href: 'https://taiy.me'},
 	{href: 'https://stesan.dev'},
 	{href: 'https://matechan.com'},
 	{href: 'https://kitazawa.me'},
 ];
+
+const taiwaiLinkList: Link[] = [{href: 'https://taiy.me/gyagu'}];
 ---
 
 <BaseLayout
@@ -69,6 +70,23 @@ const notGyaguLinkList: Link[] = [
 				<ul>
 					{
 						notGyaguLinkList.map(({href, label, extra}) => (
+							<li>
+								<ExternalLink {href}>
+									{label ?? new URL(href).hostname}
+									{extra}
+								</ExternalLink>
+							</li>
+						))
+					}
+				</ul>
+			</CardBody>
+		</Card>
+		<Card class='no-noisy'>
+			<CardBody>
+				<h2>は？</h2>
+				<ul>
+					{
+						taiwaiLinkList.map(({href, label, extra}) => (
 							<li>
 								<ExternalLink {href}>
 									{label ?? new URL(href).hostname}
