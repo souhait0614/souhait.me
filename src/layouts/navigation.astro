@@ -35,6 +35,7 @@ type Props = HTMLAttributes<'nav'>;
 ---
 
 <nav {...Astro.props}>
+	<h2>サイトナビゲーション</h2>
 	<ul>
 		{
 			links
@@ -60,6 +61,10 @@ type Props = HTMLAttributes<'nav'>;
 		padding: 0.25rem 0.5rem;
 		background-color: c.$bg;
 		border-radius: s.$radius;
+
+		> h2 {
+			display: none;
+		}
 	}
 	ul {
 		display: flex;
