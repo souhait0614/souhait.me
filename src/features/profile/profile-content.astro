@@ -1,14 +1,14 @@
 ---
 import {Image} from 'astro:assets';
-import {banner, avatar} from '@/constants/image';
+import {banner, avatar, optimizedSouhaitChan} from '@/constants/image';
 import {transitionNames} from '@/constants/transition';
 ---
 
 <Image
 	src={banner}
 	alt='Banner'
-	width={1280}
-	height={720}
+	width={1280 / 2}
+	height={720 / 2}
 	class='banner'
 	loading='eager'
 />
@@ -27,6 +27,10 @@ import {transitionNames} from '@/constants/transition';
 	<p>TypeScriptとリズムゲームで生きています</p>
 	<p>アイコンの子は<a href='/souhait-chan/'>すえちゃん</a>です</p>
 </div>
+
+<Fragment slot='head'>
+	<link rel='preload' href={optimizedSouhaitChan.src} as='image' />
+</Fragment>
 
 <style lang='scss'>
 	@use '@/styles/shapes' as s;
