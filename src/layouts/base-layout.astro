@@ -1,9 +1,6 @@
 ---
 /* eslint-disable import/no-unassigned-import, import/extensions */
 import 'modern-normalize';
-import '@fontsource/ibm-plex-sans-jp/400.css';
-import '@fontsource/ibm-plex-sans-jp/700.css';
-import '@fontsource/m-plus-rounded-1c/900.css';
 import {Icon} from 'astro-icon/components';
 import Navigation from './navigation.astro';
 import '@/styles/common.scss';
@@ -69,8 +66,9 @@ const showBack = Astro.url.pathname !== '/';
 				padding: s.$space;
 				margin: 0 auto;
 
-				font-family: 'IBM Plex Sans JP', system-ui, 'Segoe UI', Roboto,
-					Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+				font-family: 'IBM Plex Sans JP', 'BIZ UDPGothic', 'Helvetica Neue',
+					Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
+					sans-serif;
 				color: c.$fg;
 				background-color: c.$bg;
 
