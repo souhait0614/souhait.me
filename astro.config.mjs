@@ -12,5 +12,6 @@ export default defineConfig({
 		domains: ['img.souhait.me'],
 	},
 	trailingSlash: 'always',
+	scopedStyleStrategy: 'class',
 	integrations: [icon(), playformCompress()],
 });
