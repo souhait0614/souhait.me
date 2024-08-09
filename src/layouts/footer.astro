@@ -1,0 +1,30 @@
+---
+import Navigation from './navigation.astro';
+---
+
+<footer {...Astro.props}>
+  <Navigation class='navigation' />
+  <small class='copyright'>©2024 すえ</small>
+</footer>
+
+<style lang='scss'>
+  @use '@/styles/breakpoints' as bp;
+  @use '@/styles/colors' as c;
+  @use '@/styles/shapes' as s;
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .navigation {
+    width: 100%;
+  }
+  .copyright {
+    padding: 0 0.5rem;
+    font-size: 1rem;
+    background-color: c.$bg;
+    border-radius: s.$radius;
+  }
+</style>

@@ -42,4 +42,5 @@ export const transitionAnimate = {
 export const transitionNames = {
   profileCard: 'profile-card',
   souhaitChan: 'souhait-chan',
+  footer: 'footer',
 };

@@ -1,11 +1,10 @@
 ---
 /* eslint-disable import/no-unassigned-import, import/extensions */
 import 'modern-normalize';
-import {Icon} from 'astro-icon/components';
-import Navigation from './navigation.astro';
+import Footer from './footer.astro';
 import '@/styles/common.scss';
 import BaseHead from '@/components/base-head.astro';
-import {transitionAnimate} from '@/constants/transition';
+import {transitionAnimate, transitionNames} from '@/constants/transition';
 /* eslint-enable */
 
 interface Props {
@@ -13,8 +12,6 @@ interface Props {
   description: string;
 }
 const {title, description} = Astro.props;
-
-const showBack = Astro.url.pathname !== '/';
 ---
 
 <html lang='ja'>
@@ -23,25 +20,10 @@ const showBack = Astro.url.pathname !== '/';
     <slot name='head' />
   </head>
   <body>
-    <header>
-      {
-        showBack && (
-          <a class='back' href='/'>
-            <Icon name='tabler:chevron-left' size={24} />
-            <span>トップに戻る</span>
-          </a>
-        )
-      }
-      <Navigation
-        class:list={{
-          'full-width': !showBack,
-        }}
-      />
-    </header>
     <main transition:animate={transitionAnimate}>
       <slot />
     </main>
-    <footer><small class='copyright'>©2024 すえ</small></footer>
+    <Footer transition:name={transitionNames.footer} />
 
     <style lang='scss'>
       @use '@/styles/breakpoints' as bp;
@@ -56,7 +38,6 @@ const showBack = Astro.url.pathname !== '/';
       body {
         display: grid;
         grid-template:
-          'header' auto
           'main' 1fr
           'footer' auto / 1fr;
         gap: s.$space;
@@ -73,20 +54,12 @@ const showBack = Astro.url.pathname !== '/';
         color: c.$fg;
         background-color: c.$bg;
 
-        > header {
-          display: flex;
-          grid-area: header;
-          align-items: center;
-          justify-content: space-between;
-        }
-
         > main {
           grid-area: main;
         }
 
         > footer {
           grid-area: footer;
-          text-align: center;
         }
       }
 
