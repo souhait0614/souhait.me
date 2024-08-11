@@ -1,11 +1,12 @@
 ---
 import {Image} from 'astro:assets';
-import BaseLayout from '@/layouts/base-layout.astro';
+
+import Card from '@/components/card.astro';
+import CardBody from '@/components/card-body.astro';
+import ExternalLink from '@/components/external-link.astro';
 import {art, optimizedSouhaitChan} from '@/constants/image';
 import {transitionNames} from '@/constants/transition';
-import CardBody from '@/components/card-body.astro';
-import Card from '@/components/card.astro';
-import ExternalLink from '@/components/external-link.astro';
+import BaseLayout from '@/layouts/base-layout.astro';
 
 const arts = [
   {
