@@ -45,23 +45,46 @@ type Props = HTMLAttributes<'nav'>;
 
 <nav {...Astro.props}>
   <h2>サイトナビゲーション</h2>
-  <ul>
+  <ul is='nagivation-list' data-current={Astro.url.pathname}>
     {
       links
         .filter(({show}) => show !== false)
         .filter(({href, hidden}) => !hidden || href === Astro.url.pathname)
         .map(({href, label}) => (
-          <li class:list={{wrap}} transition:name={`nav-link-${href}`}>
-            {href === Astro.url.pathname ? (
-              <span>{label}</span>
-            ) : (
-              <a {href}>{label}</a>
-            )}
+          <li class:list={{wrap}}>
+            <a {href}>
+              <span transition:name={`nav-link-${href}`}>{label}</span>
+            </a>
           </li>
         ))
     }
   </ul>
 </nav>
+
+<script>
+  class NavigationList extends HTMLUListElement {
+    // NOTE: xoがなんかキレてるけど構文エラーはないし修正もしてくれないので無効化
+    // eslint-disable-next-line prettier/prettier
+    constructor() {
+      super();
+
+      const current = this.dataset.current;
+      if (!current) return;
+
+      const anchorList = this.querySelectorAll('a');
+      for (const anchor of anchorList) {
+        if (new URL(anchor.href).pathname === current) {
+          anchor.classList.add('current');
+          anchor.addEventListener('click', (event) => {
+            event.preventDefault();
+          });
+        }
+      }
+    }
+  }
+
+  customElements.define('nagivation-list', NavigationList, {extends: 'ul'});
+</script>
 
 <style lang='scss'>
   @use '@/styles/colors' as c;
@@ -95,6 +118,8 @@ type Props = HTMLAttributes<'nav'>;
     list-style: none;
 
     > li {
+      display: flex;
+      justify-content: center;
       width: 100%;
       text-align: center;
       white-space: nowrap;
@@ -102,6 +127,11 @@ type Props = HTMLAttributes<'nav'>;
 
     .wrap {
       white-space: wrap;
+    }
+
+    .current {
+      color: c.$fg;
+      text-decoration: none;
     }
   }
 </style>
