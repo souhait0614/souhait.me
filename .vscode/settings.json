@@ -1,39 +1,38 @@
 {
   "cSpell.words": ["souhait"],
   "editor.formatOnSave": true,
-  "xo.enable": true,
-  "xo.format.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
-    "editor.defaultFormatter": "samverschueren.linter-xo"
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "samverschueren.linter-xo"
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
   },
   "[typescript]": {
-    "editor.defaultFormatter": "samverschueren.linter-xo"
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "samverschueren.linter-xo"
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
   },
   "[astro]": {
-    "editor.defaultFormatter": "samverschueren.linter-xo",
     "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
       "source.fixAll.stylelint": "explicit"
     }
   },
   "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
       "source.fixAll.stylelint": "explicit"
     }
   },
-  "xo.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "astro"
-  ],
-  "stylelint.validate": ["css", "scss", "postcss", "astro"],
-  "prettier.configPath": "prettier.config.cjs"
+  "stylelint.validate": ["css", "scss", "postcss", "astro"]
 }
