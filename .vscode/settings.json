@@ -34,5 +34,13 @@
       "source.fixAll.stylelint": "explicit"
     }
   },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.documentSelectors": ["**/*.astro"],
   "stylelint.validate": ["css", "scss", "postcss", "astro"]
 }

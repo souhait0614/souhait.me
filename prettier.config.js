@@ -6,6 +6,7 @@ export default {
   singleQuote: true,
   bracketSpacing: false,
   jsxSingleQuote: true,
+  astroAllowShorthand: true,
   plugins: ['prettier-plugin-astro'],
   overrides: [
     {
