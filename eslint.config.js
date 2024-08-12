@@ -11,8 +11,14 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   configGitignore(),
-  {extends: [pluginJs.configs.recommended]},
-  {extends: tseslint.configs.recommended},
+  {
+    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx', '**/*.astro'],
+    extends: [pluginJs.configs.recommended],
+  },
+  {
+    files: ['**/*.ts', '**/*.tsx', '**/*.astro'],
+    extends: tseslint.configs.recommended,
+  },
   {
     files: ['**/*.cjs'],
     languageOptions: {
