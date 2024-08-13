@@ -2,7 +2,11 @@
 import BaseLayout from '@/layouts/base-layout.astro';
 ---
 
-<BaseLayout title='404 Not Found' description='お探しのページは存在しません'>
+<BaseLayout
+  title='404 Not Found'
+  description='お探しのページは存在しません'
+  isErrorPage
+>
   <div class='container'>
     <h1>404 Not Found</h1>
     <p>お探しのページは存在しません</p>

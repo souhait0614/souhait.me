@@ -8,37 +8,55 @@ import {siteName} from '@/constants/site-info';
 interface Props {
   title: string;
   description: string;
+  isErrorPage?: boolean;
 }
-const {title, description} = Astro.props;
+const {title, description, isErrorPage = false} = Astro.props;
 ---
 
 <meta charset='utf-8' />
 <link rel='icon' href={icon} />
 <meta name='viewport' content='width=device-width,initial-scale=1' />
 <meta name='generator' content={Astro.generator} />
-<SEO
-  title={title}
-  titleTemplate=`%s - ${siteName}`
-  titleDefault=`${siteName}`
-  description={description}
-  openGraph={{
-    basic: {
-      title: title || siteName,
-      type: 'website',
-      image: avatar,
-    },
-    optional: {
-      description,
-      locale: `ja_JP`,
-      siteName,
-    },
-  }}
-  twitter={{
-    card: 'summary',
-    title,
-    description,
-    image: avatar,
-    site: '@ElectronicsBot',
-  }}
-/>
+
+{
+  !isErrorPage && (
+    <SEO
+      {title}
+      titleTemplate={`%s - ${siteName}`}
+      titleDefault={siteName}
+      {description}
+      openGraph={{
+        basic: {
+          title: title || siteName,
+          type: 'website',
+          image: avatar,
+        },
+        optional: {
+          description,
+          locale: `ja_JP`,
+          siteName,
+        },
+      }}
+      twitter={{
+        card: 'summary',
+        title,
+        description,
+        image: avatar,
+        site: '@ElectronicsBot',
+      }}
+    />
+  )
+}
+{
+  isErrorPage && (
+    <>
+      <title>
+        {title} - {siteName}
+      </title>
+      <meta name='description' content={description} />
+      <meta content='noindex, nofollow' name='robots' />
+    </>
+  )
+}
+
 <ViewTransitions />
