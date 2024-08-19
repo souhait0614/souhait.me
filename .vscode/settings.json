@@ -4,6 +4,7 @@
   ],
   "editor.formatOnSave": true,
   "eslint.format.enable": true,
+  "editor.defaultFormatter": "EditorConfig.EditorConfig",
   "[javascript][javascriptreact][typescript][typescriptreact]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
