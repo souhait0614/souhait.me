@@ -1,16 +1,16 @@
 ---
-import {ViewTransitions} from 'astro:transitions';
-import {SEO} from 'astro-seo';
+import { ViewTransitions } from 'astro:transitions';
+import { SEO } from 'astro-seo';
 
-import {avatar, icon} from '@/constants/image';
-import {siteName} from '@/constants/site-info';
+import { avatar, icon } from '@/constants/image';
+import { siteName } from '@/constants/site-info';
 
 interface Props {
   title: string;
   description: string;
   isErrorPage?: boolean;
 }
-const {title, description, isErrorPage = false} = Astro.props;
+const { title, description, isErrorPage = false } = Astro.props;
 ---
 
 <meta charset='utf-8' />
@@ -33,7 +33,7 @@ const {title, description, isErrorPage = false} = Astro.props;
         },
         optional: {
           description,
-          locale: `ja_JP`,
+          locale: 'ja_JP',
           siteName,
         },
       }}

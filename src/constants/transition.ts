@@ -1,6 +1,6 @@
 import '@/styles/animations.scss';
 
-import type {TransitionDirectionalAnimations} from 'astro';
+import type { TransitionDirectionalAnimations } from 'astro';
 
 export const easingOld = 'cubic-bezier(0.12, 0, 0.39, 0)'; // EaseInSine
 export const easingNew = 'cubic-bezier(0.61, 1, 0.88, 1);'; // EaseOutSine

@@ -1,4 +1,4 @@
-import {getImage} from 'astro:assets';
+import { getImage } from 'astro:assets';
 
 export const origin = 'https://img.souhait.me';
 

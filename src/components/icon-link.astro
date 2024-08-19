@@ -1,12 +1,12 @@
 ---
-import type {HTMLAttributes} from 'astro/types';
-import {Icon} from 'astro-icon/components';
+import type { HTMLAttributes } from 'astro/types';
+import { Icon } from 'astro-icon/components';
 
 export type Props = HTMLAttributes<'a'> & {
   iconName: string;
 };
 
-const {iconName, ...properties} = Astro.props;
+const { iconName, ...properties } = Astro.props;
 ---
 
 <a {...properties}>

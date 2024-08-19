@@ -1,12 +1,12 @@
 ---
-import type {HTMLAttributes} from 'astro/types';
-import {Image} from 'astro:assets';
+import type { HTMLAttributes } from 'astro/types';
+import { Image } from 'astro:assets';
 
 import Card from '@/components/card.astro';
 import CardBody from '@/components/card-body.astro';
 import ExternalLink from '@/components/external-link.astro';
-import {art, optimizedSouhaitChan} from '@/constants/image';
-import {transitionNames} from '@/constants/transition';
+import { art, optimizedSouhaitChan } from '@/constants/image';
+import { transitionNames } from '@/constants/transition';
 import BaseLayout from '@/layouts/base-layout.astro';
 
 const arts = [
@@ -63,7 +63,7 @@ const imgAttrs: HTMLAttributes<'img'> = {
         <h2>ギャラリー</h2>
         <div class='arts'>
           {
-            arts.map(({src, alt, href}) => (
+            arts.map(({ src, alt, href }) => (
               <a {href} target='_blank' class='art-wrapper'>
                 <Image {src} inferSize {alt} class='art' loading='eager' />
               </a>

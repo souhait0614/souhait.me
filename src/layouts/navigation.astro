@@ -1,5 +1,5 @@
 ---
-import type {HTMLAttributes} from 'astro/types';
+import type { HTMLAttributes } from 'astro/types';
 
 const showTop = Astro.url.pathname !== '/';
 const wrap = Astro.url.pathname === '/gyagu/';
@@ -48,10 +48,10 @@ type Props = HTMLAttributes<'nav'>;
   <ul is='nagivation-list' data-current={Astro.url.pathname}>
     {
       links
-        .filter(({show}) => show !== false)
-        .filter(({href, hidden}) => !hidden || href === Astro.url.pathname)
-        .map(({href, label}) => (
-          <li class:list={{wrap}}>
+        .filter(({ show }) => show !== false)
+        .filter(({ href, hidden }) => !hidden || href === Astro.url.pathname)
+        .map(({ href, label }) => (
+          <li class:list={{ wrap }}>
             <a {href}>
               <span transition:name={`nav-link-${href}`}>{label}</span>
             </a>
