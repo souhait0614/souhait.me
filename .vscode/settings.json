@@ -1,36 +1,21 @@
 {
-  "cSpell.words": ["souhait"],
+  "cSpell.words": [
+    "souhait"
+  ],
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
-    }
-  },
-  "[javascriptreact]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
-    }
-  },
-  "[typescript]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
-    }
-  },
-  "[typescriptreact]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
-    }
+  "eslint.format.enable": true,
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[astro]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit",
       "source.fixAll.stylelint": "explicit"
     }
   },
   "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit",
       "source.fixAll.stylelint": "explicit"
     }
   },
@@ -41,6 +26,10 @@
     "typescript",
     "typescriptreact"
   ],
-  "prettier.documentSelectors": ["**/*.astro"],
-  "stylelint.validate": ["css", "scss", "postcss", "astro"]
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "postcss",
+    "astro"
+  ]
 }
