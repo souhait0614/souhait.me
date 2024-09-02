@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint . && stylelint **/*.{css,scss,astro}",
-    "fix": "eslint --fix . && stylelint --fix **/*.{css,scss,astro}"
+    "format": "eslint --fix . && stylelint --fix **/*.{css,scss,astro}"
   },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.5.3",
