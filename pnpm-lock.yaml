@@ -17,6 +17,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.3
         version: 0.9.3(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
+      '@fontsource/ibm-plex-sans-jp':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/m-plus-rounded-1c':
         specifier: ^5.0.14
         version: 5.0.14
@@ -460,6 +463,9 @@ packages:
   '@eslint/object-schema@2.1.4':
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource/ibm-plex-sans-jp@5.1.0':
+    resolution: {integrity: sha512-NcQRoHmZyHw1SgKhvnTa+db29YUsnq7D25fofK81xmdPc69S8w9Nxob4yaus0NVoaUd3qcpjv53msilteAhx9g==}
 
   '@fontsource/m-plus-rounded-1c@5.0.14':
     resolution: {integrity: sha512-+Zn7bJqr46rU4gSxoZUIFFoG5bjupImwoG5N12OSnPC2aRCFHDpt17T/3hdIfqqftQIbBcaode0N6rdc2youAA==}
@@ -4140,6 +4146,8 @@ snapshots:
   '@eslint/js@9.9.1': {}
 
   '@eslint/object-schema@2.1.4': {}
+
+  '@fontsource/ibm-plex-sans-jp@5.1.0': {}
 
   '@fontsource/m-plus-rounded-1c@5.0.14': {}
 
