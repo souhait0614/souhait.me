@@ -11,6 +11,15 @@ export default defineConfig({
   image: {
     domains: ['img.souhait.me'],
   },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern',
+        },
+      },
+    },
+  },
   trailingSlash: 'always',
   scopedStyleStrategy: 'class',
   integrations: [icon(), playformCompress()],
