@@ -14,8 +14,8 @@ interface Link {
 
 const gyaguLinkList: Link[] = [
   { href: 'https://midra.me' },
-  { href: 'https://lunachi.me/gyagu/' },
-  { href: 'https://l1n4r1.art/gyagu/' },
+  { href: 'https://lunachi.me/gyagu/', extra: '←死にました' },
+  { href: 'https://l1n4r1.art/gyagu/', extra: '←消えました' },
   { href: 'https://lutica.net/gyagu/' },
   { href: 'https://site.kagamisskey.com/gyagu.html' },
   { href: 'https://sunset0916.net/gyagu/' },
@@ -28,9 +28,10 @@ const notGyaguLinkList: Link[] = [
   { href: 'https://stesan.dev' },
   { href: 'https://matechan.com' },
   { href: 'https://kitazawa.me' },
+  { href: 'https://taiy.me' },
 ];
 
-const taiwaiLinkList: Link[] = [{ href: 'https://taiy.me/gyagu' }];
+// const taiwaiLinkList: Link[] = [];
 ---
 
 <BaseLayout
@@ -82,7 +83,7 @@ const taiwaiLinkList: Link[] = [{ href: 'https://taiy.me/gyagu' }];
         </ul>
       </CardBody>
     </Card>
-    <Card class='no-noisy'>
+    <!-- <Card class='no-noisy'>
       <CardBody>
         <h2>は？</h2>
         <ul>
@@ -98,7 +99,7 @@ const taiwaiLinkList: Link[] = [{ href: 'https://taiy.me/gyagu' }];
           }
         </ul>
       </CardBody>
-    </Card>
+    </Card> -->
     <Card>
       <CardBody element='div'>
         <p class:list={['chance-to-be-listed', 'noisy']}>
