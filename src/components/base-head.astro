@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import { SEO } from 'astro-seo';
 
 import { avatar, icon } from '@/constants/image';
@@ -59,4 +59,4 @@ const { title, description, isErrorPage = false } = Astro.props;
   )
 }
 
-<ViewTransitions />
+<ClientRouter />
