@@ -6,7 +6,7 @@ import Card from '@/components/card.astro';
 import CardBody from '@/components/card-body.astro';
 import ExternalLink from '@/components/external-link.astro';
 import NDaysLater from '@/components/n-days-later.astro';
-import { art, optimizedSouhaitChan } from '@/constants/image';
+import { art, optimizedSouhaitChan, optimizedSouhaitChanOld1, optimizedSouhaitChanOld2, optimizedSouhaitChanOld3 } from '@/constants/image';
 import { transitionNames } from '@/constants/transition';
 import EasterEgg from '@/features/souhait-chan/easter-egg.svelte';
 import BaseLayout from '@/layouts/base-layout.astro';
@@ -33,7 +33,20 @@ const imgAttrs: HTMLAttributes<'img'> = {
   <div class='stack'>
     <Card transition:name={transitionNames.profileCard}>
       <div class='souhait-chan-wrapper'>
-        <EasterEgg client:load>
+        <EasterEgg client:load optimizedOldSouhaitChans={[
+          {
+            src: optimizedSouhaitChanOld1.src,
+            ...optimizedSouhaitChanOld1.attributes,
+          },
+          {
+            src: optimizedSouhaitChanOld2.src,
+            ...optimizedSouhaitChanOld2.attributes,
+          },
+          {
+            src: optimizedSouhaitChanOld3.src,
+            ...optimizedSouhaitChanOld3.attributes,
+          },
+        ]}>
           <img
             src={optimizedSouhaitChan.src}
             {...imgAttrs}

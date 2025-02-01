@@ -1,9 +1,15 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+  import type { HTMLImgAttributes } from 'svelte/elements';
   import { blur } from 'svelte/transition';
 
-  import { optimizedSouhaitChanOld1, optimizedSouhaitChanOld2, optimizedSouhaitChanOld3 } from '@/constants/image';
 
-  const { children } = $props();
+  interface Props {
+    optimizedOldSouhaitChans: HTMLImgAttributes[];
+    children: Snippet;
+  }
+
+  const { children, optimizedOldSouhaitChans }: Props = $props();
   let imgIndex = $state(0);
 
   let combo: string[] = [];
@@ -42,15 +48,45 @@
 </script>
 
 {#if imgIndex === 0}
-  <div transition:blur class='souhait-chan'>{@render children()}</div>
+  <div transition:blur class='container'>{@render children()}</div>
 {/if}
 {#if imgIndex === 1}
+  <div transition:blur class='container'>
+    <img
+      transition:blur
+      {...optimizedOldSouhaitChans.at(0)}
+      alt='古いすえちゃん'
+      class='container'
+    />
+  </div>
+{/if}
+{#if imgIndex === 2}
+  <div transition:blur class='container'>
+    <img
+      transition:blur
+      {...optimizedOldSouhaitChans.at(1)}
+      alt='もっと古いすえちゃん'
+      class='container'
+    />
+  </div>
+{/if}
+{#if imgIndex === 3}
+  <div transition:blur class='container'>
+    <img
+      transition:blur
+      {...optimizedOldSouhaitChans.at(2)}
+      alt='一番古いすえちゃん'
+      class='container'
+    />
+  </div>
+{/if}
+<!-- {#if imgIndex === 1}
   <img
     transition:blur
     src={optimizedSouhaitChanOld1.src}
     {...optimizedSouhaitChanOld1.attributes}
     alt='古いすえちゃん'
-    class='souhait-chan'
+    class='container'
   />
 {/if}
 {#if imgIndex === 2}
@@ -59,7 +95,7 @@
     src={optimizedSouhaitChanOld2.src}
     {...optimizedSouhaitChanOld2.attributes}
     alt='もっと古いすえちゃん'
-    class='souhait-chan'
+    class='container'
   />
 {/if}
 {#if imgIndex === 3}
@@ -68,14 +104,14 @@
     src={optimizedSouhaitChanOld3.src}
     {...optimizedSouhaitChanOld3.attributes}
     alt='一番古いすえちゃん'
-    class='souhait-chan'
+    class='container'
   />
-{/if}
+{/if} -->
 
 <svelte:window on:keyup="{combinator}" />
 
 <style lang='scss'>
-  .souhait-chan {
+  .container {
     display: block;
     grid-area: souhait-chan;
     width: 100%;
