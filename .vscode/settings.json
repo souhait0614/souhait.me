@@ -20,17 +20,25 @@
       "source.fixAll.stylelint": "explicit"
     }
   },
+  "[svelte]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "explicit"
+    }
+  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "astro",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "svelte"
   ],
   "stylelint.validate": [
     "css",
     "scss",
     "postcss",
-    "astro"
+    "astro",
+    "svelte"
   ]
 }

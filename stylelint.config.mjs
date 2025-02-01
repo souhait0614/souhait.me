@@ -10,5 +10,8 @@ export default {
   rules: {
     '@stylistic/string-quotes': 'single',
   },
-  overrides: [{ files: '*.astro', customSyntax: 'postcss-html' }],
+  overrides: [
+    { files: '*.astro', customSyntax: 'postcss-html' },
+    { files: '*.svelte', customSyntax: 'postcss-html' },
+  ],
 };

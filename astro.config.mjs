@@ -1,3 +1,4 @@
+import svelte from '@astrojs/svelte';
 import playformCompress from '@playform/compress';
 import { defineConfig } from 'astro/config';
 import icon from 'astro-icon';
@@ -22,5 +23,5 @@ export default defineConfig({
   },
   trailingSlash: 'always',
   scopedStyleStrategy: 'class',
-  integrations: [icon(), playformCompress()],
+  integrations: [icon(), playformCompress(), svelte()],
 });
