@@ -6,9 +6,10 @@ import pluginAstro from 'eslint-plugin-astro';
 import globals from 'globals';
 import tsEslint from 'typescript-eslint';
 
-/** @type {import("@typescript-eslint/types").ParserOptions} */
 const parserOptions = {
+  /** @type {import("@typescript-eslint/types").EcmaVersion} */
   ecmaVersion: 'latest',
+  /** @type {import("@typescript-eslint/types").SourceType} */
   sourceType: 'module',
   project: './tsconfig.json',
   tsconfigRootDir: import.meta.dirname,
