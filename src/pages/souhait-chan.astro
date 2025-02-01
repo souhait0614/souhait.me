@@ -7,6 +7,7 @@ import CardBody from '@/components/card-body.astro';
 import ExternalLink from '@/components/external-link.astro';
 import { art, optimizedSouhaitChan } from '@/constants/image';
 import { transitionNames } from '@/constants/transition';
+import EasterEgg from '@/features/souhait-chan/easter-egg.svelte';
 import BaseLayout from '@/layouts/base-layout.astro';
 
 const arts = [
@@ -31,13 +32,15 @@ const imgAttrs: HTMLAttributes<'img'> = {
   <div class='stack'>
     <Card transition:name={transitionNames.profileCard}>
       <div class='souhait-chan-wrapper'>
-        <img
-          src={optimizedSouhaitChan.src}
-          {...imgAttrs}
-          alt='すえちゃん'
-          class='souhait-chan'
-          transition:name={transitionNames.souhaitChan}
-        />
+        <EasterEgg client:load>
+          <img
+            src={optimizedSouhaitChan.src}
+            {...imgAttrs}
+            alt='すえちゃん'
+            class='souhait-chan'
+            transition:name={transitionNames.souhaitChan}
+          />
+        </EasterEgg>
       </div>
       <div class='profile'>
         <h1>すえちゃん</h1>
@@ -140,6 +143,8 @@ const imgAttrs: HTMLAttributes<'img'> = {
     gap: s.$space;
   }
   .souhait-chan-wrapper {
+    display: grid;
+    grid-template: 'souhait-chan' 100% / 100%;
     width: 100%;
     height: auto;
     padding: calc(s.$space * 2);
