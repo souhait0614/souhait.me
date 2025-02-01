@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint . && stylelint **/*.{css,scss,astro}",
+    "lint": "astro check && eslint . && stylelint **/*.{css,scss,astro}",
     "format": "eslint --fix . && stylelint --fix **/*.{css,scss,astro}"
   },
   "dependencies": {
