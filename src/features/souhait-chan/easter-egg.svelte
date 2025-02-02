@@ -54,6 +54,7 @@
   <img
     transition:blur
     {...optimizedOldSouhaitChans.at(0)}
+    loading="eager"
     alt='古いすえちゃん'
     class='souhait-chan'
   />
@@ -62,6 +63,7 @@
   <img
     transition:blur
     {...optimizedOldSouhaitChans.at(1)}
+    loading="eager"
     alt='もっと古いすえちゃん'
     class='souhait-chan'
   />
@@ -70,6 +72,7 @@
   <img
     transition:blur
     {...optimizedOldSouhaitChans.at(2)}
+    loading="eager"
     alt='一番古いすえちゃん'
     class='souhait-chan'
   />
