@@ -9,7 +9,7 @@
     children: Snippet;
   }
 
-  const { children, optimizedOldSouhaitChans }: Props = $props();
+  const { optimizedOldSouhaitChans }: Props = $props();
   let imgIndex = $state(0);
 
   let combo: string[] = [];
@@ -47,71 +47,49 @@
   }
 </script>
 
-{#if imgIndex === 0}
-  <div transition:blur class='container'>{@render children()}</div>
+{#if imgIndex !== 0}
+  <div transition:blur class='background'></div>
 {/if}
 {#if imgIndex === 1}
-  <div transition:blur class='container'>
-    <img
-      transition:blur
-      {...optimizedOldSouhaitChans.at(0)}
-      alt='古いすえちゃん'
-      class='container'
-    />
-  </div>
-{/if}
-{#if imgIndex === 2}
-  <div transition:blur class='container'>
-    <img
-      transition:blur
-      {...optimizedOldSouhaitChans.at(1)}
-      alt='もっと古いすえちゃん'
-      class='container'
-    />
-  </div>
-{/if}
-{#if imgIndex === 3}
-  <div transition:blur class='container'>
-    <img
-      transition:blur
-      {...optimizedOldSouhaitChans.at(2)}
-      alt='一番古いすえちゃん'
-      class='container'
-    />
-  </div>
-{/if}
-<!-- {#if imgIndex === 1}
   <img
     transition:blur
-    src={optimizedSouhaitChanOld1.src}
-    {...optimizedSouhaitChanOld1.attributes}
+    {...optimizedOldSouhaitChans.at(0)}
     alt='古いすえちゃん'
-    class='container'
+    class='souhait-chan'
   />
 {/if}
 {#if imgIndex === 2}
   <img
     transition:blur
-    src={optimizedSouhaitChanOld2.src}
-    {...optimizedSouhaitChanOld2.attributes}
+    {...optimizedOldSouhaitChans.at(1)}
     alt='もっと古いすえちゃん'
-    class='container'
+    class='souhait-chan'
   />
 {/if}
 {#if imgIndex === 3}
   <img
     transition:blur
-    src={optimizedSouhaitChanOld3.src}
-    {...optimizedSouhaitChanOld3.attributes}
+    {...optimizedOldSouhaitChans.at(2)}
     alt='一番古いすえちゃん'
-    class='container'
+    class='souhait-chan'
   />
-{/if} -->
+{/if}
 
 <svelte:window on:keyup="{combinator}" />
 
 <style lang='scss'>
-  .container {
+  @use '../../styles/colors.scss' as c;
+
+  .background {
+    z-index: 1;
+    display: block;
+    grid-area: souhait-chan;
+    width: 100%;
+    height: auto;
+    background-color: c.$container;
+  }
+  .souhait-chan {
+    z-index: 2;
     display: block;
     grid-area: souhait-chan;
     width: 100%;

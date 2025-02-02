@@ -33,7 +33,14 @@ const imgAttrs: HTMLAttributes<'img'> = {
   <div class='stack'>
     <Card transition:name={transitionNames.profileCard}>
       <div class='souhait-chan-wrapper'>
-        <EasterEgg client:load optimizedOldSouhaitChans={[
+        <img
+          src={optimizedSouhaitChan.src}
+          {...imgAttrs}
+          alt='すえちゃん'
+          class='souhait-chan'
+          transition:name={transitionNames.souhaitChan}
+        />
+        <EasterEgg client:idle optimizedOldSouhaitChans={[
           {
             src: optimizedSouhaitChanOld1.src,
             ...optimizedSouhaitChanOld1.attributes,
@@ -47,13 +54,6 @@ const imgAttrs: HTMLAttributes<'img'> = {
             ...optimizedSouhaitChanOld3.attributes,
           },
         ]}>
-          <img
-            src={optimizedSouhaitChan.src}
-            {...imgAttrs}
-            alt='すえちゃん'
-            class='souhait-chan'
-            transition:name={transitionNames.souhaitChan}
-          />
         </EasterEgg>
       </div>
       <div class='profile'>
@@ -166,6 +166,7 @@ const imgAttrs: HTMLAttributes<'img'> = {
   }
   .souhait-chan {
     display: block;
+    grid-area: souhait-chan;
     width: 100%;
     height: auto;
   }
