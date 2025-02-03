@@ -9,7 +9,9 @@
   });
 </script>
 
-{yearsOldText} (<input type="number" bind:value={year}>/5/8)
+<span>
+  {yearsOldText} (<input type="number" bind:value={year}>/5/8)
+</span>
 
 <style lang="scss">
   @use '../../styles/colors' as c;
