@@ -13,7 +13,6 @@
       month,
       date,
     });
-    console.log(now, birthDay);
     return differenceInDays(birthDay, now) + (isAfter(now, birthDay) ? 365 : 0);
   };
 </script>
