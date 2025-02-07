@@ -23,6 +23,7 @@
     "astro": "^4.16.18",
     "astro-icon": "^1.1.5",
     "astro-seo": "^0.8.4",
+    "date-fns": "^4.1.0",
     "modern-normalize": "^3.0.1",
     "svelte": "^5.19.6"
   },

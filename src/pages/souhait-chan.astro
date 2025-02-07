@@ -2,10 +2,10 @@
 import type { HTMLAttributes } from 'astro/types';
 import { Image } from 'astro:assets';
 
+import BirthDay from '@/components/birth-day.svelte';
 import Card from '@/components/card.astro';
 import CardBody from '@/components/card-body.astro';
 import ExternalLink from '@/components/external-link.astro';
-import NDaysLater from '@/components/n-days-later.astro';
 import { art, optimizedSouhaitChan, optimizedSouhaitChanOld1, optimizedSouhaitChanOld2, optimizedSouhaitChanOld3 } from '@/constants/image';
 import { transitionNames } from '@/constants/transition';
 import EasterEgg from '@/features/souhait-chan/easter-egg.svelte';
@@ -60,7 +60,7 @@ const imgAttrs: HTMLAttributes<'img'> = {
         <h1>すえちゃん</h1>
         <dl>
           <dt>誕生日</dt>
-          <dd>6/14 (<NDaysLater month={6} day={14}/>日後)</dd>
+          <dd><BirthDay client:only='svelte' month={5} date={14}/></dd>
           <dt>年齢</dt>
           <dd>14~16くらい</dd>
           <dt>性別</dt>

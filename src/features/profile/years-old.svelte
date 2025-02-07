@@ -18,8 +18,7 @@
   @use '../../styles/shapes' as s;
 
   input {
-    min-width: 5rem;
-    field-sizing: content;
+    width: 6rem;
     padding: 0 0.25rem;
     margin: 0;
     -webkit-appearance: none;

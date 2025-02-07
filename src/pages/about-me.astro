@@ -1,10 +1,10 @@
 ---
 import { YouTube } from '@astro-community/astro-embed-youtube';
 
+import BirthDay from '@/components/birth-day.svelte';
 import Card from '@/components/card.astro';
 import CardBody from '@/components/card-body.astro';
 import ExternalLink from '@/components/external-link.astro';
-import NDaysLater from '@/components/n-days-later.astro';
 import { transitionNames } from '@/constants/transition';
 import ProfileContent from '@/features/profile/profile-content.astro';
 import YearsOld from '@/features/profile/years-old.svelte';
@@ -18,9 +18,9 @@ import BaseLayout from '@/layouts/base-layout.astro';
       <div class='profile'>
         <dl>
           <dt>誕生日</dt>
-          <dd>5/8 (<NDaysLater month={5} day={0}/>日後)</dd>
+          <dd><BirthDay client:only='svelte' month={4} date={8}/></dd>
           <dt>年齢</dt>
-          <dd><YearsOld client:idle /></dd>
+          <dd><YearsOld client:only='svelte' /></dd>
         </dl>
       </div>
     </Card>
