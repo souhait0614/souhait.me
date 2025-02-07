@@ -57,6 +57,9 @@ importers:
       '@taiyme/eslint-config':
         specifier: ^0.7.0
         version: 0.7.0(@typescript-eslint/eslint-plugin@8.23.0(@typescript-eslint/parser@8.23.0(eslint@9.19.0)(typescript@5.7.3))(eslint@9.19.0)(typescript@5.7.3))(eslint@9.19.0)(typescript@5.7.3)
+      '@typescript-eslint/types':
+        specifier: ^8.23.0
+        version: 8.23.0
       eslint:
         specifier: ~9.19.0
         version: 9.19.0
