@@ -1,5 +1,10 @@
 <script lang='ts'>
-  let year = $state(new Date().getFullYear());
+  import { isBefore } from 'date-fns';
+
+  const currentDate = new Date();
+  const currentYearBirthDay = new Date(currentDate.getFullYear(), 4, 8);
+
+  let year = $state(isBefore(currentDate, currentYearBirthDay) ? currentDate.getFullYear() - 1 : currentDate.getFullYear());
   const delta = $derived(year - 2002);
 
   const yearsOldText = $derived.by(() => {
@@ -10,7 +15,7 @@
 </script>
 
 <span>
-  {yearsOldText} (<input type="number" bind:value={year}>/5/8)
+  {yearsOldText} (<input type="number" bind:value={year}>/{currentYearBirthDay.getMonth() + 1}/{currentYearBirthDay.getDate()})
 </span>
 
 <style lang="scss">
