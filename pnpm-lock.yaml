@@ -15,7 +15,7 @@ importers:
         specifier: ^0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.7.3)
       '@astrojs/svelte':
-        specifier: ^6.0.2
+        specifier: '6'
         version: 6.0.2(@types/node@22.13.4)(astro@4.16.18(@types/node@22.13.4)(lightningcss@1.28.2)(rollup@4.34.7)(sass@1.85.0)(terser@5.37.0)(typescript@5.7.3))(lightningcss@1.28.2)(sass@1.85.0)(svelte@5.20.1)(terser@5.37.0)(typescript@5.7.3)
       '@fontsource/ibm-plex-sans-jp':
         specifier: ^5.1.1
@@ -33,7 +33,7 @@ importers:
         specifier: ^0.1.7
         version: 0.1.7(@types/node@22.13.4)(rollup@4.34.7)(sass@1.85.0)(typescript@5.7.3)
       astro:
-        specifier: ^4.16.18
+        specifier: '4'
         version: 4.16.18(@types/node@22.13.4)(lightningcss@1.28.2)(rollup@4.34.7)(sass@1.85.0)(terser@5.37.0)(typescript@5.7.3)
       astro-icon:
         specifier: ^1.1.5
