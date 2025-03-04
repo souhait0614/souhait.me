@@ -30,7 +30,8 @@ export default tsEslint.config(
     },
   },
   {
-    extends: pluginAstro.configs['flat/jsx-a11y-recommended'],
+    // NOTE: 多分pnpm v10で動かなくなったので暫定対応 https://github.com/ota-meshi/eslint-plugin-astro/issues/470
+    extends: pluginAstro.configs['flat/recommended'],
     languageOptions: {
       parserOptions: {
         ...parserOptions,
