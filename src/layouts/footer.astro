@@ -1,10 +1,18 @@
 ---
+import type { HTMLAttributes } from 'astro/types';
+
 import Navigation from './navigation.astro';
+
+type Props = HTMLAttributes<'footer'> & {
+  showBackground?: boolean;
+};
+
+const { showBackground = false, ...props } = Astro.props;
 ---
 
-<footer {...Astro.props}>
-  <Navigation class='navigation' />
-  <small class='copyright'>©2025 すえ</small>
+<footer {...props}>
+  <Navigation class:list={['navigation', showBackground && 'background']} />
+  <small class:list={['copyright', showBackground && 'background']}>©2025 すえ</small>
 </footer>
 
 <style lang='scss'>
@@ -21,11 +29,15 @@ import Navigation from './navigation.astro';
   }
   .navigation {
     width: 100%;
+    border-radius: s.$radius;
   }
   .copyright {
     padding: 0 0.5rem;
     font-size: 1rem;
-    background-color: c.$bg;
     border-radius: s.$radius;
+  }
+
+  .background {
+    background-color: c.$bg;
   }
 </style>

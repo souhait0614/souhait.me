@@ -13,8 +13,9 @@ interface Props {
   title: string;
   description: string;
   isErrorPage?: boolean;
+  showFooterBackground?: boolean;
 }
-const { title, description, isErrorPage = false } = Astro.props;
+const { title, description, isErrorPage = false, showFooterBackground = false } = Astro.props;
 ---
 
 <html lang='ja'>
@@ -26,7 +27,7 @@ const { title, description, isErrorPage = false } = Astro.props;
     <main transition:animate={transitionAnimate}>
       <slot />
     </main>
-    <Footer transition:name={transitionNames.footer} />
+    <Footer transition:name={transitionNames.footer} showBackground={showFooterBackground} />
   </body>
 </html>
 

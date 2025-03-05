@@ -34,6 +34,11 @@ const links: Link[] = [
     label: '作ったもの',
   },
   {
+    href: '/hyakkano/',
+    label: '100カノ',
+    hidden: true,
+  },
+  {
     href: '/gyagu/',
     label: 'ギャグ',
     hidden: true,
@@ -90,8 +95,6 @@ type Props = HTMLAttributes<'nav'>;
 
   nav {
     padding: 0.25rem 0.5rem;
-    background-color: c.$bg;
-    border-radius: s.$radius;
 
     > h2 {
       position: absolute;
