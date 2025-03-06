@@ -1,5 +1,6 @@
 ---
 import heartImage from '@/assets/heart.svg';
+import BirthDay from '@/components/birth-day.svelte';
 import Card from '@/components/card.astro';
 import CardBody from '@/components/card-body.astro';
 import ExternalLink from '@/components/external-link.astro';
@@ -99,19 +100,34 @@ const records: Array<{
             <ExternalLink href='https://hyakkano.com/character/shizuka/'
             >好本静</ExternalLink
             >
+            <ul>
+              <li>誕生日: <BirthDay client:only='svelte' month={10} date={1}/></li>
+            </ul>
           </li>
           <li>
             <ExternalLink href='https://hyakkano.com/character/kusuri/'
             >薬膳楠莉</ExternalLink
             >
+            <ul>
+              <li>誕生日: <BirthDay client:only='svelte' month={3} date={18}/></li>
+            </ul>
           </li>
         </ul>
         <details>
           <summary>アニメ未登場</summary>
           <ul>
-            <li>毛樽井亜愛子衣</li>
-            <li>雪房田夢留</li>
-            <li>端須蓮葉</li>
+            <li>
+              <span>毛樽井亜愛子衣</span>
+              <ul>
+                <li>誕生日: <BirthDay client:only='svelte' month={1} date={5}/></li>
+              </ul>
+            </li>
+            <li>
+              <span>雪房田夢留</span>
+            </li>
+            <li>
+              <span>端須蓮葉</span>
+            </li>
           </ul>
         </details>
       </CardBody>
