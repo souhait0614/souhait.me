@@ -39,6 +39,12 @@
       combo = [];
       return;
     }
+    if (combo.length === (list.length / 2)) {
+      const optimizedOldSouhaitChan = optimizedOldSouhaitChans.at(imgIndex);
+      if (optimizedOldSouhaitChan?.src) {
+        new globalThis.Image().src = optimizedOldSouhaitChan.src;
+      }
+    }
     if (combo.length === list.length) {
       imgIndex = (imgIndex + 1) % 4;
       globalThis.scrollTo({ top: 0, behavior: 'smooth' });
