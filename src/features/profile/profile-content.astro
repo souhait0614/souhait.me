@@ -1,18 +1,27 @@
 ---
+import type { JSX } from 'astro/jsx-runtime';
 import { Image } from 'astro:assets';
 
 import { avatar, banner, optimizedSouhaitChan } from '@/constants/image';
 import { transitionNames } from '@/constants/transition';
----
 
-<Image
-  src={banner}
-  alt='Banner'
-  width={1280 / 2}
-  height={720 / 2}
-  class='banner'
-  loading='eager'
-/>
+type Props = {
+  nameElement?: keyof JSX.DefinedIntrinsicElements;
+  blurBanner?: boolean;
+};
+
+const { nameElement: NameElement = 'h1', blurBanner = false } = Astro.props;
+---
+<div class='banner-wrapper'>
+  <Image
+    src={banner}
+    alt='Banner'
+    width={1280 / 2}
+    height={720 / 2}
+    class:list={['banner', blurBanner && 'blur']}
+    loading='eager'
+  />
+</div>
 <div class='profile'>
   <Image
     src={avatar}
@@ -23,10 +32,10 @@ import { transitionNames } from '@/constants/transition';
     loading='eager'
     transition:name={transitionNames.souhaitChan}
   />
-  <h1>すえ</h1>
-  <p>なんかいろいろやってる人</p>
-  <p>TypeScriptとリズムゲームで生きています</p>
-  <p>アイコンの子は<a href='/souhait-chan/'>すえちゃん</a>です</p>
+  <NameElement class='name'>すえ</NameElement>
+  <p class='text'>なんかいろいろやってる人</p>
+  <p class='text'>TypeScriptとリズムゲームと100カノで生きています</p>
+  <p class='text'>アイコンの子は<a href='/souhait-chan/'>すえちゃん</a>です</p>
 </div>
 
 <Fragment slot='head'>
@@ -35,11 +44,20 @@ import { transitionNames } from '@/constants/transition';
 
 <style lang='scss'>
   @use '@/styles/shapes' as s;
+  .banner-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
   .banner {
     display: block;
     width: 100%;
     height: 13rem;
     object-fit: cover;
+
+    &.blur {
+      opacity: 0.5;
+      filter: blur(15px);
+    }
   }
   .profile {
     display: flex;
@@ -55,14 +73,14 @@ import { transitionNames } from '@/constants/transition';
     margin-top: -60px;
     border-radius: 100%;
   }
-  h1 {
+  .name {
     width: 100%;
     margin: 0;
     margin-top: s.$space;
     font-size: 1.5rem;
     font-weight: inherit;
   }
-  p {
+  .text {
     margin: 0;
     margin-top: calc(s.$space / 2);
   }

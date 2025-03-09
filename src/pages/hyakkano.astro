@@ -4,6 +4,8 @@ import BirthDay from '@/components/birth-day.svelte';
 import Card from '@/components/card.astro';
 import CardBody from '@/components/card-body.astro';
 import ExternalLink from '@/components/external-link.astro';
+import { transitionNames } from '@/constants/transition';
+import ProfileContent from '@/features/profile/profile-content.astro';
 import BaseLayout from '@/layouts/base-layout.astro';
 
 const records: Array<{
@@ -189,6 +191,15 @@ const records: Array<{
         </ul>
       </CardBody>
     </Card>
+    <section id='profile' hidden>
+      <h2>ところであなたは誰</h2>
+      <Card class='card' transition:name={transitionNames.profileCard}>
+        <ProfileContent nameElement='p' blurBanner />
+        <div class='more-link-container'>
+          <a href='/about-me/'>もっと見る</a>
+        </div>
+      </Card>
+    </section>
   </div>
 </BaseLayout>
 
@@ -275,9 +286,25 @@ const records: Array<{
   .gichigichi {
     text-align: right;
   }
+
+  .more-link-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(s.$space / 2);
+  }
 </style>
 
 <script>
+  document.addEventListener("astro:page-load", () => {
+    if (location.pathname !== "/hyakkano/") return;
+    const params = new URLSearchParams(location.search);
+    const direct = params.get("direct");
+    if (direct !== null) {
+      const profile = document.getElementById("profile");
+      profile?.removeAttribute("hidden");
+    }
+  });
+  // ハートの背景アニメーション
   document.addEventListener("astro:page-load", () => {
     if (location.pathname !== "/hyakkano/") return;
     const bgContainer = document.getElementById("bg-container");
