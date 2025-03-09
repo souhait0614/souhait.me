@@ -327,7 +327,6 @@ const records: Array<{
         const bottom = parseFloat(bgHeart.style.bottom || "0");
         bgHeart.style.bottom = `${bottom + speed * deltaTime}px`;
         if (bgHeart.getBoundingClientRect().bottom < 0) {
-          console.log("reset");
           initBgHeart(bgHeart, bgHeart.clientHeight * -1);
         }
       });
