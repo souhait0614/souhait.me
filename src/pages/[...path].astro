@@ -8,6 +8,17 @@ import { transitionNames } from '@/constants/transition';
 import ProfileContent from '@/features/profile/profile-content.astro';
 import BaseLayout from '@/layouts/base-layout.astro';
 
+export function getStaticPaths() {
+  return [
+    { params: { path: 'hyakkano' } },
+    { params: { path: 'hyakkano-profile' } },
+  ];
+}
+
+const { path } = Astro.params;
+
+const isDirect = path === 'hyakkano-profile';
+
 const records: Array<{
   date: [year: number, month: number, date: number];
   content: string;
@@ -191,15 +202,17 @@ const records: Array<{
         </ul>
       </CardBody>
     </Card>
-    <section id='profile' hidden>
-      <h2>ところであなたは誰</h2>
-      <Card class='card' transition:name={transitionNames.profileCard}>
-        <ProfileContent nameElement='p' blurBanner />
-        <div class='more-link-container'>
-          <a href='/about-me/'>もっと見る</a>
-        </div>
-      </Card>
-    </section>
+    {isDirect && (
+      <section id='profile'>
+        <h2>ところであなたは誰</h2>
+        <Card class='card' transition:name={transitionNames.profileCard}>
+          <ProfileContent nameElement='p' blurBanner />
+          <div class='more-link-container'>
+            <a href='/about-me/'>もっと見る</a>
+          </div>
+        </Card>
+      </section>
+    )}
   </div>
 </BaseLayout>
 
@@ -295,18 +308,9 @@ const records: Array<{
 </style>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
-    if (location.pathname !== "/hyakkano/") return;
-    const params = new URLSearchParams(location.search);
-    const direct = params.get("direct");
-    if (direct !== null) {
-      const profile = document.getElementById("profile");
-      profile?.removeAttribute("hidden");
-    }
-  });
   // ハートの背景アニメーション
   document.addEventListener("astro:page-load", () => {
-    if (location.pathname !== "/hyakkano/") return;
+    if (location.pathname !== "/hyakkano/" && location.pathname !== "/hyakkano-profile/") return;
     const bgContainer = document.getElementById("bg-container");
     const bgHeartTemplate = document.getElementById("bg-heart-template");
 
