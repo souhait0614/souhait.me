@@ -17,7 +17,7 @@ export function getStaticPaths() {
 
 const { path } = Astro.params;
 
-const isDirect = path === 'hyakkano-profile';
+const showProfile = path === 'hyakkano-profile';
 
 const records: Array<{
   date: [year: number, month: number, date: number];
@@ -202,8 +202,8 @@ const records: Array<{
         </ul>
       </CardBody>
     </Card>
-    {isDirect && (
-      <section id='profile'>
+    {showProfile && (
+      <section>
         <h2>ところであなたは誰</h2>
         <Card class='card' transition:name={transitionNames.profileCard}>
           <ProfileContent nameElement='p' blurBanner />
