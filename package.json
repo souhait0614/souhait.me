@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@stylistic/stylelint-config": "^2.0.0",
-    "@taiyme/eslint-config": "^0.9.0",
+    "@taiyme/eslint-config": "^0.10.0",
     "@typescript-eslint/types": "^8.26.1",
     "eslint": "~9.22.0",
     "eslint-config-flat-gitignore": "^2.1.0",
@@ -39,14 +39,14 @@
     "postcss-html": "^1.8.0",
     "sass": "^1.85.1",
     "sharp": "^0.33.5",
-    "stylelint": "^16.15.0",
+    "stylelint": "^16.16.0",
     "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-recommended-scss": "^14.1.0",
     "svelte-eslint-parser": "^1.0.1",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1"
   },
-  "packageManager": "pnpm@10.6.2",
+  "packageManager": "pnpm@10.6.3",
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
