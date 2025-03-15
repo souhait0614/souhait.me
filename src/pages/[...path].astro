@@ -23,6 +23,8 @@ const records: Array<{
   date: [year: number, month: number, date: number];
   content: string;
   link?: string;
+  misskeyLink?: string;
+  twitterLink?: string;
 }> = [
   {
     date: [2023, 12, 9],
@@ -72,7 +74,8 @@ const records: Array<{
   {
     date: [2025, 3, 5],
     content: '飾りました',
-    link: 'https://submarin.online/notes/a4zch2tcos',
+    misskeyLink: 'https://submarin.online/notes/a4zch2tcos',
+    twitterLink: 'https://twitter.com/souhait_100kano/status/1895635366306333074',
   },
 ];
 ---
@@ -174,7 +177,7 @@ const records: Array<{
       <CardBody>
         <h2>足跡的な</h2>
         <p>新しい順に並んでいます</p>
-        <ul>
+        <div class='record'>
           {
             records
               .sort((a, b) => {
@@ -182,24 +185,42 @@ const records: Array<{
                 const bDate = new Date(b.date[0], b.date[1] - 1, b.date[2]);
                 return bDate.getTime() - aDate.getTime();
               })
-              .map(({ date, content, link }) => {
+              .map(({ date, content, link, twitterLink, misskeyLink }) => {
                 const [year, month, day] = date;
                 const monthStr = month.toString().padStart(2, '0');
                 const dayStr = day.toString().padStart(2, '0');
                 return (
-                  <li class='record-item'>
-                    {link
-                      ? (
-                        <ExternalLink class='record-item-link' href={link}>
-                          <span class='record-item-content'><time datetime={`${year}-${monthStr}-${dayStr}`}>{`${year}/${monthStr}/${dayStr}`}</time><span>{content}</span></span>
-                        </ExternalLink>
-                      )
-                      : <span class='record-item-content'><time datetime={`${year}-${monthStr}-${dayStr}`}>{`${year}/${monthStr}/${dayStr}`}</time><span>{content}</span></span>}
-                  </li>
+                  <article class='record-item'>
+                    <time datetime={`${year}-${monthStr}-${dayStr}`}>{`${year}/${monthStr}/${dayStr}`}</time>
+                    <div class='record-item-content'>
+                      {link
+                        ? (
+                          <ExternalLink class='record-item-link' href={link}>
+                            <h3>{content}</h3>
+                          </ExternalLink>
+                        )
+                        : <h3>{content}</h3>
+                      }
+                      {
+                        misskeyLink && (
+                          <span>
+                            (<ExternalLink href={misskeyLink}>Misskey</ExternalLink>)
+                          </span>
+                        )
+                      }
+                      {
+                        twitterLink && (
+                          <span>
+                            (<ExternalLink href={twitterLink}>Twitter</ExternalLink>)
+                          </span>
+                        )
+                      }
+                    </div>
+                  </article>
                 );
               })
           }
-        </ul>
+        </div>
       </CardBody>
     </Card>
     {showProfile && (
@@ -268,14 +289,32 @@ const records: Array<{
     transform: translateX(-50%);
   }
 
+  .record {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
   .record-item {
-    &:not(:last-of-type) {
-      margin-bottom: 0.5rem;
-    }
+    display: flex;
+    column-gap: 0.5em;
+    align-items: baseline;
 
     time {
       font-size: 0.85em;
     }
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  }
+
+  .record-item-content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5em;
   }
 
   .record-item-link {
@@ -283,12 +322,6 @@ const records: Array<{
     grid-template-columns: 1fr auto;
     column-gap: 0.25em;
     width: fit-content;
-  }
-
-  .record-item-content {
-    display: flex;
-    column-gap: 0.5em;
-    align-items: baseline;
   }
 
   .multi-column {
