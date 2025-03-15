@@ -10,12 +10,12 @@ import BaseLayout from '@/layouts/base-layout.astro';
 
 export function getStaticPaths() {
   return [
-    { params: { path: 'hyakkano' } },
-    { params: { path: 'hyakkano-profile' } },
+    { params: { hyakkano: 'hyakkano' } },
+    { params: { hyakkano: 'hyakkano-profile' } },
   ];
 }
 
-const { path } = Astro.params;
+const { hyakkano: path } = Astro.params;
 
 const showProfile = path === 'hyakkano-profile';
 
