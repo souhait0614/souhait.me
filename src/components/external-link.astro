@@ -6,9 +6,7 @@ type Props = HTMLAttributes<'a'>;
 ---
 
 <a {...Astro.props} target='_blank'>
-  <span>
-    <slot />
-  </span>
+  <span><slot /></span>
   <Icon class='icon' name='tabler:external-link' size={16} />
 </a>
 
