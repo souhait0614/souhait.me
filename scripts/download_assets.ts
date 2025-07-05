@@ -35,34 +35,35 @@ export const imageAssets: Record<string, ImageAsset[]> = {
 const outputDir = path.join(process.cwd(), 'public');
 
 async function downloadAssets() {
-  // await rm(outputDir, { recursive: true, force: true });
-  // await mkdir(outputDir, { recursive: true });
+  await rm(outputDir, { recursive: true, force: true });
+  await mkdir(outputDir, { recursive: true });
 
-  // for (const [url, assets] of Object.entries(imageAssets)) {
-  //   console.log(`Downloading ${url}...`);
-  //   try {
-  //     const response = await fetch(url);
-  //     if (!response.ok) {
-  //       throw new Error(`HTTP ${response.status}`);
-  //     }
-  //     const buffer = await response.arrayBuffer();
+  for (const [url, assets] of Object.entries(imageAssets)) {
+    console.log(`Downloading ${url}...`);
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      const buffer = await response.arrayBuffer();
 
-  //     await Promise.all(
-  //       assets.map(async (asset) => {
-  //         const outputPath = path.join(outputDir, asset.filename);
-  //         await sharp(buffer)
-  //           .resize(asset.width, asset.height)
-  //           .toFile(outputPath);
+      await Promise.all(
+        assets.map(async (asset) => {
+          const outputPath = path.join(outputDir, asset.filename);
+          await mkdir(path.dirname(outputPath), { recursive: true });
+          await sharp(buffer)
+            .resize(asset.width, asset.height)
+            .toFile(outputPath);
 
-  //         console.log(`Resized ${url} to ${asset.filename}`);
-  //       }),
-  //     );
-  //   } catch (error) {
-  //     console.error(`Failed to process ${url}:`, error);
-  //   } finally {
-  //     console.log(`Finished processing ${url}`);
-  //   }
-  // }
+          console.log(`Resized ${url} to ${asset.filename}`);
+        }),
+      );
+    } catch (error) {
+      console.error(`Failed to process ${url}:`, error);
+    } finally {
+      console.log(`Finished processing ${url}`);
+    }
+  }
 }
 
 downloadAssets();
