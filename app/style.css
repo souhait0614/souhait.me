@@ -1,0 +1,212 @@
+@layer theme, base, components, utilities;
+
+@import 'kiso.css' layer(base);
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@theme {
+  --color-primary: hsl(191, 56%, 60%);
+  --color-primary-dark: hsl(191, 56%, 50%);
+  --color-primary-text: hsl(191, 66%, 45%);
+  --color-text: hsl(0, 0%, 26%);
+  --color-text-muted: hsl(0, 0%, 50%);
+  --color-background: hsl(18, 56%, 96%);
+  --color-card: hsl(300, 50%, 99%);
+
+  /* 100カノ用テーマ */
+  /* --color-primary: hsl(344, 83%, 62%); */
+  /* --color-primary-dark: hsl(344, 83%, 52%); */
+  /* --color-primary-text: hsl(344, 93%, 47%); */
+  /* --color-text: hsl(8, 81%, 18%); */
+  /* --color-text-muted: hsl(8, 11%, 18%); */
+  /* --color-background: hsl(348, 83%, 98%); */
+  /* --color-card: hsla(0, 0%, 100%, 0.627); */
+
+  --page-padding-top: calc(env(safe-area-inset-top, 0) + var(--spacing) * 2);
+  --page-padding-right: calc(env(safe-area-inset-right, 0) + var(--spacing) * 4);
+  --page-padding-bottom: calc(env(safe-area-inset-bottom, 0) + var(--spacing) * 2);
+  --page-padding-left: calc(env(safe-area-inset-left, 0) + var(--spacing) * 4);
+
+  --animate-hyakkano-bg-heart: bottom-to-top 20s linear forwards;
+  --hyakkano-bg-gradient:
+    to bottom,
+    var(--color-background) 0%,
+    transparent 1rem,
+    transparent calc(100% - 1rem),
+    var(--color-background) 100%;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-from-right {
+    from {
+      transform: translateX(2rem);
+    }
+  }
+
+  @keyframes slide-from-bottom {
+    from {
+      transform: translateY(2rem);
+    }
+  }
+
+  @keyframes slide-to-top {
+    to {
+      transform: translateY(-2rem);
+    }
+  }
+
+  @keyframes bottom-to-top {
+    from {
+      top: 100%;
+      transform: translateY(0);
+    }
+    to {
+      top: 0;
+      transform: translateY(-100%);
+    }
+  }
+}
+
+@layer base {
+  @view-transition {
+    navigation: auto;
+  }
+
+  html,
+  body {
+    overflow: clip visible;
+  }
+
+  body {
+    display: grid;
+    grid-template:
+      '. nav content .' 1fr
+      '. nav footer .' auto
+      / 1fr auto minmax(auto, var(--container-xl)) 1fr;
+    row-gap: var(--spacing);
+    width: 100%;
+    height: fit-content;
+    min-height: 100dvh;
+    padding: var(--page-padding-top) var(--page-padding-right) var(--page-padding-bottom) var(--page-padding-left);
+    font-family:
+      'IBM Plex Sans JP',
+      'BIZ UDPGothic',
+      'Helvetica Neue',
+      Arial,
+      'Hiragino Kaku Gothic ProN',
+      'Hiragino Sans',
+      Meiryo,
+      sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-background);
+  }
+
+  /* stylelint-disable-next-line media-query-no-invalid */
+  @media (max-width: theme(--breakpoint-sm)) {
+    body {
+      grid-template:
+        'content' 1fr
+        'footer' auto
+        'nav' auto
+        / 1fr;
+      padding: var(--page-padding-top) var(--page-padding-right) var(--page-padding-bottom) var(--page-padding-left);
+    }
+  }
+
+  table {
+    border-spacing: 0;
+  }
+
+  th::after {
+    margin-right: 0.25rem;
+    font-weight: var(--font-weight-bold);
+    content: ':';
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-text);
+  }
+
+  ::view-transition-group(portrait-souhait-chan) {
+    z-index: 1;
+  }
+  ::view-transition-group(top-souhait-chan) {
+    z-index: 2;
+  }
+  ::view-transition-group(top-souhait-chan-info) {
+    z-index: 3;
+  }
+  ::view-transition-group(nav) {
+    z-index: 4;
+  }
+
+  ::view-transition-new(top-souhait-chan),
+  ::view-transition-new(top-souhait-chan-info) {
+    animation:
+      210ms cubic-bezier(0, 0, 0.2, 1) 190ms both fade-in,
+      300ms cubic-bezier(0.4, 0, 0.2, 1) 100ms both slide-from-right;
+  }
+
+  @variant motion-reduce {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+      animation: none !important;
+    }
+  }
+}
+
+@custom-variant hover-focus-active {
+  @media (hover: hover) {
+    &:hover {
+      @slot;
+    }
+  }
+
+  &:focus-visible,
+  &:active {
+    @slot;
+  }
+}
+
+@utility card {
+  @apply px-4 py-3;
+  overflow: hidden;
+  background-color: var(--color-card);
+  border-radius: var(--radius-md);
+}
+
+@utility page-container {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+}
+
+@utility page-title {
+  @apply text-2xl font-bold my-3;
+}
+
+@utility u-list-disc {
+  @apply list-disc pl-6;
+}
+
+@utility details-summary {
+  @apply rounded bg-primary/10 motion-safe:transition-colors hover-focus-active:bg-primary/20;
+  display: flex;
+  gap: var(--spacing);
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}

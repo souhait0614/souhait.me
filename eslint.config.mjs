@@ -1,52 +1,97 @@
-// @ts-check
-
 import taiymeConfig from '@taiyme/eslint-config';
-import configGitignore from 'eslint-config-flat-gitignore';
-import pluginAstro from 'eslint-plugin-astro';
-import pluginSvelte from 'eslint-plugin-svelte';
+import gitignore from 'eslint-config-flat-gitignore';
+import betterTailwindcss from 'eslint-plugin-better-tailwindcss';
+import { getDefaultCallees } from 'eslint-plugin-better-tailwindcss/api/defaults';
+import { MatcherType } from 'eslint-plugin-better-tailwindcss/api/types';
 import globals from 'globals';
 import tsEslint from 'typescript-eslint';
 
-const parserOptions = {
-  /** @type {import("@typescript-eslint/types").EcmaVersion} */
-  ecmaVersion: 'latest',
-  /** @type {import("@typescript-eslint/types").SourceType} */
-  sourceType: 'module',
-  project: './tsconfig.json',
-  tsconfigRootDir: import.meta.dirname,
-};
+const reactPlugins = taiymeConfig.configs['react/recommended'][1].plugins;
+
+/** @typedef {import('eslint-plugin-better-tailwindcss/api/types').CalleeMatchers} CalleeMatchers */
+
+const files = [
+  '**/*.{js,mjs,ts,tsx}',
+];
+
+/** @type {CalleeMatchers} */
+const TV_BASE_VALUES = [
+  'tv',
+  [
+    {
+      match: MatcherType.ObjectValue,
+      pathPattern: '^base.*$',
+    },
+  ],
+];
+
+/** @type {CalleeMatchers} */
+const TV_SLOT_VALUES = [
+  'tv',
+  [
+    {
+      match: MatcherType.ObjectValue,
+      pathPattern: '^slots.*$',
+    },
+  ],
+];
 
 export default tsEslint.config(
-  configGitignore(),
+  gitignore(),
   {
-    files: ['**/*.*js', '**/*.jsx', '**/*.*ts', '**/*.tsx', '**/*.astro', '**/*.svelte'],
-    extends: taiymeConfig.configs.typescript,
+    files,
+    extends: [
+      taiymeConfig.configs.typescript,
+      taiymeConfig.configs['react/stylistic'],
+    ],
     languageOptions: {
       globals: {
         ...globals.node,
+        ...globals.browser,
+        React: 'readonly',
       },
       parser: tsEslint.parser,
-      parserOptions,
+      parserOptions: {
+        project: './tsconfig.json',
+        tsconfigRootDir: import.meta.dirname,
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    plugins: {
+      ...reactPlugins,
+    },
+    rules: {
+      'react/function-component-definition': [
+        'warn',
+        {
+          namedComponents: 'function-declaration',
+          unnamedComponents: 'arrow-function',
+        },
+      ],
+      'react-hooks/exhaustive-deps': 'warn',
     },
   },
   {
-    // NOTE: 多分pnpm v10で動かなくなったので暫定対応 https://github.com/ota-meshi/eslint-plugin-astro/issues/470
-    extends: pluginAstro.configs['flat/recommended'],
-    languageOptions: {
-      parserOptions: {
-        ...parserOptions,
-        extraFileExtensions: ['.astro'],
+    files,
+    plugins: {
+      'better-tailwindcss': betterTailwindcss,
+    },
+    settings: {
+      'better-tailwindcss': {
+        entryPoint: './app/style.css',
+        callees: [
+          ...getDefaultCallees(),
+          TV_BASE_VALUES,
+          TV_SLOT_VALUES,
+        ],
       },
     },
-  },
-  {
-    extends: pluginSvelte.configs['flat/recommended'],
-    languageOptions: {
-      parserOptions: {
-        ...parserOptions,
-        parser: tsEslint.parser,
-        extraFileExtensions: ['.svelte'],
-      },
+    rules: {
+      ...betterTailwindcss.configs.recommended?.rules,
+      'better-tailwindcss/enforce-consistent-line-wrapping': 'warn',
+      'better-tailwindcss/no-unregistered-classes': ['error', { detectComponentClasses: true }],
     },
   },
 );

@@ -1,7 +1,5 @@
-# build output
+# prod
 dist/
-# generated types
-.astro/
 
-# dependencies
+# deps
 node_modules/

@@ -1,44 +1,32 @@
 {
-  "cSpell.words": [
-    "souhait"
-  ],
-  "editor.formatOnSave": true,
-  "eslint.format.enable": true,
-  "editor.defaultFormatter": "EditorConfig.EditorConfig",
-  "[javascript][javascriptreact][typescript][typescriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.organizeImports": "never",
+    "source.removeUnusedImports": "never",
+    "source.sortImports": "never",
   },
-  "[astro]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.stylelint": "explicit"
-    }
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.stylelint": "explicit"
-    }
-  },
-  "[svelte]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.stylelint": "explicit"
-    }
-  },
+  "eslint.useFlatConfig": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "astro",
     "typescript",
     "typescriptreact",
-    "svelte"
   ],
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "stylelint.validate": [
     "css",
-    "scss",
-    "postcss",
-    "astro",
-    "svelte"
-  ]
+    "tailwindcss"
+  ],
+  "tailwindCSS.validate": true,
+  "tailwindCSS.classFunctions": [
+    "tv"
+  ],
+  "cSpell.words": [
+    "Hyakkano"
+  ],
 }
