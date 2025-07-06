@@ -1,4 +1,4 @@
-import type { Context } from 'hono';
+import type { Handler } from 'hono';
 
 import DateCountdown from '@/components/$DateCountdown';
 import Details from '@/components/Details';
@@ -73,17 +73,18 @@ const records: Array<EventRecord> = [
   },
 ];
 
-export const metadata = {
-  title: '100カノ',
-  description: 'わざわざこんなページを作ってしまうほど君のことが大大大大大好きな100人の彼女に人生を狂わせられた人の足跡的なページです',
-  noIndex: true,
-  pageType: 'hyakkano',
-} as const satisfies Metadata;
-
-
-export default function Page(c: Context) {
+const handler: Handler = (c) => {
   const showProfile = c.req.query('profile') !== undefined;
-  return (
+
+  const metadata = {
+    title: '100カノ',
+    description: 'わざわざこんなページを作ってしまうほど君のことが大大大大大好きな100人の彼女に人生を狂わせられた人の足跡的なページです',
+    noIndex: true,
+    pageType: 'hyakkano',
+    layoutType: showProfile ? 'zen' : 'normal',
+  } as const satisfies Metadata;
+
+  return c.render(
     <div class='page-container'>
       <h1 class='page-title'>100カノ</h1>
       <p>
@@ -209,6 +210,9 @@ export default function Page(c: Context) {
           <Profile NameElement='p' showMoreInfo />
         </section>
       )}
-    </div>
+    </div>,
+    { metadata },
   );
-}
+};
+
+export default handler;
