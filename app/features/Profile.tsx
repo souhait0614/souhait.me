@@ -85,19 +85,18 @@ export default function Profile({ NameElement, showMoreInfo }: ProfileProps) {
         class={`
           group/LinkPortrait absolute -top-10 -right-8 block origin-center
           rotate-z-10
-          motion-safe:transition-transform
           @max-xl:-right-4
           @max-sm:-top-4
           @max-2xs:top-0
-          hover-focus-active:rotate-z-12
         `}
       >
         <Portrait
           class={`
             w-40 shadow-xl
             [view-transition-name:portrait-souhait-chan]
+            group-hover-focus-active/LinkPortrait:rotate-z-2
             group-hover-focus-active/LinkPortrait:shadow-2xl
-            motion-safe:transition-shadow
+            motion-safe:transition-[box-shadow,transform]
             @max-sm:w-34
             @max-2xs:w-30
           `}
