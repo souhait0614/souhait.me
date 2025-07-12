@@ -16,6 +16,7 @@ export const imageAssets: Record<string, ImageAsset[]> = {
     { filename: '/images/favicons/icon-192.png', width: 192, height: 192 },
     { filename: '/images/favicons/icon-512.png', width: 512, height: 512 },
     { filename: '/images/favicons/apple-touch-icon.png', width: 180, height: 180 },
+    { filename: '/images/favicons/open-graph.png', width: 384, height: 384 },
   ],
   'https://img.souhait.me/Souhait4_portrait.png': [
     { filename: '/images/souhait-chan-portrait-small.webp', width: 272, height: 368 },
