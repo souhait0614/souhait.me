@@ -7,20 +7,32 @@ import { generateLinkAttributes } from '@/utils/generateLinkAttributes';
 const slots = tv({
   slots: {
     anchor: `
-      @container block h-12 rounded-md px-4
+      @container block rounded-md
       motion-safe:transition-colors
-      @max-[8rem]:px-2
     `,
     textContainer: `
       flex size-full items-center gap-x-4
-      @max-[8rem]:flex-col @max-[8rem]:justify-center
+      @max-[10rem]:flex-col @max-[10rem]:justify-center
     `,
     text: `
       block w-full max-w-fit overflow-hidden text-nowrap text-ellipsis
-      @max-[8rem]:text-xs
+      @max-[10rem]:text-xs
     `,
   },
   variants: {
+    size: {
+      normal: {
+        anchor: 'h-12',
+        textContainer: `
+          px-4
+          @max-[10rem]:px-2
+        `,
+      },
+      small: {
+        anchor: 'h-8',
+        textContainer: 'px-0',
+      },
+    },
     variant: {
       normal: {
         anchor: `
@@ -37,6 +49,7 @@ const slots = tv({
     },
   },
   defaultVariants: {
+    size: 'normal',
     variant: 'normal',
     align: 'start',
   },
@@ -46,6 +59,7 @@ type NavButtonProps = Readonly<
   & LinkWithChildren
   & Pick<
     VariantProps<typeof slots>,
+    | 'size'
     | 'variant'
     | 'align'
   >
@@ -53,9 +67,9 @@ type NavButtonProps = Readonly<
     icon?: FC<JSX.HTMLAttributes>;
     class?: string;
   }>;
-export default async function LinkButton({ variant, align, children, icon: IconComponent, class: className, ...linkProps }: NavButtonProps) {
+export default async function LinkButton({ size, variant, align, children, icon: IconComponent, class: className, ...linkProps }: NavButtonProps) {
   const { linkAttrs } = generateLinkAttributes(linkProps);
-  const { anchor, text, textContainer } = slots({ variant, align });
+  const { anchor, text, textContainer } = slots({ variant, align, size });
   return (
     <a
       {...linkAttrs}

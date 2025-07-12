@@ -165,7 +165,7 @@
   }
 
   /* stylelint-disable-next-line media-query-no-invalid */
-  @media (max-width: theme(--breakpoint-sm)) {
+  @media (width < theme(--breakpoint-sm)) {
     body {
       grid-template:
         'content' 1fr

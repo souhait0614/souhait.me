@@ -129,7 +129,7 @@ export default jsxRenderer(({ children, metadata }, context) => {
               sm:hidden
             `}
             >
-              <LinkButton icon={IconChevronLeft} {...generateNavButtonProps('/', context)}>トップページ</LinkButton>
+              <LinkButton size='small' icon={IconChevronLeft} {...generateNavButtonProps('/', context)}>トップページ</LinkButton>
             </header>
           )}
           {children}
