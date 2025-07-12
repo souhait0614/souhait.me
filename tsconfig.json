@@ -1,9 +1,34 @@
 {
-  "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
-    "baseUrl": ".",
+    /* Basic */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": true,
+
+    /* Projects */
+    "target": "ESNext",
+    "module": "Preserve",
+    "noEmit": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "DOM.AsyncIterable"],
+    "types": [
+      "vite/client",
+      "@cloudflare/workers-types/2023-07-01"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+
+    /* Type Checking */
+    "checkJs": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": true,
+
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./app/*"],
     }
   }
 }
