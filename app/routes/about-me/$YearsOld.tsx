@@ -10,14 +10,14 @@ interface YearsOldProps {
 export default function YearsOld({ year, month, day }: YearsOldProps) {
   const currentDate = startOfDay(new Date());
   const currentYear = currentDate.getFullYear();
-  const [targetYear, setTargetYear] = useState<number | null>(
-    currentYear,
+  const [targetYear, setTargetYear] = useState<string | null>(
+    currentYear.toString(),
   );
-  const age = useMemo(() => (targetYear ?? 0) - year, [targetYear, year]);
+  const age = useMemo(() => (Number(targetYear) || 0) - year, [targetYear, year]);
 
   const handleChange = (event: Event) => {
     if (event.target instanceof HTMLInputElement) {
-      setTargetYear(event.target.value ? Number(event.target.value) : null);
+      setTargetYear(event.target.value ? event.target.value : null);
     }
   };
 
