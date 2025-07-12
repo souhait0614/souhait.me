@@ -21,6 +21,31 @@ const generateNavButtonProps = (to: `/${string}`, context: Context) => ({
 
 const hiddenNavButton = (to: `/${string}`, context: Context) => context.req.path === to;
 
+interface NavButtonProps {
+  context: Context;
+}
+
+function NavButtons({ context }: NavButtonProps) {
+  return (
+    <>
+      <NavButton icon={IconUserSquare} {...generateNavButtonProps('/about-me', context)}>すえについて</NavButton>
+      <NavButton icon={IconRibbon} {...generateNavButtonProps('/souhait-chan', context)}>すえちゃん</NavButton>
+      <NavButton icon={IconPlayCard} {...generateNavButtonProps('/play', context)}>お遊び</NavButton>
+      <NavButton icon={IconApps} {...generateNavButtonProps('/product', context)}>作ったもの</NavButton>
+      {hiddenNavButton('/hyakkano', context) && (
+        <NavButton icon={IconHeart} {...generateNavButtonProps('/hyakkano', context)}>
+          100カノ
+        </NavButton>
+      )}
+      {hiddenNavButton('/gyagu', context) && (
+        <NavButton icon={IconError404} {...generateNavButtonProps('/gyagu', context)}>
+          ページが見つかりませんでした
+        </NavButton>
+      )}
+    </>
+  );
+}
+
 export default jsxRenderer(({ children, metadata }, context) => {
   const themeStyle = useMemo<JSX.CSSProperties>(() => {
     switch (metadata.pageType) {
@@ -89,20 +114,7 @@ export default jsxRenderer(({ children, metadata }, context) => {
               <NavButton icon={IconChevronLeft} {...generateNavButtonProps('/', context)}>トップページ</NavButton>
             </div>
             <div class='flex flex-col gap-1'>
-              <NavButton icon={IconUserSquare} {...generateNavButtonProps('/about-me', context)}>すえについて</NavButton>
-              <NavButton icon={IconRibbon} {...generateNavButtonProps('/souhait-chan', context)}>すえちゃん</NavButton>
-              <NavButton icon={IconPlayCard} {...generateNavButtonProps('/play', context)}>お遊び</NavButton>
-              <NavButton icon={IconApps} {...generateNavButtonProps('/product', context)}>作ったもの</NavButton>
-              {hiddenNavButton('/hyakkano', context) && (
-                <NavButton icon={IconHeart} {...generateNavButtonProps('/hyakkano', context)}>
-                  100カノ
-                </NavButton>
-              )}
-              {hiddenNavButton('/gyagu', context) && (
-                <NavButton icon={IconError404} {...generateNavButtonProps('/gyagu', context)}>
-                  お探しのページは存在しません
-                </NavButton>
-              )}
+              <NavButtons context={context} />
             </div>
           </nav>
         )}
@@ -149,20 +161,7 @@ export default jsxRenderer(({ children, metadata }, context) => {
               *:grow
             `}
             >
-              <NavButton icon={IconUserSquare} {...generateNavButtonProps('/about-me', context)}>すえについて</NavButton>
-              <NavButton icon={IconRibbon} {...generateNavButtonProps('/souhait-chan', context)}>すえちゃん</NavButton>
-              <NavButton icon={IconPlayCard} {...generateNavButtonProps('/play', context)}>お遊び</NavButton>
-              <NavButton icon={IconApps} {...generateNavButtonProps('/product', context)}>作ったもの</NavButton>
-              {hiddenNavButton('/hyakkano', context) && (
-                <NavButton icon={IconHeart} {...generateNavButtonProps('/hyakkano', context)}>
-                  100カノ
-                </NavButton>
-              )}
-              {hiddenNavButton('/gyagu', context) && (
-                <NavButton icon={IconError404} {...generateNavButtonProps('/gyagu', context)}>
-                  お探しのページは存在しません
-                </NavButton>
-              )}
+              <NavButtons context={context} />
             </div>
           </nav>
         )}
