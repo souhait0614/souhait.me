@@ -52,7 +52,7 @@ export default function Page() {
         </h2>
         <ul class='u-list-disc'>
           {gyaguLinkList.map((link, i) => (
-            <li class='origin-left animate-gyagu-jerry-muted' style={{ animationDelay: `${i * 0.025}s` }}>
+            <li class='origin-left animate-gyagu-jerry-muted' style={{ animationDelay: `-${1 - ((i) * 0.025)}s` }}>
               <LinkText href={link.href} external class='text-inherit'>
                 うるさいと{i + 1} ({link.label || new URL(link.href).hostname})
               </LinkText>
