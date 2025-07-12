@@ -33,9 +33,11 @@ type LinkTextProps = Readonly<
     VariantProps<typeof slots>,
     | 'variant'
   >
->;
+> & {
+  class?: string;
+};
 
-export default function LinkText({ children, variant, ...linkProps }: LinkTextProps) {
+export default function LinkText({ children, variant, class: className, ...linkProps }: LinkTextProps) {
   const { linkAttrs, isExternalLink } = generateLinkAttributes(linkProps);
 
   const { anchor, text, icon } = slots({
@@ -46,7 +48,7 @@ export default function LinkText({ children, variant, ...linkProps }: LinkTextPr
   return (
     <a
       {...linkAttrs}
-      class={anchor()}
+      class={anchor({ class: className })}
     >
       <span class={text()}>
         {children}

@@ -4,6 +4,7 @@ import { jsxRenderer } from 'hono/jsx-renderer';
 
 import IconApps from '@/components/icons/IconApps';
 import IconChevronLeft from '@/components/icons/IconChevronLeft';
+import IconError404 from '@/components/icons/IconError404';
 import IconHeart from '@/components/icons/IconHeart';
 import IconPlayCard from '@/components/icons/IconPlayCard';
 import IconRibbon from '@/components/icons/IconRibbon';
@@ -33,6 +34,13 @@ export default jsxRenderer(({ children, metadata }, context) => {
           '--color-background': 'hsl(348, 83%, 98%)',
           '--color-card': 'hsla(0, 0%, 100%, 0.627)',
         };
+      case 'gyagu': {
+        return {
+          '--font-sans': '\'M PLUS Rounded 1c\', \'IBM Plex Sans JP\', \'BIZ UDPGothic\', \'Helvetica Neue\', Arial, \'Hiragino Kaku Gothic ProN\', \'Hiragino Sans\', Meiryo, sans-serif',
+          'font-weight': 900,
+          '--color-card': 'hsl(300, 50%, 99%, 0.8)',
+        };
+      }
       default:
         return {};
     }
@@ -41,6 +49,13 @@ export default jsxRenderer(({ children, metadata }, context) => {
     <html lang='en' style={themeStyle}>
       <head>
         <BaseHead metadata={metadata} context={context} />
+        {metadata.pageType === 'gyagu' && (
+          <>
+            <link rel='preconnect' href='https://fonts.googleapis.com' />
+            <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin='anonymous' />
+            <link href='https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@900&display=swap' rel='stylesheet' />
+          </>
+        )}
       </head>
       <body>
         {metadata.pageType === 'hyakkano' && (
@@ -54,9 +69,13 @@ export default jsxRenderer(({ children, metadata }, context) => {
             <HyakkanoBackGround />
           </div>
         )}
+        {metadata.pageType === 'gyagu' && (
+          <div class='pointer-events-none fixed inset-0 -z-1 bg-gyagu' />
+        )}
         {metadata.layoutType !== 'zen' && (
           <nav class={`
-            sticky top-[var(--page-padding-top)] w-64 self-start pr-4
+            sticky top-[var(--page-padding-top)] z-1 mr-4 w-64 self-start
+            rounded bg-background/80 pb-3
             [grid-area:nav]
             max-sm:hidden
           `}
@@ -77,6 +96,11 @@ export default jsxRenderer(({ children, metadata }, context) => {
               {hiddenNavButton('/hyakkano', context) && (
                 <NavButton icon={IconHeart} {...generateNavButtonProps('/hyakkano', context)}>
                   100カノ
+                </NavButton>
+              )}
+              {hiddenNavButton('/gyagu', context) && (
+                <NavButton icon={IconError404} {...generateNavButtonProps('/gyagu', context)}>
+                  お探しのページは存在しません
                 </NavButton>
               )}
             </div>
@@ -132,6 +156,11 @@ export default jsxRenderer(({ children, metadata }, context) => {
               {hiddenNavButton('/hyakkano', context) && (
                 <NavButton icon={IconHeart} {...generateNavButtonProps('/hyakkano', context)}>
                   100カノ
+                </NavButton>
+              )}
+              {hiddenNavButton('/gyagu', context) && (
+                <NavButton icon={IconError404} {...generateNavButtonProps('/gyagu', context)}>
+                  お探しのページは存在しません
                 </NavButton>
               )}
             </div>
