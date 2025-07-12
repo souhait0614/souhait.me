@@ -17,10 +17,6 @@
     "tailwind-variants": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/generator": "^7.28.0",
-    "@babel/parser": "^7.28.0",
-    "@babel/traverse": "^7.28.0",
-    "@babel/types": "^7.28.0",
     "@cloudflare/workers-types": "^4.20250712.0",
     "@hono/vite-build": "^1.6.2",
     "@hono/vite-dev-server": "^0.20.0",
@@ -28,8 +24,6 @@
     "@tailwindcss/vite": "^4.1.11",
     "@taiyme/eslint-config": "^0.10.5",
     "@taiyme/vite-plugin-jsx-prune-classname": "^0.0.2",
-    "@types/babel__generator": "^7.27.0",
-    "@types/babel__traverse": "^7.20.7",
     "@types/node": "^24.0.13",
     "eslint": "^9.31.0",
     "eslint-config-flat-gitignore": "^2.1.0",
