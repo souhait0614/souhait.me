@@ -9,7 +9,7 @@ import IconHeart from '@/components/icons/IconHeart';
 import IconPlayCard from '@/components/icons/IconPlayCard';
 import IconRibbon from '@/components/icons/IconRibbon';
 import IconUserSquare from '@/components/icons/IconUserSquare';
-import NavButton from '@/components/NavButton';
+import LinkButton from '@/components/LinkButton';
 import { SITE_COPYRIGHT } from '@/constants/site';
 import HyakkanoBackGround from '@/features/$HyakkanoBackGround';
 import BaseHead from '@/features/BaseHead';
@@ -28,19 +28,19 @@ interface NavButtonProps {
 function NavButtons({ context }: NavButtonProps) {
   return (
     <>
-      <NavButton icon={IconUserSquare} {...generateNavButtonProps('/about-me', context)}>すえについて</NavButton>
-      <NavButton icon={IconRibbon} {...generateNavButtonProps('/souhait-chan', context)}>すえちゃん</NavButton>
-      <NavButton icon={IconPlayCard} {...generateNavButtonProps('/play', context)}>お遊び</NavButton>
-      <NavButton icon={IconApps} {...generateNavButtonProps('/product', context)}>作ったもの</NavButton>
+      <LinkButton icon={IconUserSquare} {...generateNavButtonProps('/about-me', context)}>すえについて</LinkButton>
+      <LinkButton icon={IconRibbon} {...generateNavButtonProps('/souhait-chan', context)}>すえちゃん</LinkButton>
+      <LinkButton icon={IconPlayCard} {...generateNavButtonProps('/play', context)}>お遊び</LinkButton>
+      <LinkButton icon={IconApps} {...generateNavButtonProps('/product', context)}>作ったもの</LinkButton>
       {hiddenNavButton('/hyakkano', context) && (
-        <NavButton icon={IconHeart} {...generateNavButtonProps('/hyakkano', context)}>
+        <LinkButton icon={IconHeart} {...generateNavButtonProps('/hyakkano', context)}>
           100カノ
-        </NavButton>
+        </LinkButton>
       )}
       {hiddenNavButton('/gyagu', context) && (
-        <NavButton icon={IconError404} {...generateNavButtonProps('/gyagu', context)}>
+        <LinkButton icon={IconError404} {...generateNavButtonProps('/gyagu', context)}>
           ページが見つかりませんでした
-        </NavButton>
+        </LinkButton>
       )}
     </>
   );
@@ -111,7 +111,7 @@ export default jsxRenderer(({ children, metadata }, context) => {
               justify-center text-text-muted
             `}
             >
-              <NavButton icon={IconChevronLeft} {...generateNavButtonProps('/', context)}>トップページ</NavButton>
+              <LinkButton icon={IconChevronLeft} {...generateNavButtonProps('/', context)}>トップページ</LinkButton>
             </div>
             <div class='flex flex-col gap-1'>
               <NavButtons context={context} />
@@ -129,7 +129,7 @@ export default jsxRenderer(({ children, metadata }, context) => {
               sm:hidden
             `}
             >
-              <NavButton icon={IconChevronLeft} {...generateNavButtonProps('/', context)}>トップページ</NavButton>
+              <LinkButton icon={IconChevronLeft} {...generateNavButtonProps('/', context)}>トップページ</LinkButton>
             </header>
           )}
           {children}

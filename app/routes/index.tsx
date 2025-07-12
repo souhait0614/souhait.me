@@ -4,8 +4,8 @@ import IconBrandMisskey from '@/components/icons/IconBrandMisskey';
 import IconBrandTwitter from '@/components/icons/IconBrandTwitter';
 import IconPlayCard from '@/components/icons/IconPlayCard';
 import IconRibbon from '@/components/icons/IconRibbon';
+import LinkButton from '@/components/LinkButton';
 import LinkIcon from '@/components/LinkIcon';
-import NavButton from '@/components/NavButton';
 import { SITE_NAME } from '@/constants/site';
 import Profile from '@/features/Profile';
 import type { Metadata } from '@/types/Metadata';
@@ -47,9 +47,9 @@ export default function Page() {
         *:grow
       `}
       >
-        <NavButton align='center' icon={IconRibbon} to='/souhait-chan'>すえちゃん</NavButton>
-        <NavButton align='center' icon={IconPlayCard} to='/play'>お遊び</NavButton>
-        <NavButton align='center' icon={IconApps} to='/product'>作ったもの</NavButton>
+        <LinkButton align='center' icon={IconRibbon} to='/souhait-chan'>すえちゃん</LinkButton>
+        <LinkButton align='center' icon={IconPlayCard} to='/play'>お遊び</LinkButton>
+        <LinkButton align='center' icon={IconApps} to='/product'>作ったもの</LinkButton>
       </div>
     </div>
   );

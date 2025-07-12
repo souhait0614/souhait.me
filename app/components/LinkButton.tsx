@@ -53,7 +53,7 @@ type NavButtonProps = Readonly<
     icon?: FC<JSX.HTMLAttributes>;
     class?: string;
   }>;
-export default async function NavButton({ variant, align, children, icon: IconComponent, class: className, ...linkProps }: NavButtonProps) {
+export default async function LinkButton({ variant, align, children, icon: IconComponent, class: className, ...linkProps }: NavButtonProps) {
   const { linkAttrs } = generateLinkAttributes(linkProps);
   const { anchor, text, textContainer } = slots({ variant, align });
   return (
