@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2024 taiy https://github.com/taiyme
+// SPDX-License-Identifier: MIT
+
 import { tv, type VariantProps } from 'tailwind-variants';
 
 import IconExternalLink from '@/components/icons/IconExternalLink';

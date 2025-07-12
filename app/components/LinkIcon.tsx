@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2024 taiy https://github.com/taiyme
+// SPDX-License-Identifier: MIT
+
 import type { FC, JSX } from 'hono/jsx';
 
 import type { Link } from '@/types/Link';
