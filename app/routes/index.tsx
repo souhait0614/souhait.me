@@ -27,18 +27,21 @@ export default function Page() {
             external
             me
             href='https://github.com/souhait0614'
+            aria-label='GitHub'
           />
           <LinkIcon
             icon={IconBrandMisskey}
             external
             me
             href='https://submarin.online/@souhait'
+            aria-label='Misskey'
           />
           <LinkIcon
             icon={IconBrandTwitter}
             external
             me
             href='https://twitter.com/electronicsbot'
+            aria-label='Twitter'
           />
         </div>
       </div>
