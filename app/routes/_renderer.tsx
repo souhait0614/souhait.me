@@ -148,8 +148,8 @@ export default jsxRenderer(({ children, metadata }, context) => {
             sticky bottom-0 -mr-[var(--page-padding-right)]
             -mb-[var(--page-padding-bottom)] -ml-[var(--page-padding-left)]
             w-[calc(100%+var(--page-padding-left)+var(--page-padding-right))]
-            bg-background/80 py-2 pr-[var(--page-padding-right)]
-            pl-[var(--page-padding-left)]
+            bg-background/80 pt-2 pr-[var(--page-padding-right)]
+            pb-[var(--page-padding-bottom)] pl-[var(--page-padding-left)]
             [grid-area:nav]
             [view-transition-name:nav]
             sm:hidden
