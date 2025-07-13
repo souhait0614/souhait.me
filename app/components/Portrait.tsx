@@ -14,8 +14,10 @@ const slots = tv({
 interface PortraitProps extends JSX.HTMLAttributes {
   src?: string;
   alt?: string;
+  fetchpriority?: 'high' | 'low' | 'auto';
+  loading?: 'eager' | 'lazy';
 }
-export default async function Portrait({ src, alt, class: className, ...props }: PortraitProps) {
+export default async function Portrait({ src, alt, class: className, fetchpriority, loading, ...props }: PortraitProps) {
   const { container, image } = slots();
   return (
     <div {...props} class={container({ class: await className })}>
@@ -23,6 +25,8 @@ export default async function Portrait({ src, alt, class: className, ...props }:
         class={image()}
         src={src}
         alt={alt}
+        fetchpriority={fetchpriority}
+        loading={loading}
       />
     </div>
   );

@@ -15,7 +15,7 @@ export default function Page() {
     <>
       <div class='page-container'>
         <h1 class='page-title'>{metadata.title}</h1>
-        <Profile NameElement='p' />
+        <Profile NameElement='p' portraitFetchPriority='high' />
         <div class={`
           flex flex-wrap items-center gap-2 card
           *:grow

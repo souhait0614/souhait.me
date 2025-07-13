@@ -14,8 +14,10 @@ const { linkAttrs: souhaitChanLinkAttrs } = generateLinkAttributes({
 interface ProfileProps {
   NameElement: keyof JSX.IntrinsicElements;
   showMoreInfo?: boolean;
+  portraitFetchPriority?: 'high' | 'low' | 'auto';
+  portraitLoading?: 'eager' | 'lazy';
 }
-export default function Profile({ NameElement, showMoreInfo }: ProfileProps) {
+export default function Profile({ NameElement, showMoreInfo, portraitFetchPriority, portraitLoading }: ProfileProps) {
   return (
     <div class={`
       @container relative
@@ -102,6 +104,8 @@ export default function Profile({ NameElement, showMoreInfo }: ProfileProps) {
           `}
           src='/images/souhait-chan-portrait-small.webp'
           alt='すえちゃんのポートレート'
+          fetchpriority={portraitFetchPriority}
+          loading={portraitLoading}
         />
       </a>
     </div>

@@ -20,7 +20,7 @@ export default function Page() {
   return (
     <div class='flex h-full flex-col'>
       <div class='flex grow flex-col justify-center gap-8 pt-12'>
-        <Profile NameElement='h1' showMoreInfo />
+        <Profile NameElement='h1' showMoreInfo portraitFetchPriority='high' />
         <div class='flex justify-center gap-4'>
           <LinkIcon
             icon={IconBrandGitHub}

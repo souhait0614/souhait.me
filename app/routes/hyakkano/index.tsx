@@ -207,7 +207,7 @@ const handler: Handler = (c) => {
       {showProfile && (
         <section>
           <h2>ところであなたは誰</h2>
-          <Profile NameElement='p' showMoreInfo />
+          <Profile NameElement='p' showMoreInfo portraitLoading='lazy' />
         </section>
       )}
     </div>,

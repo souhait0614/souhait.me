@@ -36,6 +36,7 @@ export default function Page() {
           `}
           src='/images/souhait-chan-portrait-large.webp'
           alt='すえちゃんのポートレート'
+          fetchpriority='high'
         />
         <div class={`
           absolute inset-0 z-2 h-full w-full pr-16
