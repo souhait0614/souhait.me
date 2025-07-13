@@ -20,7 +20,7 @@
     "jsxImportSource": "hono/jsx",
 
     /* Type Checking */
-    "checkJs": true,
+    "allowJs": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
@@ -30,5 +30,8 @@
     "paths": {
       "@/*": ["./app/*"],
     }
-  }
+  },
+  "exclude": [
+    "dist",
+  ]
 }

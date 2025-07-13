@@ -1,3 +1,5 @@
+// @ts-check
+
 import taiymeConfig from '@taiyme/eslint-config';
 import gitignore from 'eslint-config-flat-gitignore';
 import betterTailwindcss from 'eslint-plugin-better-tailwindcss';
