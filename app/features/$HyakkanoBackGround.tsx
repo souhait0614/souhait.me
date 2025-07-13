@@ -68,7 +68,7 @@ export default function HyakkanoBackGround() {
     <div
       id={id}
       class={`
-        relative h-full w-full overflow-hidden text-primary/20
+        absolute top-0 left-0 h-lvh w-lvw overflow-hidden text-primary/20
         *:absolute *:bottom-100 *:size-20 *:-translate-x-1/2
         *:animate-hyakkano-bg-heart
       `}
