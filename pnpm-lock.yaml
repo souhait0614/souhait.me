@@ -9,89 +9,89 @@ importers:
   .:
     dependencies:
       hono:
-        specifier: ^4.8.4
+        specifier: 4.8.4
         version: 4.8.4
       honox:
-        specifier: ^0.1.43
+        specifier: 0.1.43
         version: 0.1.43(hono@4.8.4)(miniflare@4.20250709.0)(wrangler@4.24.3(@cloudflare/workers-types@4.20250712.0))
       tailwind-variants:
-        specifier: ^1.0.0
+        specifier: 1.0.0
         version: 1.0.0(tailwindcss@4.1.11)
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: ^4.20250712.0
+        specifier: 4.20250712.0
         version: 4.20250712.0
       '@hono/vite-build':
-        specifier: ^1.6.2
+        specifier: 1.6.2
         version: 1.6.2(hono@4.8.4)
       '@hono/vite-dev-server':
-        specifier: ^0.20.0
+        specifier: 0.20.0
         version: 0.20.0(hono@4.8.4)(miniflare@4.20250709.0)(wrangler@4.24.3(@cloudflare/workers-types@4.20250712.0))
       '@stylistic/stylelint-config':
-        specifier: ^2.0.0
+        specifier: 2.0.0
         version: 2.0.0(stylelint@16.21.1(typescript@5.8.3))
       '@tailwindcss/vite':
-        specifier: ^4.1.11
+        specifier: 4.1.11
         version: 4.1.11(vite@7.0.4(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
       '@taiyme/eslint-config':
-        specifier: ^0.10.5
+        specifier: 0.10.5
         version: 0.10.5(@typescript-eslint/eslint-plugin@8.36.0(@typescript-eslint/parser@8.36.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)
       '@taiyme/vite-plugin-jsx-prune-classname':
-        specifier: ^0.0.2
+        specifier: 0.0.2
         version: 0.0.2(vite@7.0.4(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
       '@types/node':
-        specifier: ^24.0.13
+        specifier: 24.0.13
         version: 24.0.13
       eslint:
-        specifier: ^9.31.0
+        specifier: 9.31.0
         version: 9.31.0(jiti@2.4.2)
       eslint-config-flat-gitignore:
-        specifier: ^2.1.0
+        specifier: 2.1.0
         version: 2.1.0(eslint@9.31.0(jiti@2.4.2))
       eslint-plugin-better-tailwindcss:
-        specifier: ^3.5.2
+        specifier: 3.5.2
         version: 3.5.2(eslint@9.31.0(jiti@2.4.2))(tailwindcss@4.1.11)
       globals:
-        specifier: ^16.3.0
+        specifier: 16.3.0
         version: 16.3.0
       kiso.css:
-        specifier: ^1.2.2
+        specifier: 1.2.2
         version: 1.2.2
       sharp:
-        specifier: ^0.34.3
+        specifier: 0.34.3
         version: 0.34.3
       stylelint:
-        specifier: ^16.21.1
+        specifier: 16.21.1
         version: 16.21.1(typescript@5.8.3)
       stylelint-config-recess-order:
-        specifier: ^7.1.0
+        specifier: 7.1.0
         version: 7.1.0(stylelint-order@7.0.0(stylelint@16.21.1(typescript@5.8.3)))(stylelint@16.21.1(typescript@5.8.3))
       stylelint-config-recommended:
-        specifier: ^16.0.0
+        specifier: 16.0.0
         version: 16.0.0(stylelint@16.21.1(typescript@5.8.3))
       stylelint-config-tailwindcss:
-        specifier: ^1.0.0
+        specifier: 1.0.0
         version: 1.0.0(stylelint@16.21.1(typescript@5.8.3))(tailwindcss@4.1.11)
       tailwindcss:
-        specifier: ^4.1.11
+        specifier: 4.1.11
         version: 4.1.11
       tsx:
-        specifier: ^4.20.3
+        specifier: 4.20.3
         version: 4.20.3
       type-fest:
-        specifier: ^4.41.0
+        specifier: 4.41.0
         version: 4.41.0
       typescript-eslint:
-        specifier: ^8.36.0
+        specifier: 8.36.0
         version: 8.36.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)
       vite:
-        specifier: ^7.0.4
+        specifier: 7.0.4
         version: 7.0.4(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3)
       vite-tsconfig-paths:
-        specifier: ^5.1.4
+        specifier: 5.1.4
         version: 5.1.4(typescript@5.8.3)(vite@7.0.4(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.20.3))
       wrangler:
-        specifier: ^4.24.3
+        specifier: 4.24.3
         version: 4.24.3(@cloudflare/workers-types@4.20250712.0)
 
 packages:
