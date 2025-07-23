@@ -4,9 +4,9 @@
 import type { Context } from 'hono';
 import type { AllUnionFields } from 'type-fest';
 
+import type { Metadata } from '@/types/Metadata';
 import { OG_DEFAULT } from '@/constants/og';
 import { SITE_BASE_URL, SITE_NAME } from '@/constants/site';
-import type { Metadata } from '@/types/Metadata';
 
 export function generateHeadData(metadata: AllUnionFields<Metadata>, context: Context) {
   const { noIndex = false } = metadata;

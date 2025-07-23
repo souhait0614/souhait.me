@@ -1,4 +1,5 @@
-import { type AnimationEvent, useEffect, useId, useMemo } from 'hono/jsx';
+import type { AnimationEvent } from 'hono/jsx';
+import { useEffect, useId, useMemo } from 'hono/jsx';
 
 import IconHeart from '@/components/icons/IconHeart';
 import useReducedMotion from '@/hooks/useReducedMotion';

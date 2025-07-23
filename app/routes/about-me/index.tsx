@@ -1,7 +1,7 @@
+import type { Metadata } from '@/types/Metadata';
 import DateCountdown from '@/components/$DateCountdown';
 import LinkText from '@/components/LinkText';
 import Profile from '@/features/Profile';
-import type { Metadata } from '@/types/Metadata';
 
 import YearsOld from './$YearsOld';
 

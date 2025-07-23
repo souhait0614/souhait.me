@@ -1,10 +1,11 @@
 // SPDX-FileCopyrightText: 2024 taiy https://github.com/taiyme
 // SPDX-License-Identifier: MIT
 
-import { tv, type VariantProps } from 'tailwind-variants';
+import type { VariantProps } from 'tailwind-variants';
+import { tv } from 'tailwind-variants';
 
-import IconExternalLink from '@/components/icons/IconExternalLink';
 import type { LinkWithChildren } from '@/types/Link';
+import IconExternalLink from '@/components/icons/IconExternalLink';
 import { generateLinkAttributes } from '@/utils/generateLinkAttributes';
 
 const slots = tv({

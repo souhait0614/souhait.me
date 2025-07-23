@@ -1,5 +1,6 @@
 import type { Context } from 'hono';
-import { type JSX, useMemo } from 'hono/jsx';
+import type { JSX } from 'hono/jsx';
+import { useMemo } from 'hono/jsx';
 import { jsxRenderer } from 'hono/jsx-renderer';
 
 import IconApps from '@/components/icons/IconApps';

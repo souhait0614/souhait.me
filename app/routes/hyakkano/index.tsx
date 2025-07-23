@@ -1,10 +1,10 @@
 import type { Handler } from 'hono';
 
+import type { Metadata } from '@/types/Metadata';
 import DateCountdown from '@/components/$DateCountdown';
 import Details from '@/components/Details';
 import LinkText from '@/components/LinkText';
 import Profile from '@/features/Profile';
-import type { Metadata } from '@/types/Metadata';
 
 interface EventRecord {
   date: [year: number, month: number, date: number];
