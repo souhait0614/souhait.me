@@ -1,7 +1,7 @@
+import type { Metadata } from '@/types/Metadata';
 import DateCountdown from '@/components/$DateCountdown';
 import LinkText from '@/components/LinkText';
 import Portrait from '@/components/Portrait';
-import type { Metadata } from '@/types/Metadata';
 import { generateLinkAttributes } from '@/utils/generateLinkAttributes';
 
 import SouhaitChanImage from './$SouhaitChanImage';

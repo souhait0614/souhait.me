@@ -1,5 +1,5 @@
-import LinkText from '@/components/LinkText';
 import type { Metadata } from '@/types/Metadata';
+import LinkText from '@/components/LinkText';
 
 interface Link {
   href: string;

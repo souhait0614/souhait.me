@@ -1,7 +1,7 @@
 import type { NotFoundHandler } from 'hono';
 
-import LinkText from '@/components/LinkText';
 import type { Metadata } from '@/types/Metadata';
+import LinkText from '@/components/LinkText';
 
 const handler: NotFoundHandler = (c) => {
   const metadata = {

@@ -1,7 +1,8 @@
-import { mkdir, rm } from 'fs/promises';
-import path from 'path';
-import sharp from 'sharp';
+import { mkdir, rm } from 'node:fs/promises';
+import path from 'node:path';
+
 import type { RequireAllOrNone } from 'type-fest';
+import sharp from 'sharp';
 
 type ImageAsset = {
   filename: string;

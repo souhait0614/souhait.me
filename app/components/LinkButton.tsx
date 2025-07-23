@@ -1,5 +1,6 @@
 import type { FC, JSX } from 'hono/jsx';
-import { tv, type VariantProps } from 'tailwind-variants';
+import type { VariantProps } from 'tailwind-variants';
+import { tv } from 'tailwind-variants';
 
 import type { LinkWithChildren } from '@/types/Link';
 import { generateLinkAttributes } from '@/utils/generateLinkAttributes';

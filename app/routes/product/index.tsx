@@ -1,6 +1,6 @@
+import type { Metadata } from '@/types/Metadata';
 import LinkText from '@/components/LinkText';
 import ProductCard from '@/components/ProductCard';
-import type { Metadata } from '@/types/Metadata';
 
 export const metadata = {
   title: '作ったもの',

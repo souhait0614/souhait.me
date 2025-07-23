@@ -1,3 +1,4 @@
+import type { Metadata } from '@/types/Metadata';
 import IconApps from '@/components/icons/IconApps';
 import IconBrandGitHub from '@/components/icons/IconBrandGitHub';
 import IconBrandMisskey from '@/components/icons/IconBrandMisskey';
@@ -8,7 +9,6 @@ import LinkButton from '@/components/LinkButton';
 import LinkIcon from '@/components/LinkIcon';
 import { SITE_NAME } from '@/constants/site';
 import Profile from '@/features/Profile';
-import type { Metadata } from '@/types/Metadata';
 
 export const metadata = {
   title: SITE_NAME,
