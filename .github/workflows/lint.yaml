@@ -30,9 +30,20 @@ jobs:
     timeout-minutes: 10
     needs:
       - pre-checkout
+    strategy:
+      matrix:
+        linter:
+          - eslint
+          - stylelint
+        include:
+          - linter: eslint
+            linter-command-name: lint:ts
+            linter-cache-version: v1
+          - linter: stylelint
+            linter-command-name: lint:css
+            linter-cache-version: v1
     env:
-      eslint-cache-version: v1
-      eslint-cache-path: ${{ github.workspace }}/node_modules/.cache/eslint
+      linter-cache-path: ${{ github.workspace }}/node_modules/.cache/${{ matrix.linter }}
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -56,16 +67,16 @@ jobs:
         run: |
           pnpm install --frozen-lockfile
 
-      - name: Restore eslint cache
+      - name: Restore ${{ matrix.linter }} cache
         uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
         with:
-          path: ${{ env.eslint-cache-path }}
-          key: eslint-${{ env.eslint-cache-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ needs.pre-checkout.outputs.sha }}
-          restore-keys: eslint-${{ env.eslint-cache-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}-
+          path: ${{ env.linter-cache-path }}
+          key: ${{ matrix.linter }}-${{ matrix.linter-cache-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ needs.pre-checkout.outputs.sha }}
+          restore-keys: ${{ matrix.linter }}-${{ matrix.linter-cache-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
-      - name: Run eslint
+      - name: Run ${{ matrix.linter }} command
         run: |
-          pnpm run lint \
+          pnpm run ${{ matrix.linter-command-name }} \
             --cache \
-            --cache-location '${{ env.eslint-cache-path }}' \
+            --cache-location '${{ env.linter-cache-path }}' \
             --cache-strategy content

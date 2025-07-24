@@ -7,8 +7,10 @@
     "build": "vite build --mode client && vite build",
     "preview": "wrangler dev",
     "deploy": "pnpm build && wrangler deploy",
-    "lint": "eslint .",
-    "format": "eslint --fix ."
+    "lint": "concurrently node:lint:*",
+    "lint:ts": "eslint .",
+    "lint:css": "stylelint .",
+    "format": "eslint --fix . && stylelint --fix ."
   },
   "private": true,
   "dependencies": {
@@ -25,6 +27,7 @@
     "@taiyme/eslint-config": "0.11.0",
     "@taiyme/vite-plugin-jsx-prune-classname": "0.0.2",
     "@types/node": "24.1.0",
+    "concurrently": "^9.2.0",
     "eslint": "9.31.0",
     "eslint-config-flat-gitignore": "2.1.0",
     "eslint-plugin-better-tailwindcss": "3.7.1",
