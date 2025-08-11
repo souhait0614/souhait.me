@@ -34,7 +34,7 @@
     "globals": "16.3.0",
     "kiso.css": "1.2.2",
     "sharp": "0.34.3",
-    "stylelint": "16.22.0",
+    "stylelint": "16.23.1",
     "stylelint-config-recess-order": "7.1.0",
     "stylelint-config-recommended": "17.0.0",
     "stylelint-config-tailwindcss": "1.0.0",
