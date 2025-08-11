@@ -10,6 +10,7 @@ export default {
   ],
   rules: {
     'at-rule-no-deprecated': null,
+    'nesting-selector-no-missing-scoping-root': null,
     '@stylistic/string-quotes': 'single',
   },
 };

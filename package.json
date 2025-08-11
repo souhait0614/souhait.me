@@ -16,7 +16,7 @@
   "dependencies": {
     "hono": "4.9.0",
     "honox": "0.1.44",
-    "tailwind-variants": "1.0.0"
+    "tailwind-variants": "2.1.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20250810.0",
@@ -36,7 +36,7 @@
     "sharp": "0.34.3",
     "stylelint": "16.23.1",
     "stylelint-config-recess-order": "7.1.0",
-    "stylelint-config-recommended": "16.0.0",
+    "stylelint-config-recommended": "17.0.0",
     "stylelint-config-tailwindcss": "1.0.0",
     "tailwindcss": "4.1.11",
     "tsx": "4.20.3",
