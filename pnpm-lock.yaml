@@ -12,8 +12,8 @@ importers:
         specifier: 4.9.0
         version: 4.9.0
       honox:
-        specifier: 0.1.43
-        version: 0.1.43(hono@4.9.0)(miniflare@4.20250803.0)(wrangler@4.28.1(@cloudflare/workers-types@4.20250810.0))
+        specifier: 0.1.44
+        version: 0.1.44(hono@4.8.9)(miniflare@4.20250712.2)(wrangler@4.26.0(@cloudflare/workers-types@4.20250726.0))
       tailwind-variants:
         specifier: 2.1.0
         version: 2.1.0(tailwind-merge@3.0.2)(tailwindcss@4.1.11)
@@ -2092,8 +2092,8 @@ packages:
     resolution: {integrity: sha512-JAUc4Sqi3lhby2imRL/67LMcJFKiCu7ZKghM7iwvltVZzxEC5bVJCsAa4NTnSfmWGb+N2eOVtFE586R+K3fejA==}
     engines: {node: '>=16.9.0'}
 
-  honox@0.1.43:
-    resolution: {integrity: sha512-PNlDHOPMrStgVwD4SOO/ihcA2iK3UaNluIWahxJkjY0dgvOc1hm8BBM06XpMNF2zVkOrtYk1xS3cCxCJZQIwpw==}
+  honox@0.1.44:
+    resolution: {integrity: sha512-C9FoxN+3rt7mQYs4ejisqR0rhMKT0k+QCC7+uNEjxNCYtctQ3KbB8C+7QK7EGoYISPeql8erxfdJsx1JxKNqqg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '>=4.*'
@@ -3243,7 +3243,7 @@ snapshots:
 
   '@babel/generator@7.25.6':
     dependencies:
-      '@babel/types': 7.25.6
+      '@babel/types': 7.28.1
       '@jridgewell/gen-mapping': 0.3.12
       '@jridgewell/trace-mapping': 0.3.29
       jsesc: 2.5.2
@@ -3262,7 +3262,7 @@ snapshots:
 
   '@babel/parser@7.25.6':
     dependencies:
-      '@babel/types': 7.25.6
+      '@babel/types': 7.28.1
 
   '@babel/parser@7.27.7':
     dependencies:
@@ -3281,10 +3281,10 @@ snapshots:
   '@babel/traverse@7.25.6':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@babel/generator': 7.25.6
-      '@babel/parser': 7.25.6
+      '@babel/generator': 7.27.5
+      '@babel/parser': 7.28.0
       '@babel/template': 7.27.2
-      '@babel/types': 7.25.6
+      '@babel/types': 7.28.1
       debug: 4.4.1
       globals: 11.12.0
     transitivePeerDependencies:
@@ -5262,7 +5262,7 @@ snapshots:
 
   hono@4.9.0: {}
 
-  honox@0.1.43(hono@4.9.0)(miniflare@4.20250803.0)(wrangler@4.28.1(@cloudflare/workers-types@4.20250810.0)):
+  honox@0.1.44(hono@4.8.9)(miniflare@4.20250712.2)(wrangler@4.26.0(@cloudflare/workers-types@4.20250726.0)):
     dependencies:
       '@babel/generator': 7.25.6
       '@babel/parser': 7.25.6

@@ -15,7 +15,7 @@
   "private": true,
   "dependencies": {
     "hono": "4.9.0",
-    "honox": "0.1.43",
+    "honox": "0.1.44",
     "tailwind-variants": "2.1.0"
   },
   "devDependencies": {
