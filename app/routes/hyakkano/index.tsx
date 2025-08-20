@@ -9,67 +9,68 @@ import Profile from '@/features/Profile';
 interface EventRecord {
   date: [year: number, month: number, date: number];
   content: string;
-  link?: string;
-  misskeyLink?: string;
-  twitterLink?: string;
+  titleLink?: string;
+  labeledLinks?: Array<{ label: string; link: string; }>;
 }
 
 const records: Array<EventRecord> = [
   {
     date: [2023, 12, 9],
     content: '＠ダッシュストア',
-    link: 'https://submarin.online/notes/9n0y8hke3f',
+    titleLink: 'https://submarin.online/notes/9n0y8hke3f',
   },
   {
     date: [2024, 2, 14],
     content: 'POP UP SHOP in 新宿マルイ メン',
-    link: 'https://submarin.online/notes/9pp6437scx',
+    titleLink: 'https://submarin.online/notes/9pp6437scx',
   },
   {
     date: [2024, 3, 28],
     content: 'お揃いスマホカバー',
-    link: 'https://submarin.online/notes/9res8axnii',
+    titleLink: 'https://submarin.online/notes/9res8axnii',
   },
   {
     date: [2024, 4, 26],
     content: 'TSUTAYA POP UP SHOP',
-    link: 'https://submarin.online/notes/9sjmu69rfe',
+    titleLink: 'https://submarin.online/notes/9sjmu69rfe',
   },
   {
     date: [2024, 6, 8],
     content: '君のことが大大大大大好きな100人の彼女展　Love for Family',
-    link: 'https://submarin.online/notes/9u9apnlb6j',
+    titleLink: 'https://submarin.online/notes/9u9apnlb6j',
   },
   {
     date: [2024, 11, 15],
     content: '君のことが大大大大大好きな100人の彼女～花蜜庵～',
-    link: 'https://submarin.online/notes/a0lub78vu0',
+    titleLink: 'https://submarin.online/notes/a0lub78vu0',
   },
   {
     date: [2024, 11, 23],
     content: '週刊ヤングジャンプ45周年記念 ヤングジャンプ×墨絵SHOP',
-    link: 'https://submarin.online/notes/a0x4ziksao',
+    titleLink: 'https://submarin.online/notes/a0x4ziksao',
   },
   {
     date: [2024, 11, 24],
     content: '第1期一挙上映マラソン大会～100カノはスポーツですからね！～',
-    link: 'https://submarin.online/notes/a0z3hvi045',
+    titleLink: 'https://submarin.online/notes/a0z3hvi045',
   },
   {
     date: [2025, 2, 28],
     content: 'VIVIgnette 好本 静',
-    link: 'https://submarin.online/notes/a4sbxagew6',
+    titleLink: 'https://submarin.online/notes/a4sbxagew6',
   },
   {
     date: [2025, 3, 5],
     content: '飾りました',
-    misskeyLink: 'https://submarin.online/notes/a4zch2tcos',
-    twitterLink: 'https://twitter.com/souhait_100kano/status/1895635366306333074',
+    labeledLinks: [
+      { label: 'Misskey', link: 'https://submarin.online/notes/a4zch2tcos' },
+      { label: 'Twitter', link: 'https://twitter.com/souhait_100kano/status/1895635366306333074' },
+    ],
   },
   {
     date: [2025, 6, 9],
     content: '100パズ 「きらめくジューンブライド 第1弾」 TOP10',
-    link: 'https://twitter.com/souhait_100kano/status/1931922734688457018',
+    titleLink: 'https://twitter.com/souhait_100kano/status/1931922734688457018',
   },
 ];
 
@@ -168,7 +169,7 @@ const handler: Handler = (c) => {
                 const bDate = new Date(b.date[0], b.date[1] - 1, b.date[2]);
                 return bDate.getTime() - aDate.getTime();
               })
-              .map(({ date, content, link, twitterLink, misskeyLink }) => {
+              .map(({ date, content, titleLink, labeledLinks }) => {
                 const [year, month, day] = date;
                 const monthStr = month.toString().padStart(2, '0');
                 const dayStr = day.toString().padStart(2, '0');
@@ -176,26 +177,19 @@ const handler: Handler = (c) => {
                   <article class='contents'>
                     <time class='text-sm' datetime={`${year}-${monthStr}-${dayStr}`}>{`${year}/${monthStr}/${dayStr}`}</time>
                     <div class='flex flex-row items-baseline gap-x-1'>
-                      {link
+                      {titleLink
                         ? (
-                          <LinkText external href={link}>
+                          <LinkText external href={titleLink}>
                             <h3 class='inline text-base font-normal'>{content}</h3>
                           </LinkText>
                         )
                         : <h3 class='inline text-base font-normal'>{content}</h3>}
                       {
-                        misskeyLink && (
-                          <span>
-                            (<LinkText external href={misskeyLink}>Misskey</LinkText>)
+                        labeledLinks?.map(({ label, link }) => (
+                          <span key={label}>
+                            (<LinkText external href={link}>{label}</LinkText>)
                           </span>
-                        )
-                      }
-                      {
-                        twitterLink && (
-                          <span>
-                            (<LinkText external href={twitterLink}>Twitter</LinkText>)
-                          </span>
-                        )
+                        ))
                       }
                     </div>
                   </article>
