@@ -69,8 +69,19 @@ const records: Array<EventRecord> = [
   },
   {
     date: [2025, 6, 9],
-    content: '100パズ 「きらめくジューンブライド 第1弾」 TOP10',
+    content: '100パズ 「きらめくジューンブライド 第1弾」 7位',
     titleLink: 'https://twitter.com/souhait_100kano/status/1931922734688457018',
+    labeledLinks: [
+      { label: '写経', link: 'https://twitter.com/ziburikito/status/1932051196933816393' },
+    ],
+  },
+  {
+    date: [2025, 8, 18],
+    content: '100パズ 「キラキラ☆マリンサマー 第2弾」 2位',
+    titleLink: 'https://twitter.com/souhait_100kano/status/1957281687634846083',
+    labeledLinks: [
+      { label: '写経', link: 'https://twitter.com/ziburikito/status/1957737939443806455' },
+    ],
   },
 ];
 
