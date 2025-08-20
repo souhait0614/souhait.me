@@ -137,7 +137,7 @@ export default jsxRenderer(({ children, metadata }, context) => {
           {children}
         </main>
         <footer class={`
-          flex flex-col gap-1 text-center text-text-muted
+          flex flex-col items-center gap-1 text-text-muted
           [grid-area:footer]
         `}
         >
