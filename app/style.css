@@ -234,6 +234,18 @@
   }
 }
 
+@custom-variant hover-active-without-focus {
+  @media (hover: hover) {
+    &:hover:not(*:focus-visible) {
+      @slot;
+    }
+  }
+
+  &:active:not(*:focus-visible) {
+    @slot;
+  }
+}
+
 @utility card {
   @apply px-4 py-3;
   overflow: hidden;

@@ -11,6 +11,7 @@ import IconPlayCard from '@/components/icons/IconPlayCard';
 import IconRibbon from '@/components/icons/IconRibbon';
 import IconUserSquare from '@/components/icons/IconUserSquare';
 import LinkButton from '@/components/LinkButton';
+import LinkText from '@/components/LinkText';
 import { SITE_COPYRIGHT } from '@/constants/site';
 import HyakkanoBackGround from '@/features/$HyakkanoBackGround';
 import BaseHead from '@/features/BaseHead';
@@ -136,10 +137,19 @@ export default jsxRenderer(({ children, metadata }, context) => {
           {children}
         </main>
         <footer class={`
-          text-center text-text-muted
+          flex flex-col gap-1 text-center text-text-muted
           [grid-area:footer]
         `}
         >
+          <LinkText
+            class={`
+              text-text-muted
+              [view-transition-name:footer-privacy]
+            `}
+            to='/privacy'
+          >
+            <small>プライバシーポリシー</small>
+          </LinkText>
           <small class='[view-transition-name:footer-copyright]'>
             {SITE_COPYRIGHT}
           </small>
