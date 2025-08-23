@@ -187,7 +187,7 @@ const handler: Handler = (c) => {
                 return (
                   <article class='contents'>
                     <time class='text-sm' datetime={`${year}-${monthStr}-${dayStr}`}>{`${year}/${monthStr}/${dayStr}`}</time>
-                    <div class='flex flex-row items-baseline gap-x-1'>
+                    <div class='flex flex-row flex-wrap items-baseline gap-x-1'>
                       {titleLink
                         ? (
                           <LinkText external href={titleLink}>
@@ -197,9 +197,9 @@ const handler: Handler = (c) => {
                         : <h3 class='inline text-base font-normal'>{content}</h3>}
                       {
                         labeledLinks?.map(({ label, link }) => (
-                          <span key={label}>
+                          <p class='inline-block' key={label}>
                             (<LinkText external href={link}>{label}</LinkText>)
-                          </span>
+                          </p>
                         ))
                       }
                     </div>
