@@ -107,7 +107,10 @@ const handler: Handler = (c) => {
       <section class='card'>
         <h2>あなたの100カノはどこから？</h2>
         <p>私はアニメ第1期から</p>
-        <p>アニメ第4話あたりで<ruby>全身に衝撃が走り<rp>(</rp><rt>ビビーン!!</rt><rp>)</rp></ruby>、<LinkText external href='https://submarin.online/notes/9lp0ih3wih'>電子書籍版の単行本を全巻購入</LinkText></p>
+        <p>
+          <LinkText external href='https://submarin.online/clips/abshybjd9e'>アニメ第3話あたりで<ruby>全身に衝撃が走り<rp>(</rp><rt>ビビーン!!</rt><rp>)</rp></ruby></LinkText>、
+          <LinkText external href='https://submarin.online/notes/9lp0ih3wih'>電子書籍版の単行本を全巻購入</LinkText>
+        </p>
         <p>そのまま少年ジャンプ＋→ヤンジャン＋へ</p>
       </section>
       <section class='card'>
