@@ -8,7 +8,7 @@ import SouhaitChanImage from './$SouhaitChanImage';
 
 const arts = [
   {
-    src: '/images/fan-arts/sakananoonigiri1.webp',
+    src: '/images/souhait-chan/fan-arts/sakananoonigiri1.webp',
     href: 'https://submarin.online/notes/9hd9mu9vdw',
     alt: '全体図',
   },
@@ -34,7 +34,7 @@ export default function Page() {
             max-sm:-right-12
             max-[15rem]:hidden
           `}
-          src='/images/souhait-chan-portrait-large.webp'
+          src='/images/souhait-chan/portrait-large.webp'
           alt='すえちゃんのポートレート'
           fetchpriority='high'
         />

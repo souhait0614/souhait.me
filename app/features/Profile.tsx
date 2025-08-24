@@ -102,7 +102,7 @@ export default function Profile({ NameElement, showMoreInfo, portraitFetchPriori
             @max-sm:w-34
             @max-2xs:w-30
           `}
-          src='/images/souhait-chan-portrait-small.webp'
+          src='/images/souhait-chan/portrait-small.webp'
           alt='すえちゃんのポートレート'
           fetchpriority={portraitFetchPriority}
           loading={portraitLoading}

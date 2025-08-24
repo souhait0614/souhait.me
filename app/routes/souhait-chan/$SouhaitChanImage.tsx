@@ -13,7 +13,7 @@ export default function SouhaitChanImage() {
       return (
         <img
           class={imageStyle()}
-          src='/images/souhait-chan-full.webp'
+          src='/images/souhait-chan/full.webp'
           alt='すえちゃんの全身画像'
         />
       );
@@ -21,7 +21,7 @@ export default function SouhaitChanImage() {
     return (
       <img
         class={imageStyle()}
-        src='/images/souhait-chan.webp'
+        src='/images/souhait-chan/top.webp'
         alt='すえちゃんの上半身画像'
       />
     );

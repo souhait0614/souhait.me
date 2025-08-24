@@ -55,25 +55,25 @@ export default function BaseHead({ metadata, context }: BaseHeadProps) {
       )}
       <link
         rel='icon'
-        href='/images/favicons/favicon.ico'
+        href='/favicon.ico'
         type='image/x-icon'
         sizes='32x32'
       />
       <link
         rel='icon'
-        href='/images/favicons/icon-192.png'
+        href='/icon-192.png'
         type='image/png'
         sizes='192x192'
       />
       <link
         rel='icon'
-        href='/images/favicons/icon-512.png'
+        href='/icon-512.png'
         type='image/png'
         sizes='512x512'
       />
       <link
         rel='apple-touch-icon'
-        href='/images/favicons/apple-touch-icon.png'
+        href='/apple-touch-icon.png'
         type='image/png'
         sizes='180x180'
       />

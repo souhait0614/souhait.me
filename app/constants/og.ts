@@ -7,7 +7,7 @@ import { SITE_BASE_URL } from '@/constants/site';
 export const OG_DEFAULT = {
   ogType: 'website',
   ogCardType: 'summary',
-  ogImageUrl: new URL('/images/favicons/open-graph.png', SITE_BASE_URL).href,
+  ogImageUrl: new URL('//open-graph.png', SITE_BASE_URL).href,
   ogImageAlt: 'すえのアイコン',
   ogImageType: 'image/png',
   ogImageWidth: 384,
