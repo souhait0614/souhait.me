@@ -21,6 +21,7 @@
     ],
     "enabled": true
   },
+  "minimumReleaseAge": "7 days",
   "packageRules": [
     {
       "matchUpdateTypes": [
