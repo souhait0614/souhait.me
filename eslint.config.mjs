@@ -1,12 +1,13 @@
 // @ts-check
 
 import taiymeConfig from '@taiyme/eslint-config';
+import tsEslintParser from '@typescript-eslint/parser';
 import gitignore from 'eslint-config-flat-gitignore';
 import betterTailwindcss from 'eslint-plugin-better-tailwindcss';
 import { getDefaultCallees } from 'eslint-plugin-better-tailwindcss/api/defaults';
 import { MatcherType } from 'eslint-plugin-better-tailwindcss/api/types';
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
-import tsEslint from 'typescript-eslint';
 
 const reactPlugins = taiymeConfig.configs['react/recommended'][1].plugins;
 
@@ -38,7 +39,7 @@ const TV_SLOT_VALUES = [
   ],
 ];
 
-export default tsEslint.config(
+export default defineConfig(
   gitignore(),
   {
     files,
@@ -52,7 +53,7 @@ export default tsEslint.config(
         ...globals.browser,
         React: 'readonly',
       },
-      parser: tsEslint.parser,
+      parser: tsEslintParser,
       parserOptions: {
         project: './tsconfig.json',
         tsconfigRootDir: import.meta.dirname,
