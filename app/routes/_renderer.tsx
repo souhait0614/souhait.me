@@ -73,7 +73,7 @@ export default jsxRenderer(({ children, metadata }, context) => {
     }
   }, [metadata.pageType]);
   return (
-    <html lang='en' style={themeStyle}>
+    <html lang='ja' style={themeStyle}>
       <head>
         <BaseHead metadata={metadata} context={context} />
         {metadata.pageType === 'gyagu' && (
