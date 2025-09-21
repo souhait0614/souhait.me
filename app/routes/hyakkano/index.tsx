@@ -26,7 +26,7 @@ const records: Array<EventRecord> = [
   },
   {
     date: [2024, 3, 28],
-    content: 'お揃いスマホカバー',
+    content: '好本 静 お揃いスマホカバー',
     titleLink: 'https://submarin.online/notes/9res8axnii',
   },
   {
