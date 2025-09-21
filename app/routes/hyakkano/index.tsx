@@ -83,6 +83,14 @@ const records: Array<EventRecord> = [
       { label: '写経', link: 'https://twitter.com/ziburikito/status/1957737939443806455' },
     ],
   },
+  {
+    date: [2025, 9, 19],
+    content: 'AVIOT×君のことが大大大大大好きな100人の彼女 POP UP SHOP in 新宿マルイ メン',
+    titleLink: 'https://twitter.com/souhait_100kano/status/1969656201991627199',
+    labeledLinks: [
+      { label: '19日戦利品', link: 'https://twitter.com/souhait_100kano/status/1968950653834740199' },
+    ],
+  },
 ];
 
 const handler: Handler = (c) => {
