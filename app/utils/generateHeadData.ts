@@ -28,9 +28,6 @@ export function generateHeadData(metadata: AllUnionFields<Metadata>, context: Co
   );
 
   const og = (() => {
-    if (noIndex) return null;
-    if (canonicalUrl == null) return null;
-
     const headPrefix = 'og: https://ogp.me/ns#';
     const url = canonicalUrl;
     const siteName = SITE_NAME;

@@ -35,6 +35,7 @@ type Case_NoIndex = Readonly<(
     description?: string;
   }
   & Base_Metadata
+  & OpenGraph
 )>;
 
 export type Metadata = Readonly<
