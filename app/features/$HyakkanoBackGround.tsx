@@ -12,7 +12,10 @@ function getRandomDuration() {
   return Math.round((baseAnimationDuration + randomVariation) * 1000);
 }
 
-function AnimationHeart() {
+interface AnimationHeartProps {
+  isReducedMotion?: boolean;
+}
+function AnimationHeart({ isReducedMotion }: AnimationHeartProps) {
   const defaultLeft = useMemo(() => `${Math.random() * 100}%`, []);
   const defaultTop = useMemo(() => `${Math.random() * 100}%`, []);
   const defaultDuration = useMemo(() => getRandomDuration(), []);
@@ -23,9 +26,15 @@ function AnimationHeart() {
   useEffect(() => {
     const elem = ref.current;
     if (!elem) return;
+
+    if (isReducedMotion) {
+      elem.style.display = 'none';
+      return;
+    }
+
     elem.style.left = defaultLeft;
     elem.style.top = defaultTop;
-    elem.style.opacity = '1';
+    elem.style.display = 'block';
 
     let animationFrameId = 0;
     let previousTimestamp: number | null = null;
@@ -58,7 +67,7 @@ function AnimationHeart() {
     animationFrameId = window.requestAnimationFrame(animate);
 
     return () => window.cancelAnimationFrame(animationFrameId);
-  }, [defaultDuration, defaultLeft, defaultTop]);
+  }, [defaultDuration, defaultLeft, defaultTop, isReducedMotion]);
 
   return (
     <IconHeart
@@ -71,17 +80,15 @@ function AnimationHeart() {
 export default function HyakkanoBackGround() {
   const isReducedMotion = useReducedMotion();
 
-  if (isReducedMotion) return null;
-
   return (
     <div
       class={`
         absolute top-0 left-0 h-lvh w-lvw overflow-hidden text-primary/20
-        *:absolute *:size-20 *:-translate-x-1/2 *:opacity-0
+        *:absolute *:hidden *:size-20 *:-translate-x-1/2
       `}
     >
       {Array.from({ length: heartCount }, (_, i) => (
-        <AnimationHeart key={i} />
+        <AnimationHeart key={i} isReducedMotion={isReducedMotion} />
       ))}
     </div>
   );
