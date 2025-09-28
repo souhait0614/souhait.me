@@ -22,29 +22,25 @@ export default function BaseHead({ metadata, context }: BaseHeadProps) {
   } = generateHeadData(metadata, context);
 
   return (
-    <head prefix={og?.headPrefix}>
+    <head prefix={og.headPrefix}>
       <meta charset='utf-8' />
       <meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=overlays-content' />
       <meta name='format-detection' content='telephone=no,date=no,address=no,email=no,url=no' />
       {noIndex && (<meta name='robots' content='noindex' />)}
       {description && (<meta name='description' content={description} />)}
       <title>{titleWithSiteName}</title>
-      {og && (
-        <>
-          <meta property='og:title' content={title} />
-          {description && (<meta property='og:description' content={description} />)}
-          <meta property='og:url' content={og.url} />
-          <meta property='og:site_name' content={og.siteName} />
-          <meta property='og:locale' content={og.locale} />
-          <meta property='og:image' content={og.imageUrl} />
-          <meta property='og:image:alt' content={og.imageAlt} />
-          <meta property='og:image:type' content={og.imageType} />
-          <meta property='og:image:width' content={og.imageWidth.toString()} />
-          <meta property='og:image:height' content={og.imageHeight.toString()} />
-          <meta property='og:type' content={og.type} />
-          <meta name='twitter:card' content={og.cardType} />
-        </>
-      )}
+      <meta property='og:title' content={title} />
+      {description && (<meta property='og:description' content={description} />)}
+      <meta property='og:url' content={og.url ?? undefined} />
+      <meta property='og:site_name' content={og.siteName} />
+      <meta property='og:locale' content={og.locale} />
+      <meta property='og:image' content={og.imageUrl} />
+      <meta property='og:image:alt' content={og.imageAlt} />
+      <meta property='og:image:type' content={og.imageType} />
+      <meta property='og:image:width' content={og.imageWidth.toString()} />
+      <meta property='og:image:height' content={og.imageHeight.toString()} />
+      <meta property='og:type' content={og.type} />
+      <meta name='twitter:card' content={og.cardType} />
       {canonicalUrl && (<link rel='canonical' href={canonicalUrl} />)}
       {!noIndex && (
         <>
