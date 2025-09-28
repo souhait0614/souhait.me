@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useRef } from 'hono/jsx';
+import { useEffect, useMemo, useRef } from 'hono/jsx';
 
 import IconHeart from '@/components/icons/IconHeart';
 import useReducedMotion from '@/hooks/useReducedMotion';
@@ -69,15 +69,12 @@ function AnimationHeart() {
 }
 
 export default function HyakkanoBackGround() {
-  const id = useId();
-
   const isReducedMotion = useReducedMotion();
 
   if (isReducedMotion) return null;
 
   return (
     <div
-      id={id}
       class={`
         absolute top-0 left-0 h-lvh w-lvw overflow-hidden text-primary/20
         *:absolute *:size-20 *:-translate-x-1/2 *:opacity-0
