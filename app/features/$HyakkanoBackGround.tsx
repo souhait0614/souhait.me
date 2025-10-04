@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'hono/jsx';
+import { useEffect, useId, useMemo, useRef } from 'hono/jsx';
 
 import IconHeart from '@/components/icons/IconHeart';
 import useReducedMotion from '@/hooks/useReducedMotion';
@@ -16,15 +16,15 @@ interface AnimationHeartProps {
   isReducedMotion?: boolean;
 }
 function AnimationHeart({ isReducedMotion }: AnimationHeartProps) {
+  const id = useId();
   const defaultLeft = useMemo(() => `${Math.random() * 100}%`, []);
   const defaultTop = useMemo(() => `${Math.random() * 100}%`, []);
   const defaultDuration = useMemo(() => getRandomDuration(), []);
 
-  const ref = useRef<SVGSVGElement>(null);
   const durationRef = useRef(defaultDuration);
 
   useEffect(() => {
-    const elem = ref.current;
+    const elem = document.getElementById(id);
     if (!elem) return;
 
     if (isReducedMotion) {
@@ -67,11 +67,11 @@ function AnimationHeart({ isReducedMotion }: AnimationHeartProps) {
     animationFrameId = window.requestAnimationFrame(animate);
 
     return () => window.cancelAnimationFrame(animationFrameId);
-  }, [defaultDuration, defaultLeft, defaultTop, isReducedMotion]);
+  }, [defaultDuration, defaultLeft, defaultTop, id, isReducedMotion]);
 
   return (
     <IconHeart
-      ref={ref}
+      id={id}
       filled
     />
   );
