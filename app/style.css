@@ -13,15 +13,7 @@
   --color-background: hsl(18, 56%, 96%);
   --color-card: hsl(300, 50%, 99%);
 
-  --font-sans:
-    'IBM Plex Sans JP',
-    'BIZ UDPGothic',
-    'Helvetica Neue',
-    Arial,
-    'Hiragino Kaku Gothic ProN',
-    'Hiragino Sans',
-    Meiryo,
-    sans-serif;
+  --font-sans: sans-serif;
 
   --page-padding-top: calc(env(safe-area-inset-top, 0) + var(--spacing) * 2);
   --page-padding-right: calc(env(safe-area-inset-right, 0) + var(--spacing) * 4);
