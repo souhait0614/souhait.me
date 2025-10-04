@@ -220,6 +220,18 @@ const handler: Handler = (c) => {
           }
         </div>
       </section>
+      <section class='card'>
+        <h2>作ったもの</h2>
+        <section>
+          <h3>
+            <LinkText external href='https://hyakkano.souhait.app/birthday'>
+              キャラクター誕生日一覧
+            </LinkText>
+          </h3>
+          <p>あと何日で誰が誕生日なのか一発で見たかったので整備</p>
+          <p>TVアニメ未登場キャラネタバレ配慮機能付きです</p>
+        </section>
+      </section>
       {showProfile && (
         <section>
           <h2>ところであなたは誰</h2>

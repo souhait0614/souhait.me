@@ -17,6 +17,11 @@ export default function Page() {
         <p>App RouterなNext.js→Astroと乗り換えてきて現在はTailwindなHonoX製です</p>
         <p>特に意味もなく<LinkText href='https://github.com/souhait0614/souhait.me' external>オープンソースとして公開</LinkText>しています</p>
       </ProductCard>
+      <ProductCard TitleElement='h2' title='100カノ関連アプリ置き場' href='https://hyakkano.souhait.app'>
+        <p><LinkText to='/hyakkano'>100カノ</LinkText>関連の何かを作ったときに置くサイトです</p>
+        <p>採用ライブラリの都合でReactを使いたかったが、Next.jsは過剰すぎると悩んだ結果、選ばれたのはWakuでした</p>
+        <p>これも特に意味もなく<LinkText href='https://github.com/souhait0614/hyakkano.souhait.app' external>オープンソースとして公開</LinkText>しています</p>
+      </ProductCard>
       <ProductCard TitleElement='h2' title='Monesting' href='https://github.com/souhait0614/monesting'>
         <p>完全自分用サブスクリプション管理Webアプリ</p>
         <p>SvelteKitがいい感じだったのでSMUIと組み合わせて作りました <s>でもSMUIやめたい</s></p>
