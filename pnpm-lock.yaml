@@ -12,8 +12,8 @@ importers:
         specifier: 4.9.9
         version: 4.9.9
       honox:
-        specifier: 0.1.47
-        version: 0.1.47(hono@4.9.9)(miniflare@4.20250924.0)(wrangler@4.40.2(@cloudflare/workers-types@4.20250927.0))
+        specifier: 0.1.49
+        version: 0.1.49(hono@4.9.9)(miniflare@4.20250924.0)(wrangler@4.40.2(@cloudflare/workers-types@4.20250927.0))
       tailwind-merge:
         specifier: 3.3.1
         version: 3.3.1
@@ -2084,8 +2084,8 @@ packages:
     resolution: {integrity: sha512-Hxw4wT6zjJGZJdkJzAx9PyBdf7ZpxaTSA0NfxqjLghwMrLBX8p33hJBzoETRakF3UJu6OdNQBZAlNSkGqKFukw==}
     engines: {node: '>=16.9.0'}
 
-  honox@0.1.47:
-    resolution: {integrity: sha512-z/bY7wmS/eTIFLHFJCvZtw/y1Y6vzDNx2MuqRsyKQ9f72Zlyxyfma0SYnyNPIrwXkG1R7PHWNRJ1PQEhVQQJQg==}
+  honox@0.1.49:
+    resolution: {integrity: sha512-oEM+Xw5r4/7Htz1gXA+0XO5aJ65xrYn+V+IzNOsKU7VCJEDXV3cmnFc/EKplXXJiMXuqz6wCH7rr/LPHGwg1rA==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '>=4.*'
@@ -5215,7 +5215,7 @@ snapshots:
 
   hono@4.9.9: {}
 
-  honox@0.1.47(hono@4.9.9)(miniflare@4.20250924.0)(wrangler@4.40.2(@cloudflare/workers-types@4.20250927.0)):
+  honox@0.1.49(hono@4.9.9)(miniflare@4.20250924.0)(wrangler@4.40.2(@cloudflare/workers-types@4.20250927.0)):
     dependencies:
       '@babel/generator': 7.25.6
       '@babel/parser': 7.25.6
