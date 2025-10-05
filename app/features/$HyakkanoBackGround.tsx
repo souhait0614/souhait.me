@@ -84,7 +84,7 @@ export default function HyakkanoBackGround() {
     <div
       class={`
         absolute top-0 left-0 h-lvh w-lvw overflow-hidden text-primary/20
-        *:absolute *:size-20 *:-translate-x-1/2
+        *:absolute *:hidden *:size-20 *:-translate-x-1/2
       `}
     >
       {Array.from({ length: heartCount }, (_, i) => (
