@@ -15,7 +15,7 @@ export default defineConfig({
     jsxPruneClassName(),
     honox({
       devServer: { adapter },
-      client: { input: ['./app/style.css'] },
+      client: { input: ['./app/client.ts', './app/style.css'] },
     }),
     build(),
     tailwindcss(),
