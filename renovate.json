@@ -1,44 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:best-practices",
-    ":disableRateLimiting",
-    ":pinAllExceptPeerDependencies",
-    ":separateMultipleMajorReleases",
-    "schedule:weekly",
+    "github>souhait0614/renovate-config",
     ":assignAndReview(souhait0614)"
-  ],
-  "automerge": false,
-  "platformAutomerge": false,
-  "timezone": "Asia/Tokyo",
-  "automergeType": "pr",
-  "automergeStrategy": "squash",
-  "rebaseWhen": "automerging",
-  "semanticCommits": "enabled",
-  "lockFileMaintenance": {
-    "extends": [
-      "schedule:monthly"
-    ],
-    "enabled": true
-  },
-  "minimumReleaseAge": "7 days",
-  "packageRules": [
-    {
-      "matchUpdateTypes": [
-        "pin",
-        "pinDigest",
-        "lockFileMaintenance"
-      ],
-      "automerge": true
-    },
-    {
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "matchCurrentVersion": "!/^0\\./",
-      "automerge": true,
-      "groupName": "all dependencies (non-major)"
-    }
   ]
 }
