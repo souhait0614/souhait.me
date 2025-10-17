@@ -99,27 +99,6 @@ export default jsxRenderer(({ children, metadata }, context) => {
         {metadata.pageType === 'gyagu' && (
           <div class='pointer-events-none fixed inset-0 -z-1 bg-gyagu' />
         )}
-        {metadata.layoutType !== 'zen' && (
-          <nav class={`
-            sticky top-[var(--page-padding-top)] z-1 mr-4 w-64 self-start
-            rounded bg-background/80 pb-3
-            [grid-area:nav]
-            max-sm:hidden
-          `}
-          >
-            <h2 class='sr-only'>ナビゲーション</h2>
-            <div class={`
-              mb-1 flex h-[calc(var(--text-2xl)*2+var(--spacing)*5)] flex-col
-              justify-center text-text-muted
-            `}
-            >
-              <LinkButton icon={IconChevronLeft} {...generateNavButtonProps('/', context)}>トップページ</LinkButton>
-            </div>
-            <div class='flex flex-col gap-1'>
-              <NavButtons context={context} />
-            </div>
-          </nav>
-        )}
         <main class={`
           [grid-area:content]
           [view-transition-name:content]
@@ -154,6 +133,27 @@ export default jsxRenderer(({ children, metadata }, context) => {
             {SITE_COPYRIGHT}
           </small>
         </footer>
+        {metadata.layoutType !== 'zen' && (
+          <nav class={`
+            sticky top-[var(--page-padding-top)] z-1 mr-4 w-64 self-start
+            rounded bg-background/80 pb-3
+            [grid-area:nav]
+            max-sm:hidden
+          `}
+          >
+            <h2 class='sr-only'>ナビゲーション</h2>
+            <div class={`
+              mb-1 flex h-[calc(var(--text-2xl)*2+var(--spacing)*5)] flex-col
+              justify-center text-text-muted
+            `}
+            >
+              <LinkButton icon={IconChevronLeft} {...generateNavButtonProps('/', context)}>トップページ</LinkButton>
+            </div>
+            <div class='flex flex-col gap-1'>
+              <NavButtons context={context} />
+            </div>
+          </nav>
+        )}
         {metadata.layoutType !== 'zen' && (
           <nav class={`
             sticky bottom-0 -mr-[var(--page-padding-right)]
