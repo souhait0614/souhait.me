@@ -44,6 +44,10 @@ export default function BaseHead({ metadata, context }: BaseHeadProps) {
       {canonicalUrl && (<link rel='canonical' href={canonicalUrl} />)}
       {!noIndex && (
         <>
+          <meta name='twitter:site' content='@ElectronicsBot' />
+          <meta name='twitter:creator' content='@ElectronicsBot' />
+          <meta name='twitter:site' content='@souhait_100kano' />
+          <meta name='twitter:creator' content='@souhait_100kano' />
           <link rel='me' href='https://submarin.online/@souhait' />
           <link rel='me' href='https://msk.kitazawa.me/@souhait' />
           <link rel='me' href='https://mk.shrimpia.network/@souhait' />
