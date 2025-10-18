@@ -91,6 +91,11 @@ const records: Array<EventRecord> = [
       { label: '19日戦利品', link: 'https://twitter.com/souhait_100kano/status/1968950653834740199' },
     ],
   },
+  {
+    date: [2025, 10, 18],
+    content: 'スペシャルイベント 〜ありがと、大好きになってくれて〜',
+    titleLink: 'https://twitter.com/souhait_100kano/status/1979489616307609906',
+  },
 ];
 
 const handler: Handler = (c) => {
