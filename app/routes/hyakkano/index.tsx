@@ -96,6 +96,11 @@ const records: Array<EventRecord> = [
     content: 'スペシャルイベント 〜ありがと、大好きになってくれて〜',
     titleLink: 'https://twitter.com/souhait_100kano/status/1979489616307609906',
   },
+  {
+    date: [2025, 11, 1],
+    content: '好本静生誕祭2025',
+    titleLink: 'https://twitter.com/souhait_100kano/status/1984277145846501508',
+  },
 ];
 
 const handler: Handler = (c) => {
