@@ -159,6 +159,9 @@ const handler: Handler = (c) => {
             <li>
               <span>端須蓮葉</span>
             </li>
+            <li>
+              <span>慈相千優</span>
+            </li>
           </ul>
         </Details>
       </section>
