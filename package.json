@@ -20,17 +20,17 @@
     "tailwind-variants": "3.1.1"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20251014.0",
+    "@cloudflare/workers-types": "4.20251109.0",
     "@hono/vite-build": "1.7.0",
     "@hono/vite-dev-server": "0.23.0",
     "@stylistic/stylelint-config": "3.0.1",
-    "@tailwindcss/vite": "4.1.16",
+    "@tailwindcss/vite": "4.1.17",
     "@taiyme/eslint-config": "0.11.1",
     "@taiyme/vite-plugin-jsx-prune-classname": "0.0.3",
     "@types/node": "24.10.0",
-    "@typescript-eslint/parser": "8.46.2",
+    "@typescript-eslint/parser": "8.46.3",
     "concurrently": "9.2.1",
-    "eslint": "9.39.0",
+    "eslint": "9.39.1",
     "eslint-config-flat-gitignore": "2.1.0",
     "eslint-plugin-better-tailwindcss": "3.7.10",
     "globals": "16.5.0",
@@ -40,13 +40,13 @@
     "stylelint-config-recess-order": "7.4.0",
     "stylelint-config-recommended": "17.0.0",
     "stylelint-config-tailwindcss": "1.0.0",
-    "tailwindcss": "4.1.16",
+    "tailwindcss": "4.1.17",
     "tsx": "4.20.6",
-    "type-fest": "5.1.0",
+    "type-fest": "5.2.0",
     "typescript": "5.9.3",
-    "vite": "7.1.12",
+    "vite": "7.2.2",
     "vite-tsconfig-paths": "5.1.4",
-    "wrangler": "4.45.3"
+    "wrangler": "4.46.0"
   },
   "packageManager": "pnpm@10.20.0"
 }
