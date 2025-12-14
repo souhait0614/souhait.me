@@ -101,6 +101,14 @@ const records: Array<EventRecord> = [
     content: '好本静生誕祭2025',
     titleLink: 'https://twitter.com/souhait_100kano/status/1984277145846501508',
   },
+  {
+    date: [2025, 12, 9],
+    content: '100パズ 「恋するサンタのプレゼント大作戦♡ 第1弾」 第2位',
+    titleLink: 'https://twitter.com/souhait_100kano/status/1998158810259890655',
+    labeledLinks: [
+      { label: '写経', link: 'https://twitter.com/ziburikito/status/1998736859690647709' },
+    ],
+  },
 ];
 
 const handler: Handler = (c) => {
