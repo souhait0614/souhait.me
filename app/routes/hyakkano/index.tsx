@@ -171,6 +171,9 @@ const handler: Handler = (c) => {
             </li>
             <li>
               <span>端須蓮葉</span>
+              <ul class='u-list-disc'>
+                <li>誕生日: 5月21日 (<DateCountdown month={5} day={21} />日後)</li>
+              </ul>
             </li>
             <li>
               <span>慈相千優</span>
