@@ -7,9 +7,10 @@
     "build": "vite build --mode client && vite build",
     "preview": "wrangler dev",
     "deploy": "pnpm build && wrangler deploy",
-    "lint": "concurrently node:lint:*",
-    "lint:ts": "eslint .",
-    "lint:css": "stylelint .",
+    "lint": "concurrently --pad-prefix node:lint:*",
+    "lint:typescript": "tsc --noEmit",
+    "lint:eslint": "eslint .",
+    "lint:stylelint": "stylelint .",
     "format": "eslint --fix . && stylelint --fix ."
   },
   "private": true,

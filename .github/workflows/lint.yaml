@@ -37,10 +37,10 @@ jobs:
           - stylelint
         include:
           - linter: eslint
-            linter-command-name: lint:ts
+            linter-command-name: lint:eslint
             linter-cache-version: v1
           - linter: stylelint
-            linter-command-name: lint:css
+            linter-command-name: lint:stylelint
             linter-cache-version: v1
     env:
       linter-cache-path: ${{ github.workspace }}/node_modules/.cache/${{ matrix.linter }}
