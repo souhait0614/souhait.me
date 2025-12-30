@@ -35,6 +35,7 @@ jobs:
         linter:
           - eslint
           - stylelint
+          - typescript
         include:
           - linter: eslint
             linter-command-name: lint:eslint
@@ -42,6 +43,8 @@ jobs:
           - linter: stylelint
             linter-command-name: lint:stylelint
             linter-cache-version: v1
+          - linter: typescript
+            linter-command-name: lint:typescript
     env:
       linter-cache-path: ${{ github.workspace }}/node_modules/.cache/${{ matrix.linter }}
     steps:
@@ -68,6 +71,7 @@ jobs:
           pnpm install --frozen-lockfile
 
       - name: Restore ${{ matrix.linter }} cache
+        if: ${{ matrix.linter-cache-version }}
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
           path: ${{ env.linter-cache-path }}
@@ -76,7 +80,4 @@ jobs:
 
       - name: Run ${{ matrix.linter }} command
         run: |
-          pnpm run ${{ matrix.linter-command-name }} \
-            --cache \
-            --cache-location '${{ env.linter-cache-path }}' \
-            --cache-strategy content
+          pnpm run ${{ matrix.linter-command-name }} ${{ matrix.linter-cache-version && format('--cache --cache-location ''{0}'' --cache-strategy content', env.linter-cache-path) || '' }}
