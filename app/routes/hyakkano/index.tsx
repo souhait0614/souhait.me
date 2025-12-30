@@ -109,6 +109,11 @@ const records: Array<EventRecord> = [
       { label: '写経', link: 'https://twitter.com/ziburikito/status/1998736859690647709' },
     ],
   },
+  {
+    date: [2025, 12, 29],
+    content: 'AVIOT トゥルーワイヤレスイヤホン',
+    titleLink: 'https://twitter.com/souhait_100kano/status/2005525648182505813',
+  },
 ];
 
 const handler: Handler = (c) => {
