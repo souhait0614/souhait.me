@@ -260,6 +260,15 @@ const handler: Handler = (c) => {
           <p>あと何日で誰が誕生日なのか一発で見たかったので整備</p>
           <p>TVアニメ未登場キャラネタバレ配慮機能付きです</p>
         </section>
+        <section>
+          <h3>
+            <LinkText external href='https://hyakkano.souhait.app/ime-dict'>
+              IMEユーザー辞書
+            </LinkText>
+          </h3>
+          <p>1から入力するにはだいぶキツいキャラの名前などを入力しやすくしたかったので整備</p>
+          <p>ユーザー辞書に含める単語の種類や登場範囲(TVアニメまで, ヤンジャン最新話までなど)を調整できます</p>
+        </section>
       </section>
       {showProfile && (
         <section>
