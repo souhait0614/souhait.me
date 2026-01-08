@@ -23,7 +23,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "4.20260101.0",
     "@hono/vite-build": "1.8.0",
-    "@hono/vite-dev-server": "0.23.0",
+    "@hono/vite-dev-server": "0.24.0",
     "@stylistic/stylelint-config": "3.0.1",
     "@tailwindcss/vite": "4.1.18",
     "@taiyme/eslint-config": "0.11.1",
