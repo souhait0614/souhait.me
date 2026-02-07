@@ -9,13 +9,14 @@ import { MatcherType } from 'eslint-plugin-better-tailwindcss/api/types';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 
-/** @typedef {import('eslint-plugin-better-tailwindcss/api/types').CalleeMatchers} CalleeMatchers */
+// TODO: 後でなんとかする
+// /** @typedef {import('eslint-plugin-better-tailwindcss/api/types').CalleeMatchers} CalleeMatchers */
 
 const files = [
   '**/*.{js,mjs,ts,tsx}',
 ];
 
-/** @type {CalleeMatchers} */
+// /** @type {CalleeMatchers} */
 const TV_BASE_VALUES = [
   'tv',
   [
@@ -26,7 +27,7 @@ const TV_BASE_VALUES = [
   ],
 ];
 
-/** @type {CalleeMatchers} */
+// /** @type {CalleeMatchers} */
 const TV_SLOT_VALUES = [
   'tv',
   [
@@ -91,9 +92,9 @@ export default defineConfig(
       },
     },
     rules: {
-      ...betterTailwindcss.configs.recommended?.rules,
+      ...betterTailwindcss.configs.recommended.rules,
       'better-tailwindcss/enforce-consistent-line-wrapping': 'warn',
-      'better-tailwindcss/no-unregistered-classes': ['error', { detectComponentClasses: true }],
+      'better-tailwindcss/no-unknown-classes': ['error', { detectComponentClasses: true }],
     },
   },
 );

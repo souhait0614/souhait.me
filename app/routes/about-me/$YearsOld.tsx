@@ -28,7 +28,7 @@ export default function YearsOld({ year, month, day }: YearsOldProps) {
         type='number'
         value={targetYear ?? ''}
         onInput={handleChange}
-        class='w-[4rem] text-center'
+        class='w-16 text-center'
       />/{month}/{day}
       )
     </span>
