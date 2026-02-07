@@ -9,8 +9,6 @@ import { MatcherType } from 'eslint-plugin-better-tailwindcss/api/types';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 
-const reactPlugins = taiymeConfig.configs['react/recommended'][1].plugins;
-
 // TODO: 後でなんとかする
 // /** @typedef {import('eslint-plugin-better-tailwindcss/api/types').CalleeMatchers} CalleeMatchers */
 
@@ -46,7 +44,8 @@ export default defineConfig(
     files,
     extends: [
       taiymeConfig.configs.typescript,
-      taiymeConfig.configs['react/stylistic'],
+      taiymeConfig.configs.react,
+      taiymeConfig.configs.stylistic,
     ],
     languageOptions: {
       globals: {
@@ -56,20 +55,14 @@ export default defineConfig(
       },
       parser: tsEslintParser,
       parserOptions: {
-        project: './tsconfig.json',
+        projectService: true,
         tsconfigRootDir: import.meta.dirname,
-        ecmaFeatures: {
-          jsx: true,
-        },
       },
     },
     settings: {
       react: {
         version: '19',
       },
-    },
-    plugins: {
-      ...reactPlugins,
     },
     rules: {
       'react/function-component-definition': [
@@ -79,7 +72,8 @@ export default defineConfig(
           unnamedComponents: 'arrow-function',
         },
       ],
-      'react-hooks/exhaustive-deps': 'warn',
+      'react/no-unknown-property': 'off',
+      'react/jsx-key': 'off',
     },
   },
   {

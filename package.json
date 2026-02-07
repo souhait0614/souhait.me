@@ -26,7 +26,7 @@
     "@hono/vite-dev-server": "0.25.0",
     "@stylistic/stylelint-config": "4.0.0",
     "@tailwindcss/vite": "4.1.18",
-    "@taiyme/eslint-config": "0.11.1",
+    "@taiyme/eslint-config": "1.0.0",
     "@taiyme/vite-plugin-jsx-prune-classname": "0.0.3",
     "@types/node": "24.10.9",
     "@typescript-eslint/parser": "8.54.0",
