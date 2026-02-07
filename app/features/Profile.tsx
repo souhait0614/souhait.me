@@ -19,11 +19,7 @@ interface ProfileProps {
 }
 export default function Profile({ NameElement, showMoreInfo, portraitFetchPriority, portraitLoading }: ProfileProps) {
   return (
-    <div class={`
-      @container relative
-      [view-transition-name:profile]
-    `}
-    >
+    <div class='@container relative [view-transition-name:profile]'>
       <div class='w-full card p-0 leading-normal'>
         <div class='relative h-9 text-center leading-9'>
           <div class={`
@@ -39,11 +35,11 @@ export default function Profile({ NameElement, showMoreInfo, portraitFetchPriori
         </div>
         <div class='px-4 py-3 pt-1 font-mono'>
           <div class='flex items-baseline'>
-            <NameElement class='m-0 inline text-base leading-normal font-bold'>すえ</NameElement>
+            <NameElement class='m-0 inline text-base/normal font-bold'>すえ</NameElement>
             <p class='before:content-["/"]'>souhait</p>
           </div>
           <hr class={`
-            m-0 h-[1.5rem] border-0
+            m-0 h-6 border-0
             after:content-['------------']
           `}
           />
@@ -94,8 +90,7 @@ export default function Profile({ NameElement, showMoreInfo, portraitFetchPriori
       >
         <Portrait
           class={`
-            w-40 shadow-xl
-            [view-transition-name:portrait-souhait-chan]
+            w-40 shadow-xl [view-transition-name:portrait-souhait-chan]
             group-hover-focus-active/LinkPortrait:rotate-z-2
             group-hover-focus-active/LinkPortrait:shadow-2xl
             motion-safe:transition-[box-shadow,transform]

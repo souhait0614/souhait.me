@@ -26,7 +26,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div>
-      <div class='relative h-[30rem]'>
+      <div class='relative h-120'>
         <Portrait
           class={`
             absolute -right-8 -bottom-8 h-full rotate-z-5 opacity-40
