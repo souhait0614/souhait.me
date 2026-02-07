@@ -33,7 +33,7 @@
     "concurrently": "9.2.1",
     "eslint": "9.39.2",
     "eslint-config-flat-gitignore": "2.1.0",
-    "eslint-plugin-better-tailwindcss": "3.8.0",
+    "eslint-plugin-better-tailwindcss": "4.1.1",
     "globals": "17.3.0",
     "kiso.css": "1.2.4",
     "sharp": "0.34.5",
