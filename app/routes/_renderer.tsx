@@ -99,11 +99,7 @@ export default jsxRenderer(({ children, metadata }, context) => {
         {metadata.pageType === 'gyagu' && (
           <div class='pointer-events-none fixed inset-0 -z-1 bg-gyagu' />
         )}
-        <main class={`
-          [grid-area:content]
-          [view-transition-name:content]
-        `}
-        >
+        <main class='[grid-area:content] [view-transition-name:content]'>
           {metadata.layoutType !== 'zen' && (
             <header class={`
               pb-1 text-text-muted
@@ -116,15 +112,11 @@ export default jsxRenderer(({ children, metadata }, context) => {
           {children}
         </main>
         <footer class={`
-          flex flex-col items-center gap-1 text-text-muted
-          [grid-area:footer]
+          flex flex-col items-center gap-1 text-text-muted [grid-area:footer]
         `}
         >
           <LinkText
-            class={`
-              text-text-muted
-              [view-transition-name:footer-privacy]
-            `}
+            class='text-text-muted [view-transition-name:footer-privacy]'
             to='/privacy'
           >
             <small>プライバシーポリシー</small>
@@ -135,9 +127,8 @@ export default jsxRenderer(({ children, metadata }, context) => {
         </footer>
         {metadata.layoutType !== 'zen' && (
           <nav class={`
-            sticky top-[var(--page-padding-top)] z-1 mr-4 w-64 self-start
-            rounded bg-background/80 pb-3
-            [grid-area:nav]
+            sticky top-(--page-padding-top) z-1 mr-4 w-64 self-start rounded-sm
+            bg-background/80 pb-3 [grid-area:nav]
             max-sm:hidden
           `}
           >
@@ -156,12 +147,11 @@ export default jsxRenderer(({ children, metadata }, context) => {
         )}
         {metadata.layoutType !== 'zen' && (
           <nav class={`
-            sticky bottom-0 -mr-[var(--page-padding-right)]
-            -mb-[var(--page-padding-bottom)] -ml-[var(--page-padding-left)]
+            sticky bottom-0 -mr-(--page-padding-right)
+            -mb-(--page-padding-bottom) -ml-(--page-padding-left)
             w-[calc(100%+var(--page-padding-left)+var(--page-padding-right))]
-            bg-background/80 pt-2 pr-[var(--page-padding-right)]
-            pb-[var(--page-padding-bottom)] pl-[var(--page-padding-left)]
-            [grid-area:nav]
+            bg-background/80 pt-2 pr-(--page-padding-right)
+            pb-(--page-padding-bottom) pl-(--page-padding-left) [grid-area:nav]
             [view-transition-name:nav]
             sm:hidden
           `}

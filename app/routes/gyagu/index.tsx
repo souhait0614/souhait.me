@@ -44,11 +44,7 @@ export default function Page() {
         </h1>
       </div>
       <section class='card'>
-        <h2 class={`
-          origin-left animate-gyagu-jerry
-          [animation-delay:-0.5s]
-        `}
-        >もしかして: うるさいと
+        <h2 class='origin-left animate-gyagu-jerry [animation-delay:-0.5s]'>もしかして: うるさいと
         </h2>
         <ul class='u-list-disc'>
           {gyaguLinkList.map((link, i) => (
