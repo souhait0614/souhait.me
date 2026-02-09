@@ -28,7 +28,7 @@
     "@tailwindcss/vite": "4.1.18",
     "@taiyme/eslint-config": "1.0.0",
     "@taiyme/vite-plugin-jsx-prune-classname": "0.0.3",
-    "@types/node": "24.10.9",
+    "@types/node": "24.10.11",
     "@typescript-eslint/parser": "8.54.0",
     "concurrently": "9.2.1",
     "eslint": "9.39.2",
