@@ -21,7 +21,7 @@
     "tailwind-variants": "3.2.2"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20260129.0",
+    "@cloudflare/workers-types": "4.20260206.0",
     "@hono/vite-build": "1.9.2",
     "@hono/vite-dev-server": "0.25.0",
     "@stylistic/stylelint-config": "4.0.0",
@@ -43,11 +43,11 @@
     "stylelint-config-tailwindcss": "1.0.1",
     "tailwindcss": "4.1.18",
     "tsx": "4.21.0",
-    "type-fest": "5.4.2",
+    "type-fest": "5.4.3",
     "typescript": "5.9.3",
     "vite": "7.3.1",
     "vite-tsconfig-paths": "6.0.5",
-    "wrangler": "4.61.1"
+    "wrangler": "4.63.0"
   },
   "packageManager": "pnpm@10.28.2"
 }
