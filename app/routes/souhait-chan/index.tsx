@@ -39,7 +39,7 @@ export default function Page() {
           fetchpriority='high'
         />
         <div class={`
-          absolute inset-0 z-2 h-full w-full pr-16
+          absolute inset-0 z-2 size-full pr-16
           [view-transition-name:top-souhait-chan]
           max-sm:pr-8
         `}

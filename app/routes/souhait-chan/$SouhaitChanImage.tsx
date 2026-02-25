@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'hono/jsx';
 import { tv } from 'tailwind-variants';
 
 const imageStyle = tv({
-  base: 'h-full w-full object-contain object-bottom',
+  base: 'size-full object-contain object-bottom',
 });
 
 export default function SouhaitChanImage() {

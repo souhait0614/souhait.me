@@ -13,7 +13,7 @@ const handler: NotFoundHandler = (c) => {
   return c.render(
     (
       <div class={`
-        flex h-full flex-col items-center justify-center gap-4 text-center
+        page-container h-full items-center justify-center text-center
       `}
       >
         <h1>404 Not Found</h1>
