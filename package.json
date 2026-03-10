@@ -35,6 +35,7 @@
     "eslint-config-flat-gitignore": "2.2.1",
     "eslint-plugin-better-tailwindcss": "4.3.2",
     "globals": "17.4.0",
+    "jiti": "2.6.1",
     "kiso.css": "1.2.4",
     "sharp": "0.34.5",
     "stylelint": "17.4.0",

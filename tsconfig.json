@@ -20,7 +20,6 @@
     "jsxImportSource": "hono/jsx",
 
     /* Type Checking */
-    "allowJs": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,

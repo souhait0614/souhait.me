@@ -1,6 +1,5 @@
-// @ts-check
+import type { Config } from 'stylelint';
 
-/** @type {import("stylelint").Config} */
 export default {
   extends: [
     'stylelint-config-recommended',
@@ -13,4 +12,4 @@ export default {
     'nesting-selector-no-missing-scoping-root': null,
     '@stylistic/string-quotes': 'single',
   },
-};
+} satisfies Config;
