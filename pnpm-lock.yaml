@@ -12,8 +12,8 @@ importers:
         specifier: 4.12.7
         version: 4.12.7
       honox:
-        specifier: 0.1.54
-        version: 0.1.54(hono@4.12.7)(miniflare@4.20260301.1)(wrangler@4.71.0(@cloudflare/workers-types@4.20260305.1))
+        specifier: 0.1.55
+        version: 0.1.55(hono@4.12.7)(miniflare@4.20260301.1)(wrangler@4.71.0(@cloudflare/workers-types@4.20260305.1))
       tailwind-merge:
         specifier: 3.5.0
         version: 3.5.0
@@ -686,6 +686,12 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@hono/node-server@1.19.11':
+    resolution: {integrity: sha512-dr8/3zEaB+p0D2n/IUrlPF1HZm586qgJNXK1a9fhg/PzdtkK7Ksd5l312tJX2yBuALqDYBlG20QEbayqPyxn+g==}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      hono: ^4
+
   '@hono/node-server@1.19.6':
     resolution: {integrity: sha512-Shz/KjlIeAhfiuE93NDKVdZ7HdBVLQAfdbaXEaoAVO3ic9ibRSLGIQGkcBbFyuLr+7/1D5ZCINM8B+6IvXeMtw==}
     engines: {node: '>=18.14.1'}
@@ -698,8 +704,8 @@ packages:
     peerDependencies:
       hono: '*'
 
-  '@hono/vite-dev-server@0.23.0':
-    resolution: {integrity: sha512-tHV86xToed9Up0j/dubQW2PDP4aYNFDSfQrjcV6Ra7bqCGrxhtg/zZBmbgSco3aTxKOEPzDXKK+6seAAfsbIXw==}
+  '@hono/vite-dev-server@0.25.0':
+    resolution: {integrity: sha512-4j5rs7yUTOObU2/yCEHeWbf3C8m95SD9lhdUUE6CJ462Emp9vS94yiza2dsA8+ly5pdaIQW0cd4nhNVcwYL5tA==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '*'
@@ -711,8 +717,8 @@ packages:
       wrangler:
         optional: true
 
-  '@hono/vite-dev-server@0.25.0':
-    resolution: {integrity: sha512-4j5rs7yUTOObU2/yCEHeWbf3C8m95SD9lhdUUE6CJ462Emp9vS94yiza2dsA8+ly5pdaIQW0cd4nhNVcwYL5tA==}
+  '@hono/vite-dev-server@0.25.1':
+    resolution: {integrity: sha512-H6EqoPtCV+uH1fu8nKyRy5Wh3LU012QxloEYMlUcyMjjEfVFiRXPjHx/0TQiiRi140Vu8San5A4XQWyElKFKaw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '*'
@@ -1252,12 +1258,6 @@ packages:
     peerDependencies:
       typescript: '>=4.8.4 <6.0.0'
 
-  '@typescript-eslint/project-service@8.56.0':
-    resolution: {integrity: sha512-M3rnyL1vIQOMeWxTWIW096/TtVP+8W3p/XnaFflhmcFp+U4zlxUxWj4XwNs6HbDeTtN4yun0GNTTDBw/SvufKg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <6.0.0'
-
   '@typescript-eslint/project-service@8.56.1':
     resolution: {integrity: sha512-TAdqQTzHNNvlVFfR+hu2PDJrURiwKsUvxFn1M0h95BB8ah5jejas08jUWG4dBA68jDMI988IvtfdAI53JzEHOQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1335,12 +1335,6 @@ packages:
     peerDependencies:
       typescript: '>=4.8.4 <6.0.0'
 
-  '@typescript-eslint/typescript-estree@8.56.0':
-    resolution: {integrity: sha512-ex1nTUMWrseMltXUHmR2GAQ4d+WjkZCT4f+4bVsps8QEdh0vlBsaCokKTPlnqBFqqGaxilDNJG7b8dolW2m43Q==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <6.0.0'
-
   '@typescript-eslint/typescript-estree@8.56.1':
     resolution: {integrity: sha512-qzUL1qgalIvKWAf9C1HpvBjif+Vm6rcT5wZd4VoMb9+Km3iS3Cv9DY6dMRMDtPnwRAFyAi7YXJpTIEXLvdfPxg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1367,10 +1361,6 @@ packages:
 
   '@typescript-eslint/visitor-keys@8.54.0':
     resolution: {integrity: sha512-VFlhGSl4opC0bprJiItPQ1RfUhGDIBokcPwaFH4yiBCaNPeld/9VeXbiPO1cLyorQi1G1vL+ecBk1x8o1axORA==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@typescript-eslint/visitor-keys@8.56.0':
-    resolution: {integrity: sha512-q+SL+b+05Ud6LbEE35qe4A99P+htKTKVbyiNEe45eCbJFyh/HVK9QXwlrbz+Q4L8SOW4roxSVwXYj4DMBT7Ieg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript-eslint/visitor-keys@8.56.1':
@@ -2142,8 +2132,8 @@ packages:
     resolution: {integrity: sha512-jq9l1DM0zVIvsm3lv9Nw9nlJnMNPOcAtsbsgiUhWcFzPE99Gvo6yRTlszSLLYacMeQ6quHD6hMfId8crVHvexw==}
     engines: {node: '>=16.9.0'}
 
-  honox@0.1.54:
-    resolution: {integrity: sha512-Tbwi2rKKSZyHZF2NbE2SLtw97oH8npvTX85XCLzmQVTaFLmxypaHLLIR/jyyL1YvE9EhkCeCsxR2mmLxhGhSOw==}
+  honox@0.1.55:
+    resolution: {integrity: sha512-Khf2X/8Z+1iTg1p7rkSEUhmFLpCNKhcSSRV5pk/xo+LsiB1gNMUH869MsfhQW0n4cNsLMnz0APrHLGCmdfQ1Hg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '>=4.*'
@@ -3715,6 +3705,10 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
+  '@hono/node-server@1.19.11(hono@4.12.7)':
+    dependencies:
+      hono: 4.12.7
+
   '@hono/node-server@1.19.6(hono@4.12.7)':
     dependencies:
       hono: 4.12.7
@@ -3723,7 +3717,7 @@ snapshots:
     dependencies:
       hono: 4.12.7
 
-  '@hono/vite-dev-server@0.23.0(hono@4.12.7)(miniflare@4.20260301.1)(wrangler@4.71.0(@cloudflare/workers-types@4.20260305.1))':
+  '@hono/vite-dev-server@0.25.0(hono@4.12.7)(miniflare@4.20260301.1)(wrangler@4.71.0(@cloudflare/workers-types@4.20260305.1))':
     dependencies:
       '@hono/node-server': 1.19.6(hono@4.12.7)
       hono: 4.12.7
@@ -3732,9 +3726,9 @@ snapshots:
       miniflare: 4.20260301.1
       wrangler: 4.71.0(@cloudflare/workers-types@4.20260305.1)
 
-  '@hono/vite-dev-server@0.25.0(hono@4.12.7)(miniflare@4.20260301.1)(wrangler@4.71.0(@cloudflare/workers-types@4.20260305.1))':
+  '@hono/vite-dev-server@0.25.1(hono@4.12.7)(miniflare@4.20260301.1)(wrangler@4.71.0(@cloudflare/workers-types@4.20260305.1))':
     dependencies:
-      '@hono/node-server': 1.19.6(hono@4.12.7)
+      '@hono/node-server': 1.19.11(hono@4.12.7)
       hono: 4.12.7
       minimatch: 9.0.5
     optionalDependencies:
@@ -4188,15 +4182,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/project-service@8.56.0(typescript@5.9.3)':
-    dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.56.0(typescript@5.9.3)
-      '@typescript-eslint/types': 8.56.0
-      debug: 4.4.3
-      typescript: 5.9.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/project-service@8.56.1(typescript@5.9.3)':
     dependencies:
       '@typescript-eslint/tsconfig-utils': 8.56.1(typescript@5.9.3)
@@ -4287,21 +4272,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/typescript-estree@8.56.0(typescript@5.9.3)':
-    dependencies:
-      '@typescript-eslint/project-service': 8.56.0(typescript@5.9.3)
-      '@typescript-eslint/tsconfig-utils': 8.56.0(typescript@5.9.3)
-      '@typescript-eslint/types': 8.56.0
-      '@typescript-eslint/visitor-keys': 8.56.0
-      debug: 4.4.3
-      minimatch: 9.0.5
-      semver: 7.7.3
-      tinyglobby: 0.2.15
-      ts-api-utils: 2.4.0(typescript@5.9.3)
-      typescript: 5.9.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3)':
     dependencies:
       '@typescript-eslint/project-service': 8.56.1(typescript@5.9.3)
@@ -4348,11 +4318,6 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.54.0
       eslint-visitor-keys: 4.2.1
-
-  '@typescript-eslint/visitor-keys@8.56.0':
-    dependencies:
-      '@typescript-eslint/types': 8.56.0
-      eslint-visitor-keys: 5.0.1
 
   '@typescript-eslint/visitor-keys@8.56.1':
     dependencies:
@@ -4712,7 +4677,7 @@ snapshots:
 
   detective-typescript@14.0.0(typescript@5.9.3):
     dependencies:
-      '@typescript-eslint/typescript-estree': 8.56.0(typescript@5.9.3)
+      '@typescript-eslint/typescript-estree': 8.56.1(typescript@5.9.3)
       ast-module-types: 6.0.1
       node-source-walk: 7.0.1
       typescript: 5.9.3
@@ -5351,13 +5316,13 @@ snapshots:
 
   hono@4.12.7: {}
 
-  honox@0.1.54(hono@4.12.7)(miniflare@4.20260301.1)(wrangler@4.71.0(@cloudflare/workers-types@4.20260305.1)):
+  honox@0.1.55(hono@4.12.7)(miniflare@4.20260301.1)(wrangler@4.71.0(@cloudflare/workers-types@4.20260305.1)):
     dependencies:
       '@babel/generator': 7.25.6
       '@babel/parser': 7.25.6
       '@babel/traverse': 7.25.6
       '@babel/types': 7.25.6
-      '@hono/vite-dev-server': 0.23.0(hono@4.12.7)(miniflare@4.20260301.1)(wrangler@4.71.0(@cloudflare/workers-types@4.20260305.1))
+      '@hono/vite-dev-server': 0.25.1(hono@4.12.7)(miniflare@4.20260301.1)(wrangler@4.71.0(@cloudflare/workers-types@4.20260305.1))
       hono: 4.12.7
       jsonc-parser: 3.3.1
       precinct: 12.2.0
