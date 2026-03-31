@@ -219,6 +219,7 @@ const handler: Handler = (c) => {
         <div class='mt-2 grid grid-cols-[auto_1fr] items-baseline gap-2'>
           {
             records
+              .reverse()
               .sort((a, b) => {
                 const aDate = new Date(a.date[0], a.date[1] - 1, a.date[2]);
                 const bDate = new Date(b.date[0], b.date[1] - 1, b.date[2]);
