@@ -118,6 +118,44 @@ const records: Array<EventRecord> = [
     content: 'AVIOT トゥルーワイヤレスイヤホン',
     titleLink: 'https://twitter.com/souhait_100kano/status/2005525648182505813',
   },
+  {
+    date: [2026, 1, 31],
+    content: 'POP UP SHOP in MEDICOS SHOP渋谷',
+    titleLink: 'https://twitter.com/souhait_100kano/status/2017483603840774562',
+    labeledLinks: [
+      { label: '戦利品', link: 'https://twitter.com/souhait_100kano/status/2017446430508781882' },
+    ],
+  },
+  {
+    date: [2026, 2, 28],
+    content: 'POP UP SHOP（犬テーマ） in eeo Store 池袋本店',
+    titleLink: 'https://twitter.com/souhait_100kano/status/2027565005831561332',
+  },
+  {
+    date: [2026, 3, 28],
+    content: 'POP UP SHOP（猫テーマ） in eeo Store 池袋本店 (+AnimeJapan 2026)',
+    titleLink: 'https://twitter.com/souhait_100kano/status/2037709605527306572',
+    labeledLinks: [
+      { label: '戦利品', link: 'https://twitter.com/souhait_100kano/status/2037845218557579567' },
+    ],
+  },
+  {
+    date: [2026, 3, 28],
+    content: 'TVアニメ『君のことが大大大大大好きな100人の彼女』第3期 新ヒロインキャスト発表！スペシャルトークイベント',
+    titleLink: 'https://twitter.com/souhait_100kano/status/2037803209704751575',
+    labeledLinks: [
+      { label: '撤収', link: 'https://twitter.com/souhait_100kano/status/2037807561483997499' },
+    ],
+  },
+  {
+    date: [2026, 3, 31],
+    content: puzzleEventResultContent('静キュン！キュン！チャレンジ', 1),
+    titleLink: 'https://twitter.com/souhait_100kano/status/2038814049086177773',
+    labeledLinks: [
+      // TODO: 後で追加
+      // { label: '写経', link: 'https://twitter.com/souhait_100kano/status/' },
+    ],
+  },
 ];
 
 const handler: Handler = (c) => {
