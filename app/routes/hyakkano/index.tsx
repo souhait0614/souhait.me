@@ -152,8 +152,7 @@ const records: Array<EventRecord> = [
     content: puzzleEventResultContent('静キュン！キュン！チャレンジ', 1),
     titleLink: 'https://twitter.com/souhait_100kano/status/2038814049086177773',
     labeledLinks: [
-      // TODO: 後で追加
-      // { label: '写経', link: 'https://twitter.com/souhait_100kano/status/' },
+      { label: '写経', link: 'https://twitter.com/ziburikito/status/2040448072468316336' },
     ],
   },
 ];
