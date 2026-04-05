@@ -31,8 +31,8 @@ importers:
         specifier: 0.25.1
         version: 0.25.1(hono@4.12.9)(miniflare@4.20260317.2)(wrangler@4.77.0(@cloudflare/workers-types@4.20260317.1))
       '@stylistic/stylelint-config':
-        specifier: 4.0.0
-        version: 4.0.0(stylelint@17.6.0(typescript@5.9.3))
+        specifier: 5.0.0
+        version: 5.0.0(stylelint@17.6.0(typescript@5.9.3))
       '@tailwindcss/vite':
         specifier: 4.2.2
         version: 4.2.2(vite@8.0.3(@types/node@24.12.0)(esbuild@0.27.3)(jiti@2.6.1)(tsx@4.21.0))
@@ -1071,17 +1071,17 @@ packages:
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
 
-  '@stylistic/stylelint-config@4.0.0':
-    resolution: {integrity: sha512-04H8xfsIR/pWpAPQI5aGxwgjeikb8vy4OSNvzRdRcAITYSfX1UUTgGL5jm8iZxN8MSWfN77hMlV1LknE0Ho6tg==}
+  '@stylistic/stylelint-config@5.0.0':
+    resolution: {integrity: sha512-AW6S27wEm4DzB+uOZMvRkONIu0ba50VRbFte7qYJgGP4dacS8kAuj8HZJ+s+8kE4GK3XXBcSKLb75a+NfJlbiQ==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
-      stylelint: ^17.0.0
+      stylelint: ^17.6.0
 
-  '@stylistic/stylelint-plugin@5.0.1':
-    resolution: {integrity: sha512-NaVwCNVZ2LyPA3TnUwvjO9c6P6VUjgRB8UP8SOW+cAOJBVqPPuOIDawsvvtql/LhkuR3JuTdGvr/RM3dUl8l2Q==}
+  '@stylistic/stylelint-plugin@5.1.0':
+    resolution: {integrity: sha512-TFvKCbJUEWUYCD+rDv45qhnStO6nRtbBngaCblS2JGh8c95S3jJi3fIotfF6EDo4IVM15UPa65WP+kp6GNvXRA==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
-      stylelint: ^17.0.0
+      stylelint: ^17.6.0
 
   '@tailwindcss/node@4.2.2':
     resolution: {integrity: sha512-pXS+wJ2gZpVXqFaUEjojq7jzMpTGf8rU6ipJz5ovJV6PUGmlJ+jvIwGrzdHdQ80Sg+wmQxUFuoW1UAAwHNEdFA==}
@@ -3968,12 +3968,12 @@ snapshots:
       estraverse: 5.3.0
       picomatch: 4.0.3
 
-  '@stylistic/stylelint-config@4.0.0(stylelint@17.6.0(typescript@5.9.3))':
+  '@stylistic/stylelint-config@5.0.0(stylelint@17.6.0(typescript@5.9.3))':
     dependencies:
-      '@stylistic/stylelint-plugin': 5.0.1(stylelint@17.6.0(typescript@5.9.3))
+      '@stylistic/stylelint-plugin': 5.1.0(stylelint@17.6.0(typescript@5.9.3))
       stylelint: 17.6.0(typescript@5.9.3)
 
-  '@stylistic/stylelint-plugin@5.0.1(stylelint@17.6.0(typescript@5.9.3))':
+  '@stylistic/stylelint-plugin@5.1.0(stylelint@17.6.0(typescript@5.9.3))':
     dependencies:
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-tokenizer': 4.0.0
