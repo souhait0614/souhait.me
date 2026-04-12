@@ -24,7 +24,7 @@
     "@cloudflare/workers-types": "4.20260403.1",
     "@hono/vite-build": "1.10.1",
     "@hono/vite-dev-server": "0.25.1",
-    "@stylistic/stylelint-config": "4.0.0",
+    "@stylistic/stylelint-config": "5.0.0",
     "@tailwindcss/vite": "4.2.2",
     "@taiyme/eslint-config": "1.0.1",
     "@taiyme/vite-plugin-jsx-prune-classname": "0.0.3",
