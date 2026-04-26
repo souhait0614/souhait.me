@@ -28,8 +28,8 @@ importers:
         specifier: 1.11.1
         version: 1.11.1(hono@4.12.14)
       '@hono/vite-dev-server':
-        specifier: 0.25.1
-        version: 0.25.1(hono@4.12.14)(miniflare@4.20260415.0)(wrangler@4.83.0(@cloudflare/workers-types@4.20260416.2))
+        specifier: 0.25.3
+        version: 0.25.3(hono@4.12.14)(miniflare@4.20260415.0)(wrangler@4.83.0(@cloudflare/workers-types@4.20260416.2))
       '@stylistic/stylelint-config':
         specifier: 5.0.0
         version: 5.0.0(stylelint@17.8.0(typescript@6.0.2))
@@ -709,8 +709,8 @@ packages:
     peerDependencies:
       hono: '*'
 
-  '@hono/vite-dev-server@0.25.1':
-    resolution: {integrity: sha512-H6EqoPtCV+uH1fu8nKyRy5Wh3LU012QxloEYMlUcyMjjEfVFiRXPjHx/0TQiiRi140Vu8San5A4XQWyElKFKaw==}
+  '@hono/vite-dev-server@0.25.3':
+    resolution: {integrity: sha512-w3uQ0KQF0i/SDcJ6+d5njEFTr6pbolajrt/GxV0pliYL+4ywiBqiOFRWSpwW3mTuZ80boww7+ZxJTGTBIzyBQg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '*'
@@ -2511,9 +2511,6 @@ packages:
     resolution: {integrity: sha512-oRjTw/97aTBN0RHbYCdtF1MQfvusSIBQM0IZEgzl6426+8jSC0nF1a/GmnVLpfB9yyr6g6FTqWqiZVbxrtaCIg==}
     engines: {node: 18 || 20 || >=22}
 
-  minimatch@3.1.2:
-    resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
-
   minimatch@3.1.5:
     resolution: {integrity: sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==}
 
@@ -3733,7 +3730,7 @@ snapshots:
     dependencies:
       hono: 4.12.14
 
-  '@hono/vite-dev-server@0.25.1(hono@4.12.14)(miniflare@4.20260415.0)(wrangler@4.83.0(@cloudflare/workers-types@4.20260416.2))':
+  '@hono/vite-dev-server@0.25.3(hono@4.12.14)(miniflare@4.20260415.0)(wrangler@4.83.0(@cloudflare/workers-types@4.20260416.2))':
     dependencies:
       '@hono/node-server': 1.19.11(hono@4.12.14)
       hono: 4.12.14
@@ -4998,7 +4995,7 @@ snapshots:
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
-      minimatch: 3.1.2
+      minimatch: 3.1.5
       object.fromentries: 2.0.8
       object.groupby: 1.0.3
       object.values: 1.2.1
@@ -5026,7 +5023,7 @@ snapshots:
       hasown: 2.0.2
       jsx-ast-utils: 3.3.5
       language-tags: 1.0.9
-      minimatch: 3.1.2
+      minimatch: 3.1.5
       object.fromentries: 2.0.8
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
@@ -5063,7 +5060,7 @@ snapshots:
       estraverse: 5.3.0
       hasown: 2.0.2
       jsx-ast-utils: 3.3.5
-      minimatch: 3.1.2
+      minimatch: 3.1.5
       object.entries: 1.1.9
       object.fromentries: 2.0.8
       object.values: 1.2.1
@@ -5360,7 +5357,7 @@ snapshots:
       '@babel/parser': 7.25.6
       '@babel/traverse': 7.25.6
       '@babel/types': 7.25.6
-      '@hono/vite-dev-server': 0.25.1(hono@4.12.14)(miniflare@4.20260415.0)(wrangler@4.83.0(@cloudflare/workers-types@4.20260416.2))
+      '@hono/vite-dev-server': 0.25.3(hono@4.12.14)(miniflare@4.20260415.0)(wrangler@4.83.0(@cloudflare/workers-types@4.20260416.2))
       hono: 4.12.14
       jsonc-parser: 3.3.1
       precinct: 12.2.0
@@ -5693,10 +5690,6 @@ snapshots:
     dependencies:
       brace-expansion: 5.0.4
 
-  minimatch@3.1.2:
-    dependencies:
-      brace-expansion: 1.1.12
-
   minimatch@3.1.5:
     dependencies:
       brace-expansion: 1.1.12
@@ -5831,9 +5824,9 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-sorting@9.1.0(postcss@8.5.8):
+  postcss-sorting@9.1.0(postcss@8.5.10):
     dependencies:
-      postcss: 8.5.8
+      postcss: 8.5.10
 
   postcss-value-parser@4.2.0: {}
 
@@ -6190,8 +6183,8 @@ snapshots:
 
   stylelint-order@7.0.0(stylelint@17.8.0(typescript@6.0.2)):
     dependencies:
-      postcss: 8.5.8
-      postcss-sorting: 9.1.0(postcss@8.5.8)
+      postcss: 8.5.10
+      postcss-sorting: 9.1.0(postcss@8.5.10)
       stylelint: 17.8.0(typescript@6.0.2)
 
   stylelint@17.8.0(typescript@6.0.2):
