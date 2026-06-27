@@ -155,6 +155,19 @@ const records: Array<EventRecord> = [
       { label: '写経', link: 'https://twitter.com/ziburikito/status/2040448072468316336' },
     ],
   },
+  {
+    date: [2026, 5, 21],
+    content: 'POP UP SHOP in Anime Culture Center by eeo',
+    titleLink: 'https://twitter.com/souhait_100kano/status/2057270852257972483',
+  },
+  {
+    date: [2026, 6, 18],
+    content: puzzleEventResultContent('紫陽花色のジューンブライド 第2弾', 1),
+    titleLink: 'https://twitter.com/souhait_100kano/status/2067443155453280281',
+    labeledLinks: [
+      { label: '写経', link: 'https://twitter.com/ziburikito/status/2070489672921514161' },
+    ],
+  },
 ];
 
 const handler: Handler = (c) => {
