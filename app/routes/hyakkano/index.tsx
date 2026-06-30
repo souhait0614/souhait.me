@@ -168,6 +168,11 @@ const records: Array<EventRecord> = [
       { label: '写経', link: 'https://twitter.com/ziburikito/status/2070489672921514161' },
     ],
   },
+  {
+    date: [2026, 6, 28],
+    content: 'TVアニメ「君のことが大大大大大好きな100人の彼女」第3期先行上映会',
+    titleLink: 'https://twitter.com/souhait_100kano/status/2071123963997008239',
+  },
 ];
 
 const handler: Handler = (c) => {
