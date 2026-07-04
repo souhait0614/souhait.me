@@ -173,6 +173,11 @@ const records: Array<EventRecord> = [
     content: 'TVアニメ「君のことが大大大大大好きな100人の彼女」第3期先行上映会',
     titleLink: 'https://twitter.com/souhait_100kano/status/2071123963997008239',
   },
+  {
+    date: [2026, 7, 4],
+    content: '君のことが大大大大大好きな100人の彼女 ～アメーリカなコラボカフェ!?～',
+    titleLink: 'https://twitter.com/souhait_100kano/status/2073231837070246076',
+  },
 ];
 
 const handler: Handler = (c) => {
