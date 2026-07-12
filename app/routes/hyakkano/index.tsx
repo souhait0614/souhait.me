@@ -274,6 +274,27 @@ const handler: Handler = (c) => {
         </Details>
       </section>
       <section class='card'>
+        <h2>作ったもの</h2>
+        <section>
+          <h3>
+            <LinkText external href='https://hyakkano.souhait.app/birthday'>
+              キャラクター誕生日一覧
+            </LinkText>
+          </h3>
+          <p>あと何日で誰が誕生日なのか一発で見たかったので整備</p>
+          <p>TVアニメ未登場キャラネタバレ配慮機能付きです</p>
+        </section>
+        <section>
+          <h3>
+            <LinkText external href='https://hyakkano.souhait.app/ime-dict'>
+              IMEユーザー辞書
+            </LinkText>
+          </h3>
+          <p>1から入力するにはだいぶキツいキャラの名前などを入力しやすくしたかったので整備</p>
+          <p>ユーザー辞書に含める単語の種類や登場範囲(TVアニメまで, ヤンジャン最新話までなど)を調整できます</p>
+        </section>
+      </section>
+      <section class='card'>
         <h2>足跡的な</h2>
         <p>新しい順に並んでいます</p>
         <div class='mt-2 grid grid-cols-[auto_1fr] items-baseline gap-2'>
@@ -313,27 +334,6 @@ const handler: Handler = (c) => {
               })
           }
         </div>
-      </section>
-      <section class='card'>
-        <h2>作ったもの</h2>
-        <section>
-          <h3>
-            <LinkText external href='https://hyakkano.souhait.app/birthday'>
-              キャラクター誕生日一覧
-            </LinkText>
-          </h3>
-          <p>あと何日で誰が誕生日なのか一発で見たかったので整備</p>
-          <p>TVアニメ未登場キャラネタバレ配慮機能付きです</p>
-        </section>
-        <section>
-          <h3>
-            <LinkText external href='https://hyakkano.souhait.app/ime-dict'>
-              IMEユーザー辞書
-            </LinkText>
-          </h3>
-          <p>1から入力するにはだいぶキツいキャラの名前などを入力しやすくしたかったので整備</p>
-          <p>ユーザー辞書に含める単語の種類や登場範囲(TVアニメまで, ヤンジャン最新話までなど)を調整できます</p>
-        </section>
       </section>
       {showProfile && (
         <section>
