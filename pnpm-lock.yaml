@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       hono:
-        specifier: 4.12.27
-        version: 4.12.27
+        specifier: 4.12.30
+        version: 4.12.30
       honox:
         specifier: 0.1.55
-        version: 0.1.55(hono@4.12.27)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))
+        version: 0.1.55(hono@4.12.30)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))
       tailwind-merge:
         specifier: 3.6.0
         version: 3.6.0
@@ -26,10 +26,10 @@ importers:
         version: 4.20260702.1
       '@hono/vite-build':
         specifier: 1.11.1
-        version: 1.11.1(hono@4.12.27)
+        version: 1.11.1(hono@4.12.30)
       '@hono/vite-dev-server':
         specifier: 0.26.0
-        version: 0.26.0(hono@4.12.27)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))
+        version: 0.26.0(hono@4.12.30)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))
       '@stylistic/stylelint-config':
         specifier: 5.0.0
         version: 5.0.0(stylelint@17.14.0(typescript@6.0.3))
@@ -2153,8 +2153,8 @@ packages:
   hermes-parser@0.25.1:
     resolution: {integrity: sha512-6pEjquH3rqaI6cYAXYPcz9MS4rY6R4ngRgrgfDshRptUZIc3lw0MCIJIGDj9++mfySOuPTHB4nrSW99BCvOPIA==}
 
-  hono@4.12.27:
-    resolution: {integrity: sha512-1yrb/+w6HWQJrUCLkJ2IF5jNIPvvFkblV5RNOYl6bV+OA6p9GLcMpHFFGTosSvHvcAUibuUukRqhlYI4z32C7Q==}
+  hono@4.12.30:
+    resolution: {integrity: sha512-emn+JoJjrN9YTpRDS5it/UI2SO9BAE37T6I3d963RxcZ81G9A4pr2SZTEiiaiKbzx+NKRg5BZ89fCL7gCJCUog==}
     engines: {node: '>=16.9.0'}
 
   honox@0.1.55:
@@ -3684,27 +3684,27 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@hono/node-server@1.19.11(hono@4.12.27)':
+  '@hono/node-server@1.19.11(hono@4.12.30)':
     dependencies:
-      hono: 4.12.27
+      hono: 4.12.30
 
-  '@hono/vite-build@1.11.1(hono@4.12.27)':
+  '@hono/vite-build@1.11.1(hono@4.12.30)':
     dependencies:
-      hono: 4.12.27
+      hono: 4.12.30
 
-  '@hono/vite-dev-server@0.25.1(hono@4.12.27)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))':
+  '@hono/vite-dev-server@0.25.1(hono@4.12.30)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))':
     dependencies:
-      '@hono/node-server': 1.19.11(hono@4.12.27)
-      hono: 4.12.27
+      '@hono/node-server': 1.19.11(hono@4.12.30)
+      hono: 4.12.30
       minimatch: 9.0.5
     optionalDependencies:
       miniflare: 4.20260710.0
       wrangler: 4.111.0(@cloudflare/workers-types@4.20260702.1)
 
-  '@hono/vite-dev-server@0.26.0(hono@4.12.27)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))':
+  '@hono/vite-dev-server@0.26.0(hono@4.12.30)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))':
     dependencies:
-      '@hono/node-server': 1.19.11(hono@4.12.27)
-      hono: 4.12.27
+      '@hono/node-server': 1.19.11(hono@4.12.30)
+      hono: 4.12.30
       minimatch: 9.0.5
     optionalDependencies:
       miniflare: 4.20260710.0
@@ -5403,16 +5403,16 @@ snapshots:
     dependencies:
       hermes-estree: 0.25.1
 
-  hono@4.12.27: {}
+  hono@4.12.30: {}
 
-  honox@0.1.55(hono@4.12.27)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1)):
+  honox@0.1.55(hono@4.12.30)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1)):
     dependencies:
       '@babel/generator': 7.25.6
       '@babel/parser': 7.25.6
       '@babel/traverse': 7.25.6
       '@babel/types': 7.25.6
-      '@hono/vite-dev-server': 0.25.1(hono@4.12.27)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))
-      hono: 4.12.27
+      '@hono/vite-dev-server': 0.25.1(hono@4.12.30)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))
+      hono: 4.12.30
       jsonc-parser: 3.3.1
       precinct: 12.2.0
     optionalDependencies:
@@ -5893,9 +5893,9 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-sorting@9.1.0(postcss@8.5.16):
+  postcss-sorting@9.1.0(postcss@8.5.20):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.20
 
   postcss-value-parser@4.2.0: {}
 
@@ -6292,8 +6292,8 @@ snapshots:
 
   stylelint-order@7.0.0(stylelint@17.14.0(typescript@6.0.3)):
     dependencies:
-      postcss: 8.5.16
-      postcss-sorting: 9.1.0(postcss@8.5.16)
+      postcss: 8.5.20
+      postcss-sorting: 9.1.0(postcss@8.5.20)
       stylelint: 17.14.0(typescript@6.0.3)
 
   stylelint@17.14.0(typescript@6.0.3):
