@@ -28,8 +28,8 @@ importers:
         specifier: 1.11.1
         version: 1.11.1(hono@4.12.27)
       '@hono/vite-dev-server':
-        specifier: 0.26.0
-        version: 0.26.0(hono@4.12.27)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))
+        specifier: 0.26.1
+        version: 0.26.1(hono@4.12.27)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))
       '@stylistic/stylelint-config':
         specifier: 5.0.0
         version: 5.0.0(stylelint@17.14.0(typescript@6.0.3))
@@ -563,8 +563,8 @@ packages:
       wrangler:
         optional: true
 
-  '@hono/vite-dev-server@0.26.0':
-    resolution: {integrity: sha512-DYHht1lge/SRGd1dpOgwhS6DpamSaDtxAOlwl2RkcYyLFy769DZPEX6CeRaUzeDNgClO9JAuT83VptxB5mH5jA==}
+  '@hono/vite-dev-server@0.26.1':
+    resolution: {integrity: sha512-OlcWoXjNogKiJhVwV/ftMK87UcsJmIBfmImSdI4e8to/ZdwNHrW9ddKw2OGHjXI5/uS2RaZr+2y+l8T9VFbCmw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '*'
@@ -3701,7 +3701,7 @@ snapshots:
       miniflare: 4.20260710.0
       wrangler: 4.111.0(@cloudflare/workers-types@4.20260702.1)
 
-  '@hono/vite-dev-server@0.26.0(hono@4.12.27)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))':
+  '@hono/vite-dev-server@0.26.1(hono@4.12.27)(miniflare@4.20260710.0)(wrangler@4.111.0(@cloudflare/workers-types@4.20260702.1))':
     dependencies:
       '@hono/node-server': 1.19.11(hono@4.12.27)
       hono: 4.12.27
@@ -5893,9 +5893,9 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-sorting@9.1.0(postcss@8.5.16):
+  postcss-sorting@9.1.0(postcss@8.5.20):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.20
 
   postcss-value-parser@4.2.0: {}
 
@@ -6292,8 +6292,8 @@ snapshots:
 
   stylelint-order@7.0.0(stylelint@17.14.0(typescript@6.0.3)):
     dependencies:
-      postcss: 8.5.16
-      postcss-sorting: 9.1.0(postcss@8.5.16)
+      postcss: 8.5.20
+      postcss-sorting: 9.1.0(postcss@8.5.20)
       stylelint: 17.14.0(typescript@6.0.3)
 
   stylelint@17.14.0(typescript@6.0.3):
