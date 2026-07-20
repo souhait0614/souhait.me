@@ -31,7 +31,7 @@
     "@types/node": "24.13.3",
     "@typescript-eslint/parser": "8.64.0",
     "concurrently": "10.0.3",
-    "eslint": "9.39.5",
+    "eslint": "10.7.0",
     "eslint-config-flat-gitignore": "2.3.0",
     "eslint-plugin-better-tailwindcss": "4.6.1",
     "globals": "17.7.0",
