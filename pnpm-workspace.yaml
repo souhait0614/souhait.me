@@ -1,7 +1,10 @@
 packages:
   - .
-
-onlyBuiltDependencies:
-  - esbuild
-  - sharp
-  - workerd
+saveExact: true
+packageConfigs:
+  souhait-me:
+    saveExact: true
+allowBuilds:
+  esbuild: true
+  sharp: true
+  workerd: true
