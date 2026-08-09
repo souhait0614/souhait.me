@@ -29,7 +29,7 @@
     "@taiyme/eslint-config": "1.0.1",
     "@taiyme/vite-plugin-jsx-prune-classname": "0.0.3",
     "@types/node": "24.13.3",
-    "@typescript-eslint/parser": "8.65.0",
+    "@typescript-eslint/parser": "8.66.0",
     "concurrently": "10.0.4",
     "eslint": "9.39.5",
     "eslint-config-flat-gitignore": "2.3.0",
