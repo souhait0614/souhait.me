@@ -178,6 +178,11 @@ const records: Array<EventRecord> = [
     content: '君のことが大大大大大好きな100人の彼女 ～アメーリカなコラボカフェ!?～',
     titleLink: 'https://twitter.com/souhait_100kano/status/2073231837070246076',
   },
+  {
+    date: [2026, 8, 5],
+    content: '君のことが大大大大大好きな100人の彼女×ROUND1',
+    titleLink: 'https://twitter.com/souhait_100kano/status/2084944559596028357',
+  },
 ];
 
 const handler: Handler = (c) => {
