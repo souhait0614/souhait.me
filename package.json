@@ -45,7 +45,7 @@
     "tailwindcss": "4.3.3",
     "tsx": "4.23.9",
     "type-fest": "5.8.0",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "vite": "8.2.1",
     "wrangler": "4.119.0"
   },
