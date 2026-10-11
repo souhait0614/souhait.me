@@ -9,6 +9,7 @@ export default {
   ],
   rules: {
     'at-rule-no-deprecated': null,
+    'at-rule-prelude-no-invalid': [true, { ignoreAtRules: ['apply', 'media'] }],
     'nesting-selector-no-missing-scoping-root': null,
     '@stylistic/string-quotes': 'single',
   },
