@@ -183,6 +183,33 @@ const records: Array<EventRecord> = [
     content: '君のことが大大大大大好きな100人の彼女×ROUND1',
     titleLink: 'https://twitter.com/souhait_100kano/status/2084944559596028357',
   },
+  {
+    date: [2026, 9, 2],
+    content: 'POP UP SHOP（テーマ：雨のち晴れ。）',
+    titleLink: 'https://twitter.com/souhait_100kano/status/2094971421252608042',
+  },
+  {
+    date: [2026, 9, 4],
+    content: '大黒湯コラボ',
+    labeledLinks: [
+      { label: 'コガネキッチン', link: 'https://twitter.com/souhait_100kano/status/2095729707421782028' },
+      { label: '大黒湯', link: 'https://twitter.com/souhait_100kano/status/2095780689761522065' },
+      { label: '戦利品', link: 'https://twitter.com/souhait_100kano/status/2095856844753563854' },
+    ],
+  },
+  {
+    date: [2026, 9, 25],
+    content: '1杯で1日に必要な野菜摂取量350gが摂れる幸楽苑の味噌野菜たんめん',
+    titleLink: 'https://twitter.com/souhait_100kano/status/2103465535572992163',
+  },
+  {
+    date: [2026, 10, 9],
+    content: puzzleEventResultContent('Let`sパジャマパーティー♪ 第4弾', 1),
+    titleLink: 'https://twitter.com/souhait_100kano/status/2108394875741929529',
+    labeledLinks: [
+      { label: '写経', link: 'https://twitter.com/ziburikito/status/2108486574031913328' },
+    ],
+  },
 ];
 
 const handler: Handler = (c) => {
