@@ -15,8 +15,8 @@
   },
   "private": true,
   "dependencies": {
-    "hono": "4.13.12",
-    "honox": "0.1.61",
+    "hono": "4.13.13",
+    "honox": "0.1.62",
     "tailwind-merge": "3.7.0",
     "tailwind-variants": "3.3.1"
   },
