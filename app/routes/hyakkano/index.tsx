@@ -309,6 +309,15 @@ const handler: Handler = (c) => {
         <h2>作ったもの</h2>
         <section>
           <h3>
+            <LinkText external href='https://hyakkano.souhait.app/yomutalk-plus'>
+              よむとーく＋
+            </LinkText>
+          </h3>
+          <p>静ちゃんが使ってそうなテキスト読み上げアプリっぽいWebアプリに常用できるように色々な機能を追加したもの</p>
+          <p>VOICEVOXでの読み上げにも対応</p>
+        </section>
+        <section>
+          <h3>
             <LinkText external href='https://hyakkano.souhait.app/birthday'>
               キャラクター誕生日一覧
             </LinkText>
