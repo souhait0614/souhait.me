@@ -19,13 +19,18 @@ export default function Page() {
       </ProductCard>
       <ProductCard TitleElement='h2' title='100カノ関連アプリ置き場' href='https://hyakkano.souhait.app'>
         <p><LinkText to='/hyakkano'>100カノ</LinkText>関連の何かを作ったときに置くサイトです</p>
-        <p>採用ライブラリの都合でReactを使いたかったが、Next.jsは過剰すぎると悩んだ結果、選ばれたのはWakuでした</p>
+        <p>採用ライブラリの都合+最低限なReact Server Componentsを使いたかったのでWaku製でしたが、採用ライブラリの都合もReact Server Componentsを使いたい欲もなくなったのでAstro+Svelte製になりました</p>
         <p>これも特に意味もなく<LinkText href='https://github.com/souhait0614/hyakkano.souhait.app' external>オープンソースとして公開</LinkText>しています</p>
+      </ProductCard>
+      <ProductCard TitleElement='h2' title='よむとーく＋' href='https://yomutalk-plus.souhait.app'>
+        <p><LinkText to='/hyakkano'>100カノ</LinkText>に登場する好本静ちゃんが使ってそうなテキスト読み上げアプリの模造+機能強化品です</p>
+        <p>SvelteKit+shadcn-svelte製です。AIパワーのおかげでここに並んでいるものの中で一番凝ってます</p>
+        <p>これも特に意味もなく<LinkText href='https://github.com/souhait0614/yomutalk-plus' external>オープンソースとして公開</LinkText>しています</p>
       </ProductCard>
       <ProductCard TitleElement='h2' title='Monesting' href='https://github.com/souhait0614/monesting'>
         <p>完全自分用サブスクリプション管理Webアプリ</p>
         <p>SvelteKitがいい感じだったのでSMUIと組み合わせて作りました <s>でもSMUIやめたい</s></p>
-        <p>誰でも使える形での一般公開はしてないです</p>
+        <p>なんか色々あって公開停止中です。作り直したい</p>
       </ProductCard>
       <ProductCard TitleElement='h2' title='Submarin Converter' href='https://github.com/souhait0614/submarin-converter#readme'>
         <p>文字置換ライブラリを寄せ集めて作ったおもしろ日本語生成機のTypeScriptライブラリ版</p>

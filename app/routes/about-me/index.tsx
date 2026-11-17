@@ -48,7 +48,7 @@ export default function Page() {
         </section>
         <section class='card'>
           <h2>ぷろぐらみんぐ</h2>
-          <p>趣味その1兼お仕事です。<LinkText external href='https://ja.react.dev?uwu=true'>React</LinkText>なWebアプリをよく書いてます。</p>
+          <p>趣味その1兼お仕事です。<LinkText external href='https://ja.react.dev?uwu=true'>React</LinkText>だったり<LinkText external href='https://svelte.dev/'>Svelte</LinkText>だったりなWebアプリをよく書いてます。</p>
           <p>バックエンドとかAWSもちょっとできます</p>
           <p>公開済みの制作物は<LinkText to='/product'>ここ</LinkText>に載せてあります</p>
         </section>
@@ -56,9 +56,9 @@ export default function Page() {
           <h2>げーむ</h2>
           <p>趣味その2です。リズムゲームばっかりやってます。たまにサンドボックスやアクションをやったり。</p>
           <p>
-            <LinkText external href='https://world-dai-star.com/game'>ワールドダイスター 夢のステラリウム</LinkText>に浸かっています。
-            <LinkText external href='https://gakuen.idolmaster-official.jp'>学園アイドルマスター</LinkText>も少々
+            <LinkText external href='https://world-dai-star.com/game'>ワールドダイスター 夢のステラリウム</LinkText>に浸かっていましたが、サービス終了。
           </p>
+          <p>乗り換え先が見つかりません。たすけて</p>
           <p>
             ユメステリリース前は
             <LinkText external href='https://miku.sega.jp/mega39splus/'>初音ミク Project DIVA MEGA39’s+</LinkText>
