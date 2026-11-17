@@ -22,7 +22,7 @@ export default function BaseHead({ metadata, context }: BaseHeadProps) {
   } = generateHeadData(metadata, context);
 
   return (
-    <head prefix={og.headPrefix}>
+    <>
       <meta charset='utf-8' />
       {/* 外部CSSの適用より先に opt-in を登録しないと、クロスドキュメントの View Transition が中断される */}
       <style>{'@view-transition { navigation: auto; }'}</style>
@@ -81,6 +81,6 @@ export default function BaseHead({ metadata, context }: BaseHeadProps) {
       />
       <Link href='/app/style.css' rel='stylesheet' />
       <Script src='/app/client.ts' async />
-    </head>
+    </>
   );
 }

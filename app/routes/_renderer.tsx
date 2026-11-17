@@ -12,6 +12,7 @@ import IconRibbon from '@/components/icons/IconRibbon';
 import IconUserSquare from '@/components/icons/IconUserSquare';
 import LinkButton from '@/components/LinkButton';
 import LinkText from '@/components/LinkText';
+import { OG_HEAD_PREFIX } from '@/constants/og';
 import { SITE_COPYRIGHT } from '@/constants/site';
 import HyakkanoBackGround from '@/features/$HyakkanoBackGround';
 import BaseHead from '@/features/BaseHead';
@@ -73,7 +74,7 @@ export default jsxRenderer(({ children, metadata }, context) => {
     }
   }, [metadata.pageType]);
   return (
-    <html lang='ja' style={themeStyle}>
+    <html lang='ja' prefix={OG_HEAD_PREFIX} style={themeStyle}>
       <head>
         <BaseHead metadata={metadata} context={context} />
         {metadata.pageType === 'gyagu' && (

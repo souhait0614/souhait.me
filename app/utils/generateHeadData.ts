@@ -28,7 +28,6 @@ export function generateHeadData(metadata: AllUnionFields<Metadata>, context: Co
   );
 
   const og = (() => {
-    const headPrefix = 'og: https://ogp.me/ns#';
     const url = canonicalUrl;
     const siteName = SITE_NAME;
     const locale = 'ja_JP';
@@ -60,7 +59,6 @@ export function generateHeadData(metadata: AllUnionFields<Metadata>, context: Co
     }
 
     return {
-      headPrefix,
       type,
       cardType,
       url,
