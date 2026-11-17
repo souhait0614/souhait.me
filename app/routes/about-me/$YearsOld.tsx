@@ -13,7 +13,10 @@ export default function YearsOld({ year, month, day }: YearsOldProps) {
   const [targetYear, setTargetYear] = useState<string | null>(
     currentYear.toString(),
   );
-  const age = useMemo(() => (Number(targetYear) || 0) - year, [targetYear, year]);
+  const age = useMemo(() => {
+    const value = Number(targetYear);
+    return targetYear === null || Number.isNaN(value) ? null : value - year;
+  }, [targetYear, year]);
 
   const handleChange = (event: Event) => {
     if (event.target instanceof HTMLInputElement) {
@@ -23,7 +26,7 @@ export default function YearsOld({ year, month, day }: YearsOldProps) {
 
   return (
     <span>
-      {age}歳 (
+      {age ?? '--'}歳 (
       <input
         type='number'
         value={targetYear ?? ''}
