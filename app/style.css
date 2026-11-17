@@ -131,10 +131,6 @@
 }
 
 @layer base {
-  @view-transition {
-    navigation: auto;
-  }
-
   html,
   body {
     overflow: clip visible;

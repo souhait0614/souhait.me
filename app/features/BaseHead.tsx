@@ -24,6 +24,8 @@ export default function BaseHead({ metadata, context }: BaseHeadProps) {
   return (
     <head prefix={og.headPrefix}>
       <meta charset='utf-8' />
+      {/* 外部CSSの適用より先に opt-in を登録しないと、クロスドキュメントの View Transition が中断される */}
+      <style>{'@view-transition { navigation: auto; }'}</style>
       <meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=overlays-content' />
       <meta name='format-detection' content='telephone=no,date=no,address=no,email=no,url=no' />
       {noIndex && (<meta name='robots' content='noindex' />)}
