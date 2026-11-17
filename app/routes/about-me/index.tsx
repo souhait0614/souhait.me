@@ -74,7 +74,7 @@ export default function Page() {
         <section>
           <h2>視聴覚室</h2>
           <div class='card p-0'>
-            <lite-youtube videoid='Dh79Lk_wCD4' />
+            <lite-youtube videoid='Dh79Lk_wCD4' class='block aspect-video' />
           </div>
         </section>
       </div>
