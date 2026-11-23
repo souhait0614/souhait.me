@@ -15,10 +15,10 @@
   },
   "private": true,
   "dependencies": {
-    "hono": "4.13.17",
-    "honox": "0.1.62",
-    "tailwind-merge": "3.7.0",
-    "tailwind-variants": "4.0.1"
+    "hono": "4.13.19",
+    "honox": "0.1.63",
+    "tailwind-merge": "3.7.1",
+    "tailwind-variants": "4.0.2"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "5.20261107.1",
